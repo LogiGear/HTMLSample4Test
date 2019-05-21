@@ -85,7 +85,7 @@ COLOR: #FFFFFF;
 		var iWidth = $("#content").width();
 		$("#content").height(iHeight);
 		$("#content").width(iWidth);
-        sPage = getUrlParm('id').toLowerCase();
+        sPage = getUrlParm('id');
         sPage = "../ScenarioData_HTML/" + sPage + ".html";
         $("#content").load(sPage, function (response, status, xhr) {            
             if (status == "error") {
