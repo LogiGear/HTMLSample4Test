@@ -41,7 +41,7 @@ COLOR: #FFFFFF;
 </head>
 <!-- InstanceBeginEditable name="doctitle" -->
 <!-- InstanceEndEditable -->
-<body>
+<body onload="changeTitle()">
 
 <table id="wrapper" cellspacing="0">
 
@@ -88,6 +88,10 @@ COLOR: #FFFFFF;
 </div> 
 
 <script  type="text/javascript">
+	function changeTitle() {
+		var sTitle = document.title;
+		parent.postMessage(sTitle,"*");
+	}
     var myVideo = document.getElementById("video1");
     function playPause() {
         if (myVideo.paused)

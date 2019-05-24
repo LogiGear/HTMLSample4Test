@@ -230,6 +230,8 @@
                 udpDefaultProperties();
                 createPropertyList();
                 loadPropertyList(PropertyData);
+				var sTitle = document.title;
+				parent.postMessage(sTitle,"*");
             };
             varInterval = setInterval(function () { clearInterval(varInterval); getBoundCtr(); }, 300);
 
