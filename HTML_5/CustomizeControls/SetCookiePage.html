@@ -73,6 +73,8 @@ COLOR: #FFFFFF;
     }
 
     function DoTheCookieStuff() {
+		var sTitle = document.title;
+		parent.postMessage(sTitle,"*");
         username = getCookie('username');
         /*if (username=null)
         { 
@@ -90,6 +92,7 @@ COLOR: #FFFFFF;
             setCookie('username', username, 365);
         }
     }
+	
 </SCRIPT>
 </head>
 <!-- InstanceBeginEditable name="doctitle" -->

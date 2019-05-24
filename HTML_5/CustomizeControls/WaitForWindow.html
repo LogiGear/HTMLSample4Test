@@ -368,6 +368,8 @@
         }
         function showComment()
         {
+			var sTitle = document.title;
+			parent.postMessage(sTitle,"*");
             var strText = "Each browser has a limit size such as :<br/>";
             strText += "IE: limit width = 250, limit height = 100 <br/>";
             strText += "FireFox & Chrome: limit width = 132, limit height = 68";

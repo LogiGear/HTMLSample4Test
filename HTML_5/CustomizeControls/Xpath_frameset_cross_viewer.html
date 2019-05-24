@@ -6,12 +6,21 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <title>Example page</title>
+<script type="text/javascript">
+	
+	function changeTitle() 
+	{
+		var sTitle = document.title;
+		parent.postMessage(sTitle,"*");
+	}
 
+</script>
 </head>
-
+<body onload="changeTitle()">
 <frameset cols="100">
 
 <!-- <frame src="http://www.w3schools.com/tags/tryit.asp?filename=tryhtml_iframe" name="main4"></frame> -->
 <frame src = "http://logigearsample.pe.hu/HTML_5/CustomizeControls/Iframe.html" name="frameCrossDomain_level_1" id="frameCrossDomain_level_1"> </frame>
 </frameset>
+</body>
 </html>

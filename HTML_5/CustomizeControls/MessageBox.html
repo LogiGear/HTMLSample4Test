@@ -66,13 +66,19 @@ COLOR: #FFFFFF;
     function showConfirm() {
         var res = window.confirm("Comfirm Message?");
     }
+	
+	function changeTitle() 
+	{
+		var sTitle = document.title;
+		parent.postMessage(sTitle,"*");
+	}
 
 </script>
 </head>
 <!-- InstanceBeginEditable name="doctitle" -->
 <title>Layout Controls</title>
 <!-- InstanceEndEditable -->
-<body>
+<body onload="changeTitle()">
 
 <table id="wrapper" cellspacing="0">
 

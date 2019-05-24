@@ -104,8 +104,13 @@ COLOR: #FFFFFF;
     function TextInComment(text) {
         document.getElementById("txtComments").value = text;
     }
+	function changeTitle() 
+	{
+		var sTitle = document.title;
+		parent.postMessage(sTitle,"*");
+	}
 	</script>
-<body>
+<body onload="changeTitle()">
 
 <table id="wrapper" cellspacing="0">
 <tr>

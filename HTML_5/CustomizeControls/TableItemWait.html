@@ -104,12 +104,16 @@ label { display: block; }
         var second = (txtMiliSecond.value) / 1000;
         txtSecond.value = second * parseInt(seconds) + " second";
     }
-
+	function changeTitle() 
+	{
+		var sTitle = document.title;
+		parent.postMessage(sTitle,"*");
+	}
 
 
 </script>
 </head>
-<body>
+<body onload="changeTitle()">
 <table id="wrapper" cellspacing="0">
 <tr>
 <td colspan="4" align="right" height="15%"></td>

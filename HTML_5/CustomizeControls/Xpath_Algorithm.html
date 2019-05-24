@@ -20,9 +20,17 @@ h2{
 	font-style: oblique;
 }
 </style>
+<script type="text/javascript">
+	
+	function changeTitle() 
+	{
+		var sTitle = document.title;
+		parent.postMessage(sTitle,"*");
+	}
 
+</script>
 </head>
-<body>
+<body onload="changeTitle()">
 <div class="links">
 	<a href="Xpath_Algorithm.html" id="algorithm">Xpath Algorithm</a> 
 	<a href="Xpath_Priority.html" id="priority">Xpath Priority</a> 

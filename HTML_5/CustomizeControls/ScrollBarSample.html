@@ -4,7 +4,17 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <!-- InstanceBeginEditable name="doctitle" -->
 <title>Standard Control</title>
-
+<script type="text/javascript">
+	function changeTitle() 
+	{
+		var sTitle = document.title;
+		parent.postMessage(sTitle,"*");
+	}
+    function comment(sText)
+	{
+		document.getElementById("txtComment").innerHTML = sText;
+	}
+</script>
 <style type="text/css">
 body {
 	background-image: url(../images/background.jpg);
@@ -69,7 +79,7 @@ label { display: block; }
 
 </style>  
 </head>
-<body>
+<body onload="changeTitle()">
 <table id="wrapper" cellspacing="0">
 <tr>
 <td colspan="4" align="right" height="15%"></td>
@@ -103,11 +113,5 @@ label { display: block; }
   <td colspan="4" align="right" height="19%"><span class="style3"></span></td>
 </tr>
 </table>
-<script type="text/javascript">
-    function comment(sText)
-	{
-		document.getElementById("txtComment").innerHTML = sText;
-	}
-</script>
 </body>
 <!-- InstanceEnd --></html>

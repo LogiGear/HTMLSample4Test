@@ -95,6 +95,8 @@ COLOR: #FFFFFF;
             else
                 $("#txtComment").html("Page loaded successful.");
         });
+		var sTitle = document.title;
+		parent.postMessage(sTitle,"*");
     });
 </script>
 </body>

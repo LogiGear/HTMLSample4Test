@@ -120,6 +120,8 @@ label { display: block; }
     ];
 
     function AddItem_Select() {
+		var sTitle = document.title;
+		parent.postMessage(sTitle,"*");
         selectbox = document.getElementById("svgSelect");
         selectbox.options = null;
         selectbox.options.length = 0;
