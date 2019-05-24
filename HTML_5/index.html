@@ -89,6 +89,8 @@
         <script type="text/javascript">
             
             jQuery(document).ready(function ($) {
+				var sTitle = document.title;
+				parent.postMessage(sTitle,"*");
                 loadComponents();
             });
 
