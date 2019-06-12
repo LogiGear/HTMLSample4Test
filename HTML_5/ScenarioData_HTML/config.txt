@@ -1,4 +1,4 @@
-General_All_Control
+﻿General_All_Control
 MultiControls_sample
 MultiControls_sample_with_HTML5
 MultiControls_sample_with_AR
@@ -27,7 +27,7 @@ testPrompt
 Xpath_iframe_multi_level
 test_popup
 SetCookiePageMobile
-Type Detect
+Type_detect
 Test_Iframe
 pageLoadTimeout
 Iframe_Test_Switch_Frame
