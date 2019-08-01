@@ -3,7 +3,7 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <!-- InstanceBeginEditable name="doctitle" -->
-<title>標準コントロール</title>
+<title>Standard Control</title>
 <script src="../Scripts/js/jquery-1.5.2.min.js" type="text/javascript"></script>
 <script type="text/javascript" src="../ControlsList/Util.js"></script>
 <script type="text/javascript" src="../Scripts/js/autocomplete.js"></script>
@@ -87,9 +87,9 @@ label { display: block; }
         if (i % iGroup == 0) {    //add body
             $("#" + IDControl).append("<tbody></tbody>");
         }
-        //addRow(i);
+        //addRow(i);ひも
         sRow = "<tr>" +
-                "<td width=\"20%\" onclick =\"DisplayComment('String_" + i + "')\">String_" + i + "</td>" +
+                "<td width=\"20%\" onclick =\"DisplayComment('ひも_" + i + "')\">ひも_" + i + "</td>" +
                 "<td width=\"20%\" onclick =\"DisplayComment('Chuỗi_" + i + "');\">Chuỗi_" + i + "</td>" +
                 "<td width=\"20%\" onclick =\"DisplayComment('文本_" + i + "');\">文本_" + i + "</td>" +
                 "<td width=\"20%\"><input type=\"checkbox\"/></td>" +
@@ -134,7 +134,7 @@ label { display: block; }
                         "<caption><b> Table Element</b> </caption>" +
                         "<thead>" +
                             "<tr>" +
-                            "<td width=\"20%\" onclick =\"DisplayComment('Header String')\">String</td>" +
+                            "<td width=\"20%\" onclick =\"DisplayComment('Header ひも')\">ひも</td>" +
                             "<td width=\"20%\" onclick =\"DisplayComment('Header Chuỗi')\">Chuỗi</td>" +
                             "<td width=\"20%\" onclick =\"DisplayComment('Header 文本')\">文本</td>" +
                             "<td width=\"20%\" onclick =\"DisplayComment('Header Boolean')\">Boolean</td>" +
@@ -142,8 +142,8 @@ label { display: block; }
                             "</tr>" +
                         "</thead> " +
 
-                       "<tfoot onclick =\"DisplayComment('Footer of Element')\">" +
-                            "<th align=\"center\" colspan=\"5\">Footer of Element </th>" +
+                       "<tfoot onclick =\"DisplayComment('要素のフッター')\">" +
+                            "<th align=\"center\" colspan=\"5\">要素のフッター </th>" +
                         "</tfoot>" +
                      "</TABLE>";
 
@@ -168,7 +168,7 @@ label { display: block; }
               <td class="auto-style1"><span style="font-family: Tahoma; font-size: 12px; color: Black; font-weight:normal;" align="left" >Number of Items:</span></td>
               <td class="auto-style2"><input type="text" id="txtnumberofItem" name="txtnumberofItem" size="15" value="3"/></td>
               <td class="auto-style1"><span style="font-family: Tahoma; font-size: 12px; color: Black; font-weight:normal;" align="left" >Name of Items:</span></td>
-              <td class="auto-style2"><input type="text" id="txtnameofItem" name="txtnameofItem" size="15" value="Item" disabled="disabled"/></td>
+              <td class="auto-style2"><input type="text" id="txtnameofItem" name="txtnameofItem" size="15" value="項目" disabled="disabled"/></td>
           </tr>
           <tr>
               <td></td>

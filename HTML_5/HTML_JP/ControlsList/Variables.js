@@ -10,7 +10,7 @@ var IDPropertyList ="lstProperty";
 var IDPropertyName = "proName";
 var IDtxtProValue = "txtProValue";
 var IDbtnUpd = "btnUpd";
-var IDControl = "ControlTest";
+var IDControl = "リセットのタイトル";
 var IDTitle = "IDCaption";
 var IDComment = "txtComment";
 var AreaNonUnique = "tdNoneUnique";
@@ -20,7 +20,7 @@ var SelectedData = new Array();
 
 //Properties////////////////////////////////////
 var PropertyData = new Array();
-var _varItemName = "Item";
+var _varItemName = "項目";
 var _varItemCount = "3";
 var _bUnique = true;
 

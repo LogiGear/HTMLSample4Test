@@ -209,7 +209,7 @@ function createText() {
 
 function createTextArea() {
     inputStr = "<textarea id=" + IDControl + " title=" + IDControl + " name=" + IDControl + " cols=\"40\" rows=\"4\" onchange=\"UpdValueField()\" >" +
-                "At W3Schools you will find all the Web-building tutorials you need, from basic HTML to advanced XML, SQL, ASP, and PHP." +
+                "ケンブリッジ大学出版局」は諸般の事情により、2019年3月31日をもちまして" +
                 "</textarea>"; 
 
     document.write(inputStr);
