@@ -22,7 +22,7 @@
     <div class="container">
       <ul class="tasks">
         <li class="task" data-id="3" data-text="Go To Grocery">
-          <div class="task__content">
+          <div class="task__content" id="goToGrocery">
             Go To Grocery
           </div>
           <div class="task__actions">
@@ -32,7 +32,7 @@
           </div>
         </li>
         <li class="task" data-id="2" data-text="Type Some Code">
-          <div class="task__content">
+          <div class="task__content" id="typeSomeCode">
             Type Some Code
           </div>
           <div class="task__actions">
@@ -42,8 +42,19 @@
           </div>
         </li>
         <li class="task" data-id="1" data-text="Build An App">
-          <div class="task__content">
+          <div class="task__content" id="buildAnApp">
             Build An App
+          </div>
+		  
+          <div class="task__actions">
+            <i class="fa fa-eye"></i>
+            <i class="fa fa-edit"></i>
+            <i class="fa fa-times"></i>
+          </div>
+        </li>
+		 <li class="task" data-id="0" data-text="Go to Grocery 2">
+         <div class="task__content" id="goToGrocery">
+            Go to Grocery 2
           </div>
           <div class="task__actions">
             <i class="fa fa-eye"></i>
@@ -51,6 +62,8 @@
             <i class="fa fa-times"></i>
           </div>
         </li>
+		
+		
       </ul>
       <div class="content__footer">
         <button>Add A New Task</button>
