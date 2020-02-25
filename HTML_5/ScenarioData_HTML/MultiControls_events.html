@@ -1,119 +1,139 @@
 ﻿<!DOCTYPE html>
 <html>
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<title>Standard Control</title>
-<style type="text/css">
-            a:link {COLOR: blue;text-decoration:none;}
-            a:visited {COLOR: blue;}
-            a:hover {COLOR: red;text-decoration: underline;}
-            a:active {COLOR: blue;}
-            a { display: block; COLOR:blue;}
-            label { display: block;}  
-		#dragndrop {width:350px;height:70px;padding:10px;border:1px solid #aaaaaa;}
-</style>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Standard Control</title>
+    <style type="text/css">
+        a:link {
+            COLOR: blue;
+            text-decoration: none;
+        }
+        
+        a:visited {
+            COLOR: blue;
+        }
+        
+        a:hover {
+            COLOR: red;
+            text-decoration: underline;
+        }
+        
+        a:active {
+            COLOR: blue;
+        }
+        
+        a {
+            display: block;
+            COLOR: blue;
+        }
+        
+        label {
+            display: block;
+        }
+        
+        #dragndrop {
+            width: 350px;
+            height: 70px;
+            padding: 10px;
+            border: 1px solid #aaaaaa;
+        }
+    </style>
 
-<style>
-    #box{
-        width:400px;
-        height:300px;
-        background: #f2f2f2;
-        border: 1px solid #000;
-    }
-</style>
-<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-<script>
-    $(document).ready(function() {
-        $("#box").mousemove(function(event){            
-            var relX = event.pageX - $(this).offset().left;
-            var relY = event.pageY - $(this).offset().top;
-            var relBoxCoords = "(" + relX + "," + relY + ")";
-            $(".mouse-cords").text(relBoxCoords);
+    <style>
+        #box {
+            width: 400px;
+            height: 300px;
+            background: #f2f2f2;
+            border: 1px solid #000;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#box").mousemove(function(event) {
+                var relX = event.pageX - $(this).offset().left;
+                var relY = event.pageY - $(this).offset().top;
+                var relBoxCoords = "(" + relX + "," + relY + ")";
+                $(".mouse-cords").text(relBoxCoords);
+            });
         });
-    });
-</script>
-<script>
+    </script>
+    <script>
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
 
-function allowDrop(ev) {
-    ev.preventDefault();
-}
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
 
-function drag(ev) {
-    ev.dataTransfer.setData("text", ev.target.id);
-}
-
-function drop(ev) {
-    ev.preventDefault();
-    var data = ev.dataTransfer.getData("text");
-    ev.target.appendChild(document.getElementById(data));
-}
-</script>
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+        }
+    </script>
 </head>
 
 <body>
 
-<div>
-<!---------------------------------------------------------LABEL---------------------------------------------->
-<h2><p style="color:#FF0000"><b>Label</b></p></h2>
-<td id="DisplayCell" colspan="2" style="text-align:center">
-<label id="lbl_label test" title="lbl_label test" name="lbl_label test" style="color: red; font-size: larger; position: relative; top: 0px;" onclick="DisplayComment('Single click control test');" ondblclick="DisplayComment('Double click control test');" oncontextmenu="DisplayComment('Right click control test');">
- lbl_label test</label>
-</td>
+    <!---------------------------------------------------------LABEL---------------------------------------------->
+    <h2><p style="color:#FF0000"><b>Label</b></p></h2>
+    <td id="DisplayCell" colspan="2" style="text-align:center">
+        <label id="lbl_label test" title="lbl_label test" name="lbl_label test" style="color: red; font-size: larger; position: relative; top: 0px;" onclick="DisplayComment('Single click control test');" ondblclick="DisplayComment('Double click control test');" oncontextmenu="DisplayComment('Right click control test');">
+            lbl_label test</label>
+    </td>
 
-	<td id="DisplayCell" colspan="2" style="text-align:center">
-<label id="lbl_label_disabled" title="lbl_label_disabled" name="lbl_label_disabled" style="color: red; font-size: larger; position: relative; top: 0px;" onclick="DisplayComment('Single click control test');" ondblclick="DisplayComment('Double click control test');" oncontextmenu="DisplayComment('Right click control test');">
- lbl_label_disabled</label>
-</td>	
+    <td id="DisplayCell" colspan="2" style="text-align:center">
+        <label id="lbl_label_disabled" title="lbl_label_disabled" name="lbl_label_disabled" style="color: red; font-size: larger; position: relative; top: 0px;" onclick="DisplayComment('Single click control test');" ondblclick="DisplayComment('Double click control test');" oncontextmenu="DisplayComment('Right click control test');">
+            lbl_label_disabled</label>
+    </td>
 
-<td id="DisplayCell" colspan="2" style="text-align:center">
-<label id="cơn sốt apple ipad mới CƠN SỐT APPLE IPAD MỚI 123456 我愛你 أنا أحبك !@d#%&'control"
- title="cơn sốt apple ipad mới CƠN SỐT APPLE IPAD MỚI 123456 我愛你 أنا أحبك !@d#%&'control"
-name="cơn sốt apple ipad mới CƠN SỐT APPLE IPAD MỚI 123456 我愛你 أنا أحبك !@d#%&'control" 
-style="color: red; font-size: larger; position: relative; top: 0px;" onclick="DisplayComment('Single click control test');" ondblclick="DisplayComment('Double click control test');" oncontextmenu="DisplayComment('Right click control test');">cơn sốt apple ipad mới CƠN SỐT APPLE IPAD MỚI 123456 我愛你 أنا أحبك !@d#%&'control</label>
-</td>
+    <td id="DisplayCell" colspan="2" style="text-align:center">
+        <label id="cơn sốt apple ipad mới CƠN SỐT APPLE IPAD MỚI 123456 我愛你 أنا أحبك !@d#%&'control" title="cơn sốt apple ipad mới CƠN SỐT APPLE IPAD MỚI 123456 我愛你 أنا أحبك !@d#%&'control" name="cơn sốt apple ipad mới CƠN SỐT APPLE IPAD MỚI 123456 我愛你 أنا أحبك !@d#%&'control" style="color: red; font-size: larger; position: relative; top: 0px;" onclick="DisplayComment('Single click control test');" ondblclick="DisplayComment('Double click control test');" oncontextmenu="DisplayComment('Right click control test');">cơn sốt apple ipad mới CƠN SỐT APPLE IPAD MỚI 123456 我愛你 أنا أحبك !@d#%&'control</label>
+    </td>
 
-<td id="DisplayCell" colspan="2" style="text-align:center">
-<label id="" title="" name=""style="color: red; font-size: larger; position: relative; top: 0px;" onclick="DisplayComment('Single click control test');" ondblclick="DisplayComment('Double click control test');" oncontextmenu="DisplayComment('Right click control test');">    </label>
-</td>		
-				
-				
-				
-<!------------------------------------------------------- BUTTON -------------------------------------------------------------->
-<h2><p style="color:#FF0000"><b>Button</b></p></h2>
-<label id="lblComment"></label>
+    <td id="DisplayCell" colspan="2" style="text-align:center">
+        <label id="" title="" name="" style="color: red; font-size: larger; position: relative; top: 0px;" onclick="DisplayComment('Single click control test');" ondblclick="DisplayComment('Double click control test');" oncontextmenu="DisplayComment('Right click control test');"> </label>
+    </td>
 
-<div id="b1">
-<input type="button" id="btn_button_1"  name="btn_button_1" ondblclick="ondblclickH(this)"  value="btn_button_1" title="btn_button_1"><br>
-</div>
+    <!------------------------------------------------------- BUTTON -------------------------------------------------------------->
+    <h2><p style="color:#FF0000"><b>Button</b></p></h2>
+    <label id="lblComment"></label>
 
-<div id="b2">
-<input type="button" id="btn_button_2"  name="btn_button_2" ondblclick="ondblclickH(this)"  value="btn_button_2" title="btn_button_2"><br>
-</div>
+    <div id="b1">
+        <input type="button" id="btn_button_1" name="btn_button_1" ondblclick="ondblclickH(this)" value="btn_button_1" title="btn_button_1">
+        <br>
+    </div>
 
-<input type="button" id="btn_button test"  name="btn_button test" onclick="DisplayComment('btn_button test');"  value="btn_button test" title="btn_button test"><br>
-<input id="button_ControlTest" type="button" name="button_ControlTest" value="ButtonTest" 
-title="button_ControlTest" style="position: relative; top: 0px;">
-<script type="text/javascript">
-	
-	function ondblclickH(e)
-    {
-       document.getElementById('lblComment').textContent = e.id+" is double clicked"
-    }
+    <div id="b2">
+        <input type="button" id="btn_button_2" name="btn_button_2" ondblclick="ondblclickH(this)" value="btn_button_2" title="btn_button_2">
+        <br>
+    </div>
 
-    function DisplayComment(id)
-    {
-        var id= document.getElementById(id);
-        document.getElementById('lblComment').textContent = id.value+" is double clicked"
-    }
-</script>
-<br/>
-<br/>
-<div>jQuery Find Coordinates of Mouse Pointer Relative to an Element</div>
+    <input type="button" id="btn_button test" name="btn_button test" onclick="DisplayComment('btn_button test');" value="btn_button test" title="btn_button test">
+    <br>
+    <input id="button_ControlTest" type="button" name="button_ControlTest" value="ButtonTest" title="button_ControlTest" style="position: relative; top: 0px;">
+    <script type="text/javascript">
+        function ondblclickH(e) {
+            document.getElementById('lblComment').textContent = e.id + " is double clicked"
+        }
 
-<br/>
-<div id="box"></div>
+        function DisplayComment(id) {
+            var id = document.getElementById(id);
+            document.getElementById('lblComment').textContent = id.value + " is double clicked"
+        }
+    </script>
+    <br/>
+    <br/>
+    <div>jQuery Find Coordinates of Mouse Pointer Relative to an Element</div>
+
+    <br/>
+    <div id="box"></div>
     <p>Coordinates of mouse pointer with respect to the DIV box are: <strong id="results" class="mouse-cords"></strong></p>
-		
+
 </body>
+
 </html>
