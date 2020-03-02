@@ -1,0 +1,293 @@
+(function(jQuery) {  
+jQuery(document).ready(function(){
+    
+jQuery("#products li").draggable({
+    appendTo: "body",
+    helper: "clone"
+  
+});
+attachPostToBank(1);
+attachPostToBank(2);
+attachPostToBank(3);
+attachPostToBank(4);
+attachPostToBank(5);
+attachPostToBank(6);
+attachPostToBank(7);
+attachPostToBank(8);
+attachPostToBank(9);
+attachPostToBank(10);
+attachPostToBank(11);
+attachPostToBank(12);
+attachPostToBank(13);
+attachPostToBank(14);
+attachPostToBank(15);
+attachPostToBank(16);
+attachPostToBank(17);
+attachPostToBank(18);
+attachPostToBank(19);
+attachPostToBank(20);
+attachPostToBank(21);
+
+selectanother(1);
+selectanother(2);
+selectanother(3);
+selectanother(4);
+selectanother(5);
+selectanother(6);
+
+function test(event, ui)
+{
+    var self = jQuery(this);
+        self.find(".placeholder").remove();
+        var productid = ui.draggable.attr("data-id");
+        if (self.find("[data-id=" + productid + "]").length) return;
+        jQuery("<li></li>", {
+            "text": ui.draggable.text(),
+            "data-id": productid
+        }).appendTo(this);
+             //jQuery("#equal").hide();
+        
+        // To remove item from other shopping chart do this
+        var cartid = self.closest('.shoppingCart').attr('id');
+        jQuery(".shoppingCart:not(#"+cartid+") [data-id="+productid+"]").remove();
+           var isAllFilled = checkCompletionStatus(getParent(this));
+    var s = getParent(this);
+    if(s=="table1")
+    {
+        event1();
+    }
+   else if(s=="table2")
+    {
+        event2();
+    }
+    else if(s=="table3")
+    {
+        event3();
+    }
+    else if(s=="table4")
+    {
+        event4();
+    }
+    else if(s=="table5")
+    {
+        event5();
+    }
+    else if(s=="table6")
+    {
+        event6();
+    }
+        if(isAllFilled)
+        {
+            var result=getParent(this)+"_result";
+            jQuery("."+result).show();
+             jQuery("."+result+" a").html("Perfect!");
+        }
+
+}
+
+function attachPostToBank(i){
+    var bankable = "field"+i;
+    console.log("#"+bankable);
+    jQuery("."+bankable).droppable({
+        activeClass: "content-active",
+        hoverClass: "content-hover",
+        accept : ".block"+i,
+        drop: function(event, ui) {
+             test.call(this,event, ui);
+        }
+    }).sortable({
+        items: "li:not(.placeholder)",
+        sort: function() {
+            jQuery(this).removeClass("content-active");
+        }
+    });
+}
+
+function selectanother(j){
+    var sel="sel"+j;
+    console.log("#"+sel);
+    jQuery("."+sel).draggable({
+   revert: true,
+  start: function( event, ui ) {
+       var s="Please select another block";
+       jQuery(".e1"+j).show();
+      jQuery(".e1"+j).html(s);
+      setTimeout(function(){jQuery(".e1"+j).hide();},1200);
+       }
+});
+}
+function getParent(draggedElem)
+{
+	var tableId=jQuery(draggedElem).parents("table").attr("id");
+    //alert(tableId);
+	console.log(tableId);
+	return tableId;
+}
+function checkCompletionStatus(tableId){
+	
+	  var isAllFilled = true;
+      jQuery("#"+tableId+" .shoppingCart").each(function(){
+            if(jQuery(this).find('ol .placeholder').length > 0)
+            {
+                isAllFilled = false;
+                return
+            }
+      });
+      return isAllFilled
+}
+
+
+
+
+function event1()
+{
+    jQuery('#bal').show();
+         var sum1 = 0;
+        jQuery('#amt1').find('li').each(function(index)
+                     {
+                         sum1 += parseInt(jQuery(this).text());
+                     });
+        
+        //place2 sum
+         var sum2 = 0;
+        jQuery('#amt2').find('li').each(function(index)
+                     {
+                         sum2 += parseInt(jQuery(this).text());
+                     });
+         if(isNaN(sum1)==true)
+        {sum1=0;}
+        if(isNaN(sum2)==true)
+        {sum2=0;}
+        var total=0;
+        total=sum1+sum2;
+        jQuery('#t1').text(total);
+        jQuery('#t2').text("0");
+}
+
+function event2()
+{
+      jQuery('#bal1').show();
+    var sum1 = 0;
+        jQuery('#amt3').find('li').each(function(index)
+                     {
+                         sum1 += parseInt(jQuery(this).text());
+                     });
+        
+        //place2 sum
+         var sum2 = 0;
+        jQuery('#amt4').find('li').each(function(index)
+                     {
+                         sum2 += parseInt(jQuery(this).text());
+                     });
+         if(isNaN(sum1)==true)
+        {sum1=0;}
+        if(isNaN(sum2)==true)
+        {sum2=0;}
+        var total=0;
+        total=sum1+sum2;
+        jQuery('#t3').text(total);
+        jQuery('#t4').text("0");
+}
+
+
+function event3()
+{
+      jQuery('#bal2').show();
+var sum1 = 0;
+        jQuery('#amt5').find('li').each(function(index)
+                     {
+                         sum1 += parseInt(jQuery(this).text());
+                     });
+        
+        //place2 sum
+         var sum2 = 0;
+        jQuery('#amt6').find('li').each(function(index)
+                     {
+                         sum2 += parseInt(jQuery(this).text());
+                     });
+         if(isNaN(sum1)==true)
+        {sum1=0;}
+        if(isNaN(sum2)==true)
+        {sum2=0;}
+        var total=0;
+        total=sum1+sum2;
+        jQuery('#t5').text(total);
+        jQuery('#t6').text("0");
+}
+function event4()
+{
+      jQuery('#bal3').show();
+    var sum1 = 0;
+jQuery('#amt7').find('li').each(function(index)
+                     {
+                         sum1 += parseInt(jQuery(this).text());
+                     });
+        jQuery('#t7').text(sum1);
+        //place2 sum
+         var sum2 = 0;
+        jQuery('#amt8').find('li').each(function(index)
+                     {
+                         sum2 += parseInt(jQuery(this).text());
+                     });
+        jQuery('#t8').text(sum2);
+         if(isNaN(sum1)==true)
+        {sum1=0;
+         jQuery('#t7').text("0");
+        }
+        if(isNaN(sum2)==true)
+        {sum2=0;
+        jQuery('#t8').text("0");}
+}
+
+function event5()
+{
+      jQuery('#bal4').show();
+    var sum1 = 0;
+jQuery('#amt9').find('li').each(function(index)
+                     {
+                         sum1 += parseInt(jQuery(this).text());
+                     });
+        jQuery('#t9').text(sum1);
+        //place2 sum
+         var sum2 = 0;
+        jQuery('#amt10').find('li').each(function(index)
+                     {
+                         sum2 += parseInt(jQuery(this).text());
+                     });
+        jQuery('#t10').text(sum2);
+         if(isNaN(sum1)==true)
+        {sum1=0;
+         jQuery('#t9').text("0");
+        }
+        if(isNaN(sum2)==true)
+        {sum2=0;
+        jQuery('#t10').text("0");}
+           
+}
+function event6()
+{
+      jQuery('#bal5').show();
+    var sum1 = 0;
+jQuery('#amt11').find('li').each(function(index)
+                     {
+                         sum1 += parseInt(jQuery(this).text());
+                     });
+        jQuery('#t11').text(sum1);
+        //place2 sum
+         var sum2 = 0;
+        jQuery('#amt12').find('li').each(function(index)
+                     {
+                         sum2 += parseInt(jQuery(this).text());
+                     });
+        jQuery('#t12').text(sum2);
+         if(isNaN(sum1)==true)
+        {sum1=0;
+         jQuery('#t11').text("0");
+        }
+        if(isNaN(sum2)==true)
+        {sum2=0;
+        jQuery('#t12').text("0");}
+           
+}   
+});
+})(jQuery);

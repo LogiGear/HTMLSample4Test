@@ -1,0 +1,215 @@
+
+<!-- saved from url=(0042)http://demo.guru99.com/test/drag_drop.html -->
+<html lang="en-GB" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="./Drag and Drop Action_files/af3cfffb95196d4da1e9e744fbfc7875.css"> 
+
+<title>Drag and Drop Action</title>
+
+ <script type="text/javascript" async="" src="./Drag and Drop Action_files/analytics.js.download"></script><script src="./Drag and Drop Action_files/jquery.min.js.download"></script>
+ <link href="./Drag and Drop Action_files/AccountCSS.css" rel="stylesheet">
+ <script src="./Drag and Drop Action_files/jquery-ui.min.js.download"></script> 
+ <script src="./Drag and Drop Action_files/lesson6.js.download"></script>
+ 
+ <link href="./Drag and Drop Action_files/bootstrap.min.css" rel="stylesheet">
+
+    <link href="./Drag and Drop Action_files/main.css" rel="stylesheet">
+    <link href="./Drag and Drop Action_files/custom.css" rel="stylesheet">
+    <link href="./Drag and Drop Action_files/slider-cars.css" rel="stylesheet">
+    <link href="./Drag and Drop Action_files/home-bar.css" rel="stylesheet"> 
+    
+     <script src="./Drag and Drop Action_files/jquery.js.download"></script>
+    <script src="./Drag and Drop Action_files/bootstrap.min.js.download"></script>
+    <script src="./Drag and Drop Action_files/treemenu.js.download"></script>
+    <script src="./Drag and Drop Action_files/slider-cars.js.download"></script>
+    <script src="./Drag and Drop Action_files/home-bar.js.download"></script>  
+    
+
+
+<style>#bal,#bal1,#bal2,#bal3,#bal4,#bal5{display:none;} td{border: 1px solid #000;} td{padding:10px;}
+.button.button-orange:hover{
+    text-decoration: none;    
+}
+.navbar .nav>li>a{
+    text-shadow:none;
+}
+a{color:#262626;}
+</style></head>
+
+
+
+
+
+<body>
+   
+<section id="g-container-main" class="g-wrapper">
+	<div class="g-grid"><div class="g-block size-75"> 
+		<main id="g-mainbar"><div class="g-grid">
+			<div class="g-block size-100"><div class="g-content">
+				<div class="platform-content row-fluid">
+					<div class="span12"><div class="item-page" itemscope="" itemtype="https://schema.org/Article">
+
+
+
+
+
+<h1 style="font-size:31px;font-weight:700;">Selenium Drag and Drop Example:</h1>
+<h2 style="font-size:26px;font-weight:700;">Drag the following blocks into empty cells below</h2>
+<p style="font-size:17px;font-weight:400;"><strong>Note:</strong> Only certain blocks are permitted to be dropped in specific cells in the table</p>
+<p>
+	&nbsp;</p>
+<div id="products">
+	<div class="ui-widget-content" style="min-height: 0%;">
+		<ul>
+			<li class="sel4 ui-draggable" data-id="1" id="credit">
+				<a class="button button-orange" style="color:#FFFFFF;"> -5000 </a></li>
+			<li class="block13 ui-draggable" data-id="2" id="fourth">
+				<a class="button button-orange" style="color:#FFFFFF;"> 5000 </a></li>
+			<li class="sel4 ui-draggable" data-id="3" id="credit0">
+				<a class="button button-orange" style="color:#FFFFFF;">-5000 </a></li>
+			<li class="block13 ui-draggable" data-id="2" id="fourth">
+				<a class="button button-orange" style="color:#FFFFFF;"> 5000</a></li>
+			<li class="block14 ui-draggable" data-id="5" id="credit2">
+				<a class="button button-orange" style="color:#FFFFFF;"> BANK </a></li>
+			<li class="block15 ui-draggable" data-id="6" id="credit1">
+				<a class="button button-orange" style="color:#FFFFFF;"> SALES </a></li>
+			<li class="sel4 ui-draggable" data-id="7" id="credit3">
+				<a class="button button-orange" style="color:#FFFFFF;"> OWNER'S EQUITY</a></li>
+			<li class="sel4 ui-draggable" data-id="8" id="credit4">
+				<a class="button button-orange" style="color:#FFFFFF;"> LOAN </a></li>
+		</ul>
+	</div>
+</div>
+<table width="100%">
+	<tbody>
+		<tr>
+			<td>
+				<h3 align="center" class="ui-widget-header">
+					DEBIT SIDE</h3>
+				<table border="1" id="table4" width="100%">
+					<tbody>
+						<tr>
+							<td>
+								<div class="shoppingCart" id="shoppingCart1">
+									<h3 align="center" class="ui-widget-header">
+										Account</h3>
+									<div class="ui-widget-content">
+										<ol align="center" class="field14 ui-droppable ui-sortable" id="bank" style="list-style:none">
+											<li class="placeholder">
+												&nbsp;<br>
+												&nbsp;</li>
+										</ol>
+									</div>
+								</div>
+							</td>
+							<td>
+								<div class="shoppingCart" id="shoppingCart4">
+									<h3 align="center" class="ui-widget-header">
+										Amount</h3>
+									<div class="ui-widget-content">
+										<ol align="center" class="field13 ui-droppable ui-sortable" id="amt7" style="list-style:none">
+											<li class="placeholder">
+												&nbsp;<br>
+												&nbsp;</li>
+										</ol>
+									</div>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</td>
+			<td>
+				<h3 align="center" class="ui-widget-header">
+					CREDIT SIDE</h3>
+				<table border="1" id="table4" width="100%">
+					<tbody>
+						<tr>
+							<td>
+								<div class="shoppingCart" id="shoppingCart3">
+									<h3 align="center" class="ui-widget-header">
+										Account</h3>
+									<div class="ui-widget-content">
+										<ol align="center" class="field15 ui-droppable ui-sortable" id="loan" style="list-style:none">
+											<li class="placeholder">
+												&nbsp;<br>
+												&nbsp;</li>
+										</ol>
+									</div>
+								</div>
+							</td>
+							<td>
+								<div class="shoppingCart" id="shoppingCart4">
+									<h3 align="center" class="ui-widget-header">
+										Amount</h3>
+									<div class="ui-widget-content">
+										<ol align="center" class="field13 ui-droppable ui-sortable" id="amt8" style="list-style:none">
+											<li class="placeholder">
+												&nbsp;<br>
+												&nbsp;</li>
+										</ol>
+									</div>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<div id="total">
+	&nbsp;</div>
+<div id="bal3">
+	<table align="center" border="0">
+		<tbody>
+			<tr>
+				<td width="350">
+					Debit Movement</td>
+				<td width="350">
+					<div id="t7">
+						&nbsp;</div>
+				</td>
+				<td width="350">
+					Credit Movement</td>
+				<td width="350">
+					<div id="t8">
+						&nbsp;</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="hidden" id="list">
+	<input id="text1" name="text1" type="text"></div>
+<div class="table4_result" id="equal" width="100%"><a class="button button-green"></a>
+</div>
+<br>
+<div class="e14" id="e1">
+	&nbsp;</div>
+<p>
+	&nbsp;</p>
+
+<div class="hidden" id="list">
+	<input id="text1" name="text1" type="text"></div>
+<div class="table6_result" id="equal" width="100%"><a class="button button-green"></a>
+</div>
+ 
+
+
+
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-1248015-24');
+</script>   
+
+
+
+</div></div></div></div></div></div></main></div></div></section>
+
+
+</body></html>
