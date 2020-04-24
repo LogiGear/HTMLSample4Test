@@ -82,23 +82,20 @@
     <p>Coordinates of mouse pointer with respect to the DIV box are: <strong id="results" class="mouse-cords"></strong></p>
     <!---------------------------------------------------------LABEL---------------------------------------------->
     <h2><p style="color:#FF0000"><b>Label</b></p></h2>
-    <td id="DisplayCell" colspan="2" style="text-align:center">
+   
         <label id="lbl_label test" title="lbl_label test" name="lbl_label test" style="color: red; font-size: larger; position: relative; top: 0px;" onclick="DisplayComment('Single click control test');" ondblclick="DisplayComment('Double click control test');" oncontextmenu="DisplayComment('Right click control test');">
             lbl_label test</label>
-    </td>
 
-    <td id="DisplayCell" colspan="2" style="text-align:center">
+
+
         <label id="lbl_label_disabled" title="lbl_label_disabled" name="lbl_label_disabled" style="color: red; font-size: larger; position: relative; top: 0px;" onclick="DisplayComment('Single click control test');" ondblclick="DisplayComment('Double click control test');" oncontextmenu="DisplayComment('Right click control test');">
             lbl_label_disabled</label>
-    </td>
-
-    <td id="DisplayCell" colspan="2" style="text-align:center">
+ 
         <label id="cơn sốt apple ipad mới CƠN SỐT APPLE IPAD MỚI 123456 我愛你 أنا أحبك !@d#%&'control" title="cơn sốt apple ipad mới CƠN SỐT APPLE IPAD MỚI 123456 我愛你 أنا أحبك !@d#%&'control" name="cơn sốt apple ipad mới CƠN SỐT APPLE IPAD MỚI 123456 我愛你 أنا أحبك !@d#%&'control" style="color: red; font-size: larger; position: relative; top: 0px;" onclick="DisplayComment('Single click control test');" ondblclick="DisplayComment('Double click control test');" oncontextmenu="DisplayComment('Right click control test');">cơn sốt apple ipad mới CƠN SỐT APPLE IPAD MỚI 123456 我愛你 أنا أحبك !@d#%&'control</label>
-    </td>
 
-    <td id="DisplayCell" colspan="2" style="text-align:center">
+
         <label id="" title="" name="" style="color: red; font-size: larger; position: relative; top: 0px;" onclick="DisplayComment('Single click control test');" ondblclick="DisplayComment('Double click control test');" oncontextmenu="DisplayComment('Right click control test');"> </label>
-    </td>
+
 
     <!------------------------------------------------------- BUTTON -------------------------------------------------------------->
     <h2><p style="color:#FF0000"><b>Button</b></p></h2>
@@ -115,11 +112,22 @@
     </div>
 
     <input type="button" id="btn_button test" name="btn_button test" onclick="DisplayComment('btn_button test');" value="btn_button test" title="btn_button test">
-    <br>
+	 <br>
     <input id="button_ControlTest" type="button" name="button_ControlTest" value="ButtonTest" title="button_ControlTest" style="position: relative; top: 0px;">
+	<h2>Single click</h2>
+	
+	 <input type="button" id="btn_1" name="btn_1" onclick="singleClick('btn_1');" value="Button Test" title="Button Test">
+	  <br>
+	 <input type="button" id="我愛你" name="我愛你" onclick="singleClick('我愛你');" value="cơn sốt apple ipad mới CƠN SỐT APPLE IPAD MỚI 123456 我愛你 أنا أحبك !@d#%&'control" title="cơn sốt apple ipad mới CƠN SỐT APPLE IPAD MỚI 123456 我愛你 أنا أحبك !@d#%&'control">
+	<br>
+	<input type="button" id="btn_3" name="btn_3" onclick="singleClick('btn_3');" value="" title="">
+   
     <script type="text/javascript">
         function ondblclickH(e) {
             document.getElementById('lblComment').textContent = e.id + " is double clicked"
+        }
+		function singleClick(id) {            
+            document.getElementById('lblComment').textContent = id + " is clicked"
         }
 
         function DisplayComment(id) {
