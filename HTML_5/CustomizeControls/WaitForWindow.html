@@ -292,6 +292,7 @@
             newPage += "</p></body></html>";
             oWin = window.open('', 'newwindow', config = strConfig);
             oWin.document.write(newPage);
+	    oWin.document.close();
             oWin.moveTo(PropertyData[1].value, PropertyData[2].value);
             oWin.resizeTo(PropertyData[3].value, PropertyData[4].value);
             oWin.onbeforeunload = function (e) {
