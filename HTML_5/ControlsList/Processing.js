@@ -214,6 +214,9 @@ function createControls() {
     else if (ID == "objectwait") {
         window.location = "ObjectWait.html";
     }
+	else if (ID == "timingobject") {
+        window.location = "TimingObject.html";
+    }
     else if (ID == "dynamicbutton") {
         window.location = "DynamicButton.html";
     }
