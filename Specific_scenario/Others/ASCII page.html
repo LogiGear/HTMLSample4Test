@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ASCII page</title>
+</head>
+<body>
+<script>
+var chars = [];
+var i;
+for (i = 0; i < 256; i++) {
+	var ascii = "ASCII" + "&#" + i + ";"
+	chars.push(ascii);
+	var p_el = document.createElement("p");
+    	p_el.innerHTML = chars[i];
+	document.body.appendChild(p_el);
+}
+</script>
+</body>
+</html>

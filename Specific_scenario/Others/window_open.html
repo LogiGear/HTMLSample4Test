@@ -1,0 +1,122 @@
+
+<!-- saved from url=(0045)http://192.168.167.220/HTML5/window_open.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<script type="text/javascript" src="./window_open_files/jquery.js"></script>
+ 
+        <script type="text/javascript">
+            var windowSizeArray = [ "width=200,height=200",
+                                    "width=300,height=400,scrollbars=yes" ];
+ 
+            $(document).ready(function(){
+                $('.newWindow').click(function (event){
+ 
+                    var url = $(this).attr("href");
+                    var windowName = "popUp";//$(this).attr("name");
+                    var windowSize = windowSizeArray[$(this).attr("rel")];
+ 
+                    window.open(url, windowName, windowSize);
+ 
+                    event.preventDefault();
+ 
+                });
+            });
+        </script>
+
+<script type="text/javascript" src="chrome-extension://akhbgmecjcjokeiahbffimidgfokppop/content/jslib/tajavascript.js"></script></head>
+<body>
+
+<p> Open an about:blank page in a new window </p>
+<button onclick="myFunction()">blank new window</button>
+
+<p>Click the button to open a new window called "MsgWindow" with some text.</p>
+
+<button onclick="msgwindow()">MsgWindow</button>
+
+<p>Click the button to put the new window in the current window.</p>
+
+<button onclick="self_window()">self_window</button>
+
+<p>Click the button to open a new window with some specifications.</p>
+
+<button onclick="self_window_specific()">self_window_specific</button>
+
+<p>Click the button to open multiple windows.</p>
+
+<button onclick="multiple_windows()">multiple_windows</button>
+
+<p>New window!</p>
+
+<form> 
+<input type="button" value="New Window!" onclick="window.open(&#39;http://www.google.com&#39;,&#39;mywindow&#39;,&#39;width=400,height=200&#39;)"> 
+</form>
+
+<p>open and close window</p>
+
+<button onclick="openWin()">Open "myWindow"</button>
+<button onclick="closeWin()">Close "myWindow"</button>
+
+
+<p>POPUP CENTER</p>
+
+<a onclick="PopupCenter(&#39;http://www.google.com&#39;, &#39;myPop1&#39;,400,400);" href="javascript:void(0);">CLICK TO OPEN POPUP</a>
+
+<p>JQUERY WINDOW</p>
+<a href="http://www.google.com/" rel="0" class="newWindow">jquery window</a>
+
+<p>Open link in a Blank new window or tab: <a href="http://www.google.com/" target="_blank">Blank target</a></p>
+
+<p>Open link in a self new window or tab: <a href="http://www.google.com/" target="_self">Self target</a></p>
+
+
+
+<script>
+function myFunction() {
+    var myWindow = window.open("", "", "width=200, height=100");
+}
+
+function msgwindow() {
+    var myWindow = window.open("", "MsgWindow", "width=200, height=100");
+    myWindow.document.write("<p>This is 'MsgWindow'. I am 200px wide and 100px tall!</p>");
+	myWindow.document.close();
+}
+
+function self_window() {
+    var myWindow = window.open("", "_self");
+    myWindow.document.write("<p>I replaced the current window.</p>");
+	myWindow.document.close();
+}
+
+function self_window_specific() {
+    window.open("http://www.w3schools.com", "_blank", "toolbar=yes, scrollbars=yes, resizable=yes, top=500, left=500, width=400, height=400");
+}
+
+function multiple_windows() {
+    window.open("http://www.google.com/");
+    window.open("http://www.w3schools.com/");
+}
+
+function openWin() {
+    myWindow = window.open("", "myWindow", "width=200, height=100");
+    myWindow.document.write("<p>This is 'myWindow'</p>");
+	myWindow.document.close();
+}
+
+function closeWin() {
+    myWindow.close();
+}
+
+
+function PopupCenter(pageURL, title,w,h) {
+var left = (screen.width/2)-(w/2);
+var top = (screen.height/2)-(h/2);
+var targetWin = window.open (pageURL, title, 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width='+w+', height='+h+', top='+top+', left='+left);
+} 
+
+
+</script>
+
+
+
+
+<object><embed id="TAPluginObject131211" type="application/taw-communication" height="0" width="0"></object></body></html>

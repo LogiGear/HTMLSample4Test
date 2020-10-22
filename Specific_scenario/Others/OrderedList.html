@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Listbox with checkboxes2</title>
+<script>
+function handleClick(cb) {
+alert("abc");
+}
+</script>
+</head>
+<body>
+<form method="post" action="process.php">
+<ol>
+  <li><input type="checkbox" disabled id="chk1" name="Coffee" value="Yes">Coffee</li>
+  <li><input type="checkbox" checked id="chk2" name="Tea" value="Yes">Tea</li>
+  <li><input type="checkbox" id="chk3" onclick='handleClick(this);' name="Milk" value="Yes">Milk</li>
+  <li><input type="text" id="txtSample">Sample Textbox</li> 
+  <li><legend>Group Fruit</legend></br><fieldset class="checkboxgroup">
+    <label><input type="radio">Apple</label>
+    <label><input type="checkbox" name="Orange" value="Yes">Orange</label>
+    <label><input type="checkbox" name="Coconut" value="Yes">Coconut</label>
+    <label><input type="checkbox" name="Grape" value="Yes">Grape</label>
+</fieldset></li> 
+</ol>
+<input type="submit" value="submit">
+</form> 
+</body>
+</html>

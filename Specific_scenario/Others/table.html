@@ -1,0 +1,56 @@
+<html>
+<head>
+<title> Simple table </title>
+<style>
+table , th, td
+{
+border:1px solid black;
+}
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#tblTest").dblclick(function(){
+   $("#pTest").text("Table has a double click");
+  });
+});
+$(document).ready(function addRowHandlers() {
+    var table = document.getElementById("tblTest");
+    var rows = table.getElementsByTagName("tr");
+    for (i = 0; i < rows.length; i++) {
+        var row = table.rows[i];
+        row.onclick = function(){
+                      alert("Rows has been clicked");   
+                  };
+    }
+});
+</script>
+</head>
+<body>
+<table id="tblTest">
+<th>Item Name</th>
+<th>Price</th>
+<th>Quantity</th>
+<th>Item Description</th>
+<tr>
+<td colspan ='4'>Coconut image
+</br>
+<img src="http://www.drfranklipman.com/images/2011/01/coconut.jpg" alt="" border='3' height='80' width='350' value="TestImage" title="Test" />
+</br>
+<a href="http://en.wikipedia.org/wiki/Coconut">Coconut wiki</a>
+</br>
+<label for="Coconut" id="lblTest">Coconut</label>
+<input type="radio" name="Coconut" id="chkCoconut" value="Coconut">
+</td>	
+</tr>
+<tr>
+	<td>Coconut</td>
+	<td>10$</td>
+	<td>150</td>
+	<td>Coconut from Vietnam</td>
+</tr>
+</table>
+<p id="pTest"></p>
+</body>
+
+</html>

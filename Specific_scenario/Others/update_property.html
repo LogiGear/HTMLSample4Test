@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<title>Update property</title>
+<html>
+<body>
+
+<h3> Sample update native property for iOS Safari</h3>
+
+Textbox: <input id="txt_test" type="text"><br>
+
+<button type="button" onclick="addProperty()">Add property</button><br>
+ 
+<button type="button" onclick="updateProperty()">Update property</button><br>
+
+<button type="button" onclick="removeProperty()">Remove property</button><br>
+
+<button type="button" onclick="Specialupdate()">Update special characters</button><br>
+
+<p id="demo"></p>
+
+<script>
+function removeProperty() {
+    var x = document.getElementById("txt_test");
+	var y = document.getElementById("demo");
+    x.removeAttribute('abc');
+	y.innerHTML = "You clicked 'Remove property'";
+}
+function addProperty() {
+    var x = document.getElementById("txt_test");
+	var y = document.getElementById("demo");
+    x.setAttribute('abc','xyz');
+	y.innerHTML = "You clicked 'Add property'";
+}
+function updateProperty() {
+    var x = document.getElementById("txt_test");
+	var y = document.getElementById("demo");
+    x.setAttribute('abc','qwerty');
+	y.innerHTML = "You clicked 'Upadate property'";
+}
+
+function Specialupdate() {
+    var x = document.getElementById("txt_test");
+	var y = document.getElementById("demo");
+    x.setAttribute('abc','{a~!@#$%^&*()_+":?><,./sdsd[asd]asdas();');
+	y.innerHTML = "You clicked 'Update special characters'";
+}
+
+</script>
+</body>
+</html>

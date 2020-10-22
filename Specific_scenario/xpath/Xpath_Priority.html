@@ -1,0 +1,277 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="vn" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>XPath priority</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="vi" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<style>
+body{
+	font-family: "Times New Roman", Times, serif;
+}
+p{
+	font-size: 0.9em;
+	font-style: italic;
+	color: red;
+}
+h2{
+	color: green;
+	font-style: oblique;
+}
+</style>
+</head>
+<body>
+<div class="links">
+	<a href="Xpath_Algorithm.html" id="algorithm">Xpath Algorithm</a> 
+	<a href="Xpath_Priority.html" id="priority">Xpath Priority</a> 
+	<a href="Xpath_iframe.html" id="iframe">Xpath Iframe</a> 
+	<a href="Xpath_frameset.html" id="frameset">Xpath frame</a> 
+</div></br>
+	<div>
+		<div id="name">
+			<div>
+				<button name="name_a" test="button_1" >button 1</button>
+				<button name="name_b" test="button_2" >button 2</button>
+				<button name="" class="ignore_name" test="button_3" >button 3</button>
+				<button name="name_main" class="class_sub" value="value_sub" test="button_4" >button 4</button>
+				<button name="cơn sốt apple ipad mới" test="button_5" >button_5</button>
+				<button test="button_6"> button 6 </button>
+				<span>
+				<p></p>
+				<button id="button_id" name="button_idname" class="button_idclass" value="button_idvalue" >button</button>
+				<p>//button[@id='button_id'] - XP-ALG-005_XP-ALG-POA-01</p>
+				<button id="!@#$%^&*-=:<>'?[]/-+" test="button_special">special</button>
+				<p>//button[@id="!@#$%^&*-=:<>\'?[]/-+"] - XP-ALG-005_XP-ALG-POA-12</p>
+					<div>
+						<p>Xpath priority Name</p>
+						<button name="name_a" test="button_1_1" >button 1_1</button>
+						<p>(//div[@id='name']/div/span/div/button[@name=name_a])[1] - XP-ALG-006_XP-ALG-POA-09</p>
+						<button name="name_b" test="button_2_1" >button 2_1</button>
+						<p>//div[@id='name']/div/span/div/button[@name='name_b'] - XP-ALG-005_XP-ALG-POA-02</p>
+						<button name="name_a" test="button_1_2" >button 1_2</button>
+						<p>(//div[@id='name']/div/span/div/button[@name=name_a])[2] - XP-ALG-006_XP-ALG-POA-09</p>
+						<button name="" class="ignore_name" test="button_3_1" >button 3_1</button>
+						<p>//div[@id='name']/div/span/div/button[@class='ignore_name'] - XP-ALG-005_XP-ALG-POA-06</p>
+						<button name="name_main" class="class_sub" value="value_sub" test="button_4_1" >button 4_1</button>
+						<p>//div[@id='name']/div/span/div/button[@name='name_main'] - XP-ALG-005_XP-ALG-POA-07</p>
+						<button name="cơn sốt apple ipad mới" test="button_5_1" >button_5_1</button>
+						<p>//div[@id='name']/div/span/div/button[@name='cơn sốt apple ipad mới'] - XP-ALG-005_XP-ALG-POA-08</p>
+						<button test="button_6_1">button 6_1</button>
+						<p>(//div[@id='name']/div/span/div/button)[7] - XP-ALG-005_XP-ALG-POA-10</p>
+					</div>
+				</span>
+			</div>
+			<h3 id="class">
+					<input type="text" class="class_a" test="textbox_1">textbox 1</input>
+					<input type="text" class="class_b" test="textbox_2">textbox 2</input>
+					<input type="text" class="" value="ignore_class" test="textbox_3">textbox 3</input>					
+					<input type="text" class="class_main" value="value_sub" test="textbox_5">textbox 5</input>
+					<input type="text" class="cơn sốt apple ipad mới" test="textbox_6">textbox 6</input>
+					<span>
+						<p>Xpath priority class</p>
+						<input type="text" class="class_a" test="textbox_1_1">textbox 1_1</input>
+						<p>(//h3[@id='class']/span/input[@class="class_a"])[1] - XP-ALG-006_XP-ALG-POA-09 </p>
+						<input type="text" class="class_b" test="textbox_2_1">textbox 2_1</input>
+						<p>//h3[@id='class']/span/input[@class='class_b'] - XP-ALG-005_XP-ALG-POA-03</p>
+						<input type="text" class="class_a" test="textbox_1_2">textbox 1_2</input>
+						<p>(//h3[@id='class']/span/input[@class="class_a"])[2] - XP-ALG-006_XP-ALG-POA-09</p>
+						<input type="text" class="" value="ignore_class" test="textbox_3_1">textbox 3_1</input>
+						<p>//h3[@id='class']/span/input[@value='ignore_class'] - XP-ALG-005_XP-ALG-POA-06</p>
+						<input type="text" class="class_main" value="value_sub" test="textbox_5_1">textbox 5_1</input>
+						<p>//h3[@id='class']/span/input[@class='class_main'] - XP-ALG-005_XP-ALG-POA-07</p>
+						<input type="text" class="cơn sốt apple ipad mới" test="textbox_6_1">textbox 6_1</input>
+						<p>//h3[@id='class']/span/input[@class='cơn sốt apple ipad mới'] - XP-ALG-005_XP-ALG-POA-08</p>
+					</span>
+			</h3>
+			<legend id="value">
+					<label value="value_a" test="label_1">label 1</label>
+					<label value="value_b" test="label_2">label 2</label>
+					<label value="" test="label_3">label 3</label>
+					<label value="cơn sốt apple ipad mới" test="label_4">label 4</label>
+					<input type="text" value="first" test="textbox_4"></input>
+					<div>
+						<p>Xpath priority value</p>
+						<label value="value_a" test="label_1_1">label 1_1</label>
+						<p>(//legend[@id='value']/div/label[@value="value_a"])[1] - XP-ALG-006_XP-ALG-POA-09</p>
+						<label value="value_b" test="label_2_1">label 2_1</label>
+						<p>//legend[@id='value']/div/label[@value='value_b'] - XP-ALG-005_XP-ALG-POA-04</p>
+						<label value="value_a" test="label_1_2">label 1_2</label>
+						<p>(//legend[@id='value']/div/label[@value="value_a"])[2] - XP-ALG-006_XP-ALG-POA-09</p>
+						<p>change value first to second before test</p>
+						<input type="text" value="first" test="textbox_4_1">textbox 4_1</input>
+						<p>//legend[@id='value']/div/input[@value='first'] - XP-ALG-005_XP-ALG-POA-05</p>
+						<input></input>
+						<label value="" test="label_3_1">label 3_1</label>
+						<p>(//legend[@id='value']/div/label)[4] - XP-ALG-005_XP-ALG-POA-06</p>
+						<label value="cơn sốt apple ipad mới" test="label_4_1">label 4_1</label>
+						<p>//legend[@id='value']/div/label[@value='cơn sốt apple ipad mới'] - XP-ALG-005_XP-ALG-POA-08</p>
+					</div>
+			</legend>
+		</div>
+	</div>
+	<div>
+		<div>
+			<span id="img_name">
+			<img id="img_id" name="img_idname" alt="img_idalt" src="img_idsrc"></img>
+			<p>//img[@id='img_id'] - XP-ALG-005_XP-ALG-POI-01 </p>
+			<img id="!@#$%^&*-=:<>'?[]/-+" test="img_special">special img<img>
+			<p>//img[@id="!@#$%^&*-=:<>\'?[]/-+"] - XP-ALG-005_XP-ALG-POI-11</p>
+			<p></p>
+				<div>
+				<img name="name_a" test="img_n1" >img n1</img>
+				<img name="name_b" test="img_n2" >img n2</img>
+				<img name="" alt="ignore_name" test="img_n3" >img n3</img>
+				<img name="name_main" alt="alt_sub" src="src_sub" test="img_n4" >img n4</img>
+				<img name="cơn sốt apple ipad mới" test="img_n5" >img n5</img>
+				<img test="img_n6">img n6</img>
+				<span>
+					<div>
+						<p>Xpath image priority Name</p>
+						<img name="name_a" test="img_n1_1" >img n1_1</img>
+						<p>(//span[@id='img_name']/div/span/div/img[@name="name_a"])[1] - XP-ALG-006_XP-ALG-POI-07</p>
+						<img name="name_b" test="img_n2_1" >img n2_1</img>
+						<p>//span[@id='img_name']/div/span/div/img[@name='name_b'] - XP-ALG-005_XP-ALG-POI-02</p>
+						<img name="name_a" test="img n1_2" >img n1_2</img>
+						<p>(//span[@id='img_name']/div/span/div/img[@name="name_a"])[2] - XP-ALG-006_XP-ALG-POI-07</p>
+						<img name="" alt="ignore_name" test="img n3_1" >img n3_1</img>
+						<p>//span[@id='img_name']/div/span/div/img[@alt='ignore_name'] - XP-ALG-005_XP-ALG-POI-09</p>
+						<img name="name_main" alt="alt_sub" src="src_sub" test="img n4_1" >img n4_1</img>
+						<p>//span[@id='img_name']/div/span/div/img[@name='name_main'] - XP-ALG-005_XP-ALG-POI-05</p>
+						<img name="cơn sốt apple ipad mới" test="img n5_1" >img n5_1</img>
+						<p>//span[@id='img_name']/div/span/div/img[@name='cơn sốt apple ipad mới'] - XP-ALG-005_XP-ALG-POI-06</p>
+						<img test="img n6_1">img n6_1</img>
+						<p>(//span[@id='img_name']/div/span/div/img)[7] - XP-ALG-006_XP-ALG-POI-08</p>
+					</div>
+				</span>
+			</div>
+			</span>
+		</div>
+			<h3 id="img_alt">
+					<img alt="alt_a" test="alt_a1">alt a1</img>
+					<img alt="alt_b" test="alt_a2">alt a2</img>
+					<img alt="" src="ignore_alt" test="alt_a3">alt a3</img>					
+					<img alt="alt_main" src="src_sub" test="alt a5">alt a5</img>
+					<img alt="cơn sốt apple ipad mới" test="alt_a6">alt a6</img>
+					<span>
+						<p>Xpath image priority alt</p>
+						<img alt="alt_a" test="alt_a1_1">alt a1_1</img>
+						<p>(//h3[@id='img_alt']/span/img[@alt="alt_a"])[1] - XP-ALG-006_XP-ALG-POI-07</p>
+						<img alt="alt_b" test="alt_a2_1">alt a2_1</img>
+						<p>//h3[@id='img_alt']/span/img[@alt='alt_b'] - XP-ALG-005_XP-ALG-POI-03</p>
+						<img alt="alt_a" test="alt_a1_2">alt a1_2</img>
+						<p>(//h3[@id='img_alt']/span/img[@alt="alt_a"])[2] - XP-ALG-006_XP-ALG-POI-07</p>
+						<img alt="" src="ignore_alt" test="alt_a3_1">alt a3_1</img>
+						<p>//h3[@id='img_alt']/span/img[@src='ignore_alt'] - XP-ALG-005_XP-ALG-POI-09</p>
+						<img alt="alt_main" src="src_sub" test="img_a5_1">img a5_1</img>
+						<p>//h3[@id='img_alt']/span/img[@alt='alt_main'] - XP-ALG-005_XP-ALG-POI-05</p>
+						<img alt="cơn sốt apple ipad mới" test="img_a6_1">img a6_1</img>
+						<p>//h3[@id='img_alt']/span/img[@alt='cơn sốt apple ipad mới'] - XP-ALG-005_XP-ALG-POI-06</p>
+					</span>
+			</h3>
+			<blockquote id="img_src">
+					<img src="src_a" test="img_s1">img s1</img>
+					<img src="src_b" test="img_s2">img s2</img>
+					<img src="" test="img_s3">img s3</img>
+					<img src="cơn sốt apple ipad mới" test="img_s4">img s4</img>
+					<div>
+						<p>Xpath img priority src</p>
+						<img src="src_a" test="img_s1_1">img s1_1</img>
+						<p>(//blockquote[@id='img_src']/div/img[@src="src_a"])[1] - XP-ALG-006_XP-ALG-POI-07</p>
+						<img src="src_b" test="img_s2_1">img s2_1</img>
+						<p>//blockquote[@id='img_src']/div/img[@src='src_b'] - XP-ALG-005_XP-ALG-POI-04</p>
+						<img src="src_a" test="img_s1_2">img s1_2</img>
+						<p>(//blockquote[@id='img_src']/div/img[@src="src_a"])[2] - XP-ALG-006_XP-ALG-POI-07</p>
+						<img src="" test="img_s3_1">img s3_1</img>
+						<p>(//blockquote[@id='img_src']/div/img)[4]  - XP-ALG-005_XP-ALG-POI-09</p>
+						<img src="cơn sốt apple ipad mới" test="img_s4_1">img s4_1</img>
+						<p>//blockquote[@id='img_src']/div/img[@src='cơn sốt apple ipad mới']  - XP-ALG-005_XP-ALG-POI-06</p>
+					</div>
+			</blockquote>
+	</div>
+	<div>
+		<div>
+		<a id="link_id" name="link_idname" href="link_idhref">link_idtc</a>
+		<p>//a[@id='link_id'] - XP-ALG-005_XP-ALG-POL-01 </p>
+		<a test="special">!@#[$%'^"&*-'=:<>?]/-</a>
+		<p>//a[contain(.,"!@#[$%'^"&*-'=:<>?]/-")]  - XP-ALG-005_XP-ALG-POL-11</p>
+			<div id="link_name">
+				<div>
+				<a name="name_a" test="link_n1">link n1</a>
+				<a name="name_b" test="link_n2">link n2</a>
+				<a name="" test="link_n3" >ignore_name</a>
+				<a name="name_main" href="href_sub" test="img_n4" >textcontent sub</a>
+				<a name="cơn sốt apple ipad mới" test="img_n5" >link n5</a>
+				<a test="img_n6"></a>
+				<span>
+					<div>
+						<p>Xpath link priority Name</p>
+						<a name="name_a" test="link_n1_1" ></a><p>link n1_1</p>
+						<p>(//div[@id='link_name']/div/span/div/a[@name="name_a"])[1] - XP-ALG-006_XP-ALG-POL-07</p>
+						<a name="name_b" test="link_n2_1" ></a><p>link n2_1</p>
+						<p>//div[@id='link_name']/div/span/div/a[@name='name_b'] - XP-ALG-005_XP-ALG-POL-02</p>
+						<a name="name_a" test="link_n1_2" ></a><p>link n1_2</p>
+						<p>(//div[@id="link_name']/div/span/div/a[@name="name_a"])[2] - XP-ALG-006_XP-ALG-POL-07</p>
+						<a name="" test="link n3_1" >ignore_name</a>
+						<p>//div[@id='link_name']/div/span/div/a[contains(.,'ignore_name')] - XP-ALG-005_XP-ALG-POL-09</p>
+						<a name="name_main" href="href_sub" test="link n4_1">textcontent sub</a>
+						<p>//div[@id='link_name']/div/span/div/a[@name='name_main'] - XP-ALG-005_XP-ALG-POL-05</p>
+						<a name="cơn sốt apple ipad mới" test="link n5_1" ></a><p>cơn sốt apple ipad mới</p>
+						<p>//div[@id='link_name']/div/span/div/a[@name='cơn sốt apple ipad mới'] - XP-ALG-005_XP-ALG-POL-06</p>
+						<a test="link n6_1"></a><p>link n6_1</p>
+						<p>(//div[@id='link_name']/div/span/div/a)[7] - XP-ALG-006_XP-ALG-POL-08</p>
+					</div>
+				</span>
+				</div>
+			</div>
+			<section id="link_tc">
+					<a test="link_tc1">tc_a</a>
+					<a test="link_tc2">tc_b</a>
+					<a href="ignore_tc" test="link_tc3"></a>					
+					<a href="href_sub" test="link_tc5">tc_main</a>
+					<a test="link_tc6">cơn sốt apple ipad mới</a>
+					<span>
+						<p>Xpath link priority textcontent</p>
+						<a test="link_tc1_1">tc_a</a>
+						<p>(//section[@id='link_tc']/span/a[contains(.,'tc_a')])[1] - XP-ALG-006_XP-ALG-POL-07</p>
+						<a test="link_tc2_1">tc_b</a>
+						<p>//section[@id='link_tc']/span/a[contains(.,'tc_b')] - XP-ALG-005_XP-ALG-POL-03</p>
+						<a test="link_tc1_2">tc_a</a>
+						<p>(//section[@id='link_tc']/span/a[contains(.,'tc_a')])[2] - XP-ALG-006_XP-ALG-POL-07</p>
+						<a href="ignore_tc" test="link_tc3_1"></a><label>ignore_tc</label>
+						<p>//section[@id='link_tc']/span/a[@href='ignore_tc'] - XP-ALG-005_XP-ALG-POL-09 </p>
+						<a href="href_sub" test="link_tc5_1">tc_main</a>
+						<p>//section[@id='link_tc']/span/a[contains(.,'tc_main')] - XP-ALG-005_XP-ALG-POL-05</p>
+						<a test="link_tc6_1">cơn sốt apple ipad mới</a>
+						<p>//section[@id='link_tc']/span/a[contains(.,'cơn sốt apple ipad mới')] - XP-ALG-005_XP-ALG-POL-06</p>
+					</span>
+			</section>
+			<header id="link_href">
+					<a href="link_a" test="link_h1">link h1</a>
+					<a href="link_b" test="link_h2">link h2</a>
+					<a href="" test="link_h3">link h3</a>
+					<a href="cơn sốt apple ipad mới" test="link_h4">link h4</a>
+					<div>
+						<p>Xpath img priority src</p>
+						<a href="link_a" test="link_h1_1"></a><p>link h1_1</p>
+						<p>(//header[@id='link_href']/div/a[@href="link_a"])[1] - XP-ALG-006_XP-ALG-POL-07</p>
+						<a href="link_b" test="link_h2_1"></a><p>link h2_1</p>
+						<p>//header[@id='link_href']/div/a[@href='link_b'] - XP-ALG-005_XP-ALG-POL-04</p>
+						<a href="link_a" test="link_h1_2"></a><p>link h1_2</p>
+						<p>(//header[@id='link_href']/div/a[@href="link_a"])[2] - XP-ALG-006_XP-ALG-POL-07</p>
+						<a href="" test="link_h3_1"></a><p>link h3_1</p>
+						<p>(//header[@id='link_href']/div/a)[4] - XP-ALG-005_XP-ALG-POL-09</p>
+						<a href="cơn sốt apple ipad mới" test="link_h4_1"></a><p>link h4_1</p>
+						<p>//header[@id='link_href']/div/a[@href='cơn sốt apple ipad mới']  - XP-ALG-005_XP-ALG-POL-06</p>
+					</div>
+			</header>
+	</div>
+		<div id="test'logi" test="parent_special">
+		<a href="http://www.logigear.vn" test="link_special2" width="50" height="0" hidden="true">'logi'test'vn'</a>
+		</div>
+		<div id="others">
+			<button name="index_button_1" class="index_classs_1" value="index_value_1">test index</button>
+			<button name="index_button_1" class="index_classs_1" value="index_value_1">test index 1</button>
+		</div>
+	</div>
+</body>
+</html>

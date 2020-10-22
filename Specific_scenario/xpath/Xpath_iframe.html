@@ -1,0 +1,127 @@
+<!doctype html>
+
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<title>XPath Iframe</title>
+<body>
+<div class="links">
+	<a href="Xpath_Algorithm.html" id="algorithm">Xpath Algorithm</a> 
+	<a href="Xpath_Priority.html" id="priority">Xpath Priority</a> 
+	<a href="Xpath_iframe.html" id="iframe">Xpath Iframe</a> 
+	<a href="Xpath_frameset.html" id="frameset">Xpath frame</a> 
+</div></br>
+<table border="1">
+<tr>
+				<td>
+					1. iFrame cross domain
+				</td>
+				<td>
+					<div id="frame_test1">
+						<p>Outside:<input type="text" id="mod_search_searchword" value="search"></input> <p>
+						<p>Inside</p><iframe src='http://www.logigear.com/'></iframe>
+					</div>
+					
+				</td>
+				<td>
+					<p>Outside: //input[@id='mod_search_searchword']</p>
+					<p>Inside: (XP-ALG-IF-01): //iframe[@src='http://www.logigear.com/']://input[@id='mod_search_searchword']</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					2. iFrame cross domain
+				</td>
+				<td>
+					<div id="frame_test2">
+						<p>Outside: <img style="cursor: pointer;" id="img_w3s" src="/images/w3schools.png" /><p>
+						<p>Inside</p><iframe src='http://www.w3schools.com/'></iframe>
+						<iframe src='http://www.w3schools.com/'></iframe>
+					</div>
+					
+				</td>
+				<td>
+					<p>Outside: //body/div/img</p>
+					<p>Inside: ( XP-ALG-IF-02): (//iframe[@src='http://www.w3schools.com/'])[1]://body/div/img</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					3. iFrame main 
+				</td>
+				<td>
+					<div id="frame_test2">
+						<button id=""iframe_button_test>button_test</button>
+						<p>Inside</p><iframe width="700" height="600" src='./Xpath_frameset_cross.html'></iframe>
+					
+					</div>
+					
+				</td>
+				<td>
+					
+				</td>
+			</tr>
+			<tr>
+				<td>
+					4. iFrame same domain
+				</td>
+				<td>
+					<div id="frame_test2">
+						<p>Outside: <a href="Xpath_Algorithm.html" id="algorithm">Xpath Algorithm</a><p>
+						<p>Inside</p><iframe src='./Xpath_Algorithm.html'></iframe>
+					</div>
+					
+				</td>
+				<td>
+					<p>Outside: //a[@id="algorithm"]</p>
+					<p>Inside: ( XP-ALG-IF-01): //iframe[@src="./Xpath_Algorithm.html"]://a[@id="algorithm"]</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					5. iFrame same domain
+				</td>
+				<td>
+					<div id="frame_test2">
+						<p>Outside: <a href="Xpath_Priority.html" id="priority">Xpath Priority</a><p>
+						<p>Inside</p><iframe src='./Xpath_Priority.html'></iframe>
+						<iframe src='./Xpath_Priority.html'></iframe>
+					</div>
+					
+				</td>
+				<td>
+					<p>Outside: //a[@id="priority"]</p>
+					<p>Inside: ( XP-ALG-IF-02): (//iframe[@src='./Xpath_Priority.html'])[1]://a[@id='priority']</p>
+				</td>
+			</tr>
+						<tr>
+				<td>
+					6. iFrame special characters
+				</td>
+				<td>
+					<div id="frame_test3">
+						<p>Inside</p><iframe test="iframe special" src='!@(#$%)^<\&*\test123=-+_>;'></iframe>
+					</div>
+					
+				</td>
+				<td>
+					<p>Inside: ( XP-ALG-IF-05): //iframe[@src="!@(#$%)^<\&*\test123=-+_>;"]</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					7. Xpath for invisible control (on IE: iframe is invisible)
+				</td>
+				<td>
+					<div id='invisible_test3'>
+						<iframe src="http://www.logigear.vn/" width="0" height="120"></iframe>
+					</div>
+				</td>
+				<td>
+					<p>"Select Client" link inside the frame: (Case 16: XP-ALG-016): //iframe[@src='http://www.logigear.vn']://li[@id='logigear_menu_69']//a[contains(.,'select clients')]</p>
+				</td>
+			</tr>
+</table>
+</body>
+</head>
+</html>

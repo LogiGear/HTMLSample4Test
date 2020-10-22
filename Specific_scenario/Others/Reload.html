@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Reload every 4 mins</title>
+<script>
+function choosePic()
+{
+var myPix = new Array("http://192.168.167.220/HTML5/images/lion.jpg","http://192.168.167.220/HTML5/images/tiger.jpg","http://192.168.167.220/HTML5/images/bear.jpg");
+var randomNum = Math.floor(Math.random() * myPix.length);
+document.getElementById("myFramePicture").src = myPix[randomNum];
+}
+if(window.addEventListener ) 
+{ 
+   window.addEventListener("load",choosePic,false );
+}
+else 
+  if ( window.attachEvent ) 
+  { 
+    window.attachEvent("onload",choosePic);
+  } 
+  else 
+  if(window.onLoad) 
+  {
+    window.onload = choosePic;
+  }
+</script>
+<script>
+function timedRefresh(timeoutPeriod) 
+{
+	setTimeout("location.reload(true);",timeoutPeriod);
+}
+function ClickMe()
+{
+	alert("Clicked");
+}
+</script>
+</head>
+<body onload="JavaScript:timedRefresh(4000);">
+<p>This page will refresh every 4 seconds</p>
+<input type="button" id="btnTest" title="Test button" value="Test Button" onclick="ClickMe()">
+<img src="images/spacer.gif" width="305" height="312" id="myFramePicture" alt="some image">
+</body>
+</html>

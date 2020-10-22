@@ -1,0 +1,75 @@
+<html>
+<head>
+<title> Invisible Controls </title>
+</head>
+</body>
+Visible element : <input type="text" id="txtTest"><br>
+Hidden Attributes : <input type ="text" hidden id="txtHiddenAttr"><br>
+CSS Hidden : <input type ="text" style="visibility:hidden;" id="txtCssHidden"><br>
+CSS Not Hidden : <input type ="text" style="visibility:visible;" id="txtTest1"><br>
+CSS Visibility Display None : <input type ="text" style="display:none;" id="txtCssDisplayNone"><br>
+CSS Display Yes : <input type ="text" style="display:inline;" id="txtCssDisplayInline"><br>
+CSS Visibility Display Collapse : <input type ="text" style="visibility:collapse;" id="txtCssDisplayCollapse"><br>
+CSS Visibility Initial: 
+<div id="divTest" style="visibility:hidden;">
+	<input type="text" style="visibility:initial" id="txtTest2">
+</div>
+CSS Visibility Hidden and Visible 
+<div id="div1" style="visibility:hidden;">
+	<div>
+		<div>
+			<div>
+				<div>
+					<div>
+						<div>
+							<div>
+								<div>
+									<div>
+										<div>
+											<div>
+												<div>
+													<div>
+														<div style="visibility:visible;">
+															<div>
+																<input type="text" id="txtTest3" value="txtTest3">
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+CSS Hierarchy Non-Visible
+<div id="div2">
+	<div style="visibility:hidden;">
+		<input type="text" id="txtTest4">
+	</div>
+	<div>
+		<input type="text" id="txtTest5">
+	</div>
+</div>
+CSS Hierarchy Visibility Initial
+<div id="div2" style="visibility:hidden;">
+	<div>
+		<input type="text" id="txtTest6" style="visibility:initial;">
+	</div>
+</div>
+
+<div id="parent" style="visibility:hidden;">
+	<div>
+		<input type="text" id="child" style="visibility:initial;">
+	</div>
+</div>
+
+
+</body>
+</html>

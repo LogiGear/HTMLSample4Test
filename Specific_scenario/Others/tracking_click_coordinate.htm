@@ -1,0 +1,60 @@
+<html>
+<script>
+<!--
+function handleEvent(e){
+ var elem, evt = e ? e:window.event;
+ var clickX=0, clickY=0;
+
+ if (evt.srcElement)  elem = evt.srcElement;
+ else if (evt.target) elem = evt.target;
+ if (elem && elem.tagName.toLowerCase()=='a') return true;
+
+ if ((evt.clientX || evt.clientY) &&
+     document.body &&
+     document.body.scrollLeft!=null) {
+  clickX = evt.clientX + document.body.scrollLeft;
+  clickY = evt.clientY + document.body.scrollTop;
+ }
+ if ((evt.clientX || evt.clientY) &&
+     document.compatMode=='CSS1Compat' && 
+     document.documentElement && 
+     document.documentElement.scrollLeft!=null) {
+  clickX = evt.clientX + document.documentElement.scrollLeft;
+  clickY = evt.clientY + document.documentElement.scrollTop;
+ }
+ if (evt.pageX || evt.pageY) {
+  clickX = evt.pageX;
+  clickY = evt.pageY;
+ }
+
+ var result = evt.type.toUpperCase() + ' mouse event:'
+  +'\n pageX = ' + clickX
+  +'\n pageY = ' + clickY 
+  +'\n clientX = ' + evt.clientX
+  +'\n clientY = '  + evt.clientY 
+  +'\n screenX = ' + evt.screenX 
+  +'\n screenY = ' + evt.screenY;
+  document.getElementById("pResult").innerHTML = result;
+  return false;
+}
+function textchange()
+{
+var el = document.getElementById("button");
+el.value = "NewButton"
+}
+function change()
+{
+var el = document.getElementById("txtArea");
+el.value = "Fifth Avenue, New York City";
+}
+//-->
+</script>
+<body onclick="handleEvent(event)" style="height:5000px;">
+<a name="top"></a>
+<div id="test">
+<p id="pResult"></p>
+<input type="button" value="btnTest" id="button" onclick="textchange()"></br>
+<textarea rows="4" cols="10" id="txtArea" onclick="change()">
+This website contains a textarea. You can do whatever you want with this controls.
+</textarea>
+</div></body></html>

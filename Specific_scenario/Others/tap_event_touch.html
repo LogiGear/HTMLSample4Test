@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>
+<script>
+$(document).ready(function(){
+  
+  
+  $("#btnTest").on("tap",function(){
+    document.getElementById("pResult1").innerHTML = "Tap event was raise";
+  });     
+
+
+$("#btnTest").on("touchstart",function(){
+    document.getElementById("pResult2").innerHTML = "touchstart event was raise";
+  });  
+
+$("#btnTest").on("touchend",function(){
+    document.getElementById("pResult3").innerHTML = "touchend event was raise";
+  });  
+
+  
+  $("#btnTest").on("touchmove",function(){
+    document.getElementById("pResult4").innerHTML = "touchmove event was raise";
+  });  
+  
+  $("#btnTest").on("touchcancel ",function(){
+    document.getElementById("pResult5").innerHTML = "touchcancel event was raise";
+  }); 
+  
+  
+    $("#btnTest").on("click ",function(){
+    document.getElementById("pResult6").innerHTML = "click event was raise";
+  }); 
+  
+  
+  
+  
+   $("#btnTest").on("onmousedown ",function(){
+    document.getElementById("pResult7").innerHTML = "onmousedown event was raise";
+  }); 
+  
+     $("#btnTest").on("onmouseenter ",function(){
+    document.getElementById("pResult8").innerHTML = "onmouseenter event was raise";
+  }); 
+  
+       $("#btnTest").on("onmouseleave ",function(){
+    document.getElementById("pResult9").innerHTML = "onmouseleave event was raise";
+  }); 
+  
+         $("#btnTest").on("onmousemove ",function(){
+    document.getElementById("pResult10").innerHTML = "onmousemove event was raise";
+  }); 
+  
+  
+         $("#btnTest").on("onmouseover ",function(){
+    document.getElementById("pResult11").innerHTML = "onmouseover event was raise";
+  }); 
+  
+  
+         $("#btnTest").on("onmouseout ",function(){
+    document.getElementById("pResult12").innerHTML = "onmouseout event was raise";
+  }); 
+  
+           $("#btnTest").on("onmouseup ",function(){
+    document.getElementById("pResult13").innerHTML = "onmouseup event was raise";
+  }); 
+  
+});
+</script>
+</head>
+<body>
+<input type="radio" id="btnTest" value="Tap me please">
+<p id="pResult1"></p>
+<p id="pResult2"></p>
+<p id="pResult3"></p>
+<p id="pResult4"></p>
+<p id="pResult5"></p>
+<p id="pResult6"></p>
+<p id="pResult7"></p>
+<p id="pResult8"></p>
+<p id="pResult9"></p>
+<p id="pResult10"></p>
+<p id="pResult11"></p>
+<p id="pResult12"></p>
+<p id="pResult13"></p>
+
+
+</body>
+</html>

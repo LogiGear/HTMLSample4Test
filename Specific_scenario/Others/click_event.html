@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<title>Click Event</title>
+<html>
+<head>
+<title>Click Event</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">
+</script>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js">
+</script>
+
+<script type ="text/JavaScript">
+function MyClick()
+{
+   document.getElementById('myclick').innerHTML="MyClick Function";
+}
+
+function DoubleMyClick()
+{
+   document.getElementById('myclick').innerHTML="Double MyClick Function";
+}
+
+</script>
+<script>
+
+$(document).ready(function(){
+  $("#bindbtnTest").bind("click",function(){
+    $("#bindtest").text("Button was clicked with bind event");
+  });
+  $("#livebtnTest").live("click",function(){
+    $("#liveTest").text("Button was clicked with live event");
+  });
+  $("#onbtnTest").on("click",function(){
+    $("#ontest").text("Button was clicked with on event");
+  });
+  
+  $("#dblbindbtnTest").bind("dblclick",function(){
+    $("#bindtest").text("Button was double clicked with bind event");
+  });
+    $("#dbllivebtnTest").live("dblclick",function(){
+    $("#liveTest").text("Button was double clicked with live event");
+  });
+    $("#dblonbtnTest").on("dblclick",function(){
+    $("#ontest").text("Button was double clicked with on event");
+  });
+  $("#divTest").click(function(event){
+    $("#divResult").text("Click event on div was raised");
+  });
+  $("#pTest").click(function(event){
+    $("#pResult").text("Click event on p was raised");
+  });
+});
+</script>
+</head>
+<body>
+
+
+<h3>Javascript onclick and ondoubleclick </h3>
+<button onclick="getElementById('click').innerHTML='OnClick'">Click me</button>
+<button ondblclick="getElementById('click').innerHTML='OnDoubleClick'">Double Click me</button>
+
+<p id="click"></p>
+
+<h3>Javascript click and double click with function</h3>
+<button onclick="MyClick()">MyClick Function</button>
+<button ondblclick="DoubleMyClick()">Double MyClick Function</button>
+
+<p id="myclick"></p>
+
+<h3>Jquery with bind</h3>
+<button id="bindbtnTest"> Click Me with bind </button>
+<button id="dblbindbtnTest">Double Click Me with bind </button><br><br>
+<label id="bindtest"></label>
+
+<h3>Jquery with live</h3>
+<button id="livebtnTest"> Click Me with live </button>
+<button id="dbllivebtnTest">Double Click Me with live </button><br><br>
+<label id="liveTest"></label>
+
+<h3>Jquery with on</h3>
+<button id="onbtnTest" > Click Me with on </button>
+<button id="dblonbtnTest" >Double Click Me with on </button><br><br>
+<label id="ontest"></label>
+
+<h3>Javascript with addeventlistener</h3>
+<button id="listenbtntest"> Click Me with addeventlistener </button>
+<button id="dbllistenbtntest">Double Click Me with addeventlistener </button>
+<p id="listentest"></p>
+
+<h3>Javascript with bubble event</h3>
+<div id="divTest" style="height:100px;width:500px;padding:10px;border:1px">This is a div element
+<p id="pTest" style="background-color:pink">This is a p element, in the div element</p></div>
+<label id="divResult"></label>
+<label id="pResult"></label>
+<form action="processLogin.php" onsubmit="submit()">
+<label>Username : <input type="text" id="uname"></label></br>
+<label>Password : <input type="text" id="pwd"></label>
+<input type="submit" value="Submit">
+</form>
+<script>
+document.getElementById("listenbtntest").addEventListener("click", function(){
+    document.getElementById("listentest").innerHTML="Click event was raised";
+});
+
+document.getElementById("dbllistenbtntest").addEventListener("dblclick", function(){
+    document.getElementById("listentest").innerHTML="Double click event was raised";
+});
+</script>
+</body>
+</html>

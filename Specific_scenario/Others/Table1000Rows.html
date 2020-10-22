@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<title> Table with 1000 rows </title>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+<script>
+$(function () {
+	$("#tbl1").append("<tbody>");
+	for (i = 0; i <= 1000; i++) {
+		$("#tbl1").append("<tr><td>Người " + i + "</td><td>Position " + i + "</td><td>" + ((i % 2 == 1) ? '男性' + i : '女性の' + i) + "</td><td>Age " + i + "</td></tr>");
+	}
+});
+</script>
+<style>
+table, th, td {
+    border: 1px solid black;
+}
+</style>
+</head>
+<body>
+<div class="demo">
+<table id="tbl1">
+<thead>
+<tr>
+<th>Person</th>
+<th>Position</th>
+<th>Gender</th>
+<th>Age</th>
+</tr>
+</thead>
+</table>
+</div>
+</body>
+</html>

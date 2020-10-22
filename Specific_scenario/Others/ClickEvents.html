@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<script type="text/javascript">
+			function addElement(parent, control, eventName) {
+				var newId = control + eventName;
+				var oldEle = document.getElementById(newId);
+				if (oldEle !== null) {
+					oldEle.parentNode.removeChild(oldEle);
+				}
+				var para = document.createElement("p");
+				para.id = newId;
+				var node = document.createTextNode("Event \"" + eventName + "\" was fired on " + control);
+				para.appendChild(node);
+				var newEle = document.getElementById(parent);
+				newEle.appendChild(para);
+			};
+			function clearEle(parentId) {
+				var parentElement = document.getElementById(parentId);
+				while (parentElement.firstChild) {
+					parentElement.removeChild(parentElement.firstChild);
+				}
+			};
+		</script>
+		<style>
+			table, th, td {
+				border: 1px solid black;
+				width: 300px;
+				height: 50px;
+			}
+		</style>
+		<title>ClickEvents</title>
+	</head>
+	<body>
+		<table id="tableTest" align="center">
+			<tr>
+				<th>
+					Input button
+				</th>
+				<th>
+					Input text
+				</th>
+			</tr>
+			<tr>
+				<td align="center">
+					<input type="button" id="btnControlTest" value="Button Test"		
+						ontouchstart="addElement('btnResArea', 'button', 'touchstart')"
+						ontouchend	="addElement('btnResArea', 'button', 'touchend')"
+						onmouseover	="addElement('btnResArea', 'button', 'mouseover')"
+						onmousedown	="addElement('btnResArea', 'button', 'mousedown')"
+						onmouseup	="addElement('btnResArea', 'button', 'mouseup')"
+						onclick		="addElement('btnResArea', 'button', 'click')"
+						ondblclick	="addElement('btnResArea', 'button', 'dblclick')"
+					/>
+				</td>
+				<td align="center">
+					<input type="text" id="txtControlTest"	style="width:100px"
+						ontouchstart="addElement('txtResArea', 'textbox', 'touchstart')"
+						ontouchend	="addElement('txtResArea', 'textbox', 'touchend')"
+						onmouseover	="addElement('txtResArea', 'textbox', 'mouseover')"
+						onmousedown	="addElement('txtResArea', 'textbox', 'mousedown')"
+						onmouseup	="addElement('txtResArea', 'textbox', 'mouseup')"
+						onclick		="addElement('txtResArea', 'textbox', 'click')"
+						ondblclick	="addElement('txtResArea', 'textbox', 'dblclick')"
+					/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div id="btnResArea">
+					</div>
+				</td>
+				<td>
+					<div id="txtResArea">
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td align="center">
+					<input type="button" id="btnReset" value="Reset" onclick="clearEle('btnResArea');"/>
+				</td>
+				<td align="center">
+					<input type="button" id="txtReset" value="Reset" onclick="clearEle('txtResArea');"/>
+				</td>
+			</tr>
+			<tr>
+				<td colspan=2 align="center">
+					<input type="button" id="resetAll" value="Reset all" onclick="clearEle('btnResArea');clearEle('txtResArea');"/>
+				</td>
+			</tr>
+		</table>
+		
+		
+	</body>
+</html>

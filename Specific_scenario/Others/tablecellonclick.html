@@ -1,0 +1,37 @@
+<html>
+<head>
+<title> Table cell on click </title>
+<script language="javascript">
+function ClickedTest(){
+	var f=window.document.form1;
+	var tableTest = document.getElementById('tableTest');
+	cells = tableTest.getElementsByTagName('td');
+	for (var i=0,len=cells.length; i<len; i++){
+	cells[i].onclick = function(){
+	alert("abc");}
+    }
+}
+</script>
+</head>
+<body>
+<form action="" name="form1">
+	<table onclick="ClickedTest();" name="TableTest" border="1" cellpadding="2" cellspacing="2" width="20%" id="tableTest">
+					<thead>
+						<tr bgcolor="red">
+							<td align="center"><strong><font color="white">Header 1</font></strong></td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Cell 1.1</td>
+	
+						</tr>
+						<tr>
+							<td>Cell 2.1</td>
+						</tr>
+					</tbody>
+				</table>
+</form>
+</body>
+
+</html>

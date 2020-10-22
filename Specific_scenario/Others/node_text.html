@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>Node text</title>
+<script>
+function msg()
+{
+alert("Hello world!");
+}
+</script>
+</head>
+<body>
+
+<h2>INNER TEXT</h2>
+<a href="http://www.google.com">google</a> 
+<a href="http://www.google.com">google</a> 
+
+<h2>ID</h2>
+<a href="http://www.google.com" ID="Node ID"></a> 
+<a href="http://www.google.com" ID="Node ID"></a> 
+
+<h2>Name</h2>
+<a href="http://www.google.com" name="Node name"></a> 
+<a href="http://www.google.com" name="Node name"></a> 
+
+<h2>TA class</h2>
+<a href="http://www.google.com"></a> 
+<a href="http://www.google.com"></a>
+
+<h2>INNER TEXT - ID</h2>
+<a href="http://www.google.com" ID="Node inner id">google id</a> 
+<a href="http://www.google.com" ID="Node inner id">google id</a> 
+
+<h2>INNER TEXT - Name</h2>
+<a href="http://www.google.com" name="Node inner name">google name</a> 
+<a href="http://www.google.com" name="Node inner name">google name</a>
+
+<h2>Name - ID</h2>
+<a href="http://www.google.com" ID="Node id name" name="Node name id"></a> 
+<a href="http://www.google.com" ID="Node id name" name="Node name id"></a> 
+
+<h2>Link FULL</h2>
+<a href="http://www.google.com" ID="Node full" name="Node full">google full</a> 
+<a href="http://www.google.com" ID="Node full" name="Node full">google full</a> 
+
+
+<h2>Input Value</h2>
+<input type="button" value="Input value" onclick="msg()">
+<input type="button" value="Input value" onclick="msg()">
+
+<h2>Input ID</h2>
+<input type="button" id="input id" onclick="msg()">
+<input type="button" id="input id" onclick="msg()">
+
+<h2>Input Name</h2>
+<input type="button" name="input name" onclick="msg()">
+<input type="button" name="input name" onclick="msg()">
+
+<h2>Input TA class</h2>
+<input type="button" onclick="msg()">
+<input type="button" onclick="msg()">
+
+<h2>Value - ID</h2>
+<input type="button" onclick="msg()" ID="Node value id" value="Input value id">
+<input type="button" onclick="msg()" ID="Node value id" value="Input value id">
+
+<h2>value - Name</h2>
+<input type="button" onclick="msg()" name="Node value name" value="Input value name">
+<input type="button" onclick="msg()" name="Node value name" value="Input value name">
+
+<h2>input name - ID</h2>
+<input type="button" onclick="msg()" id="input id name" name="Node id name" >
+<input type="button" onclick="msg()" id="input id name" name="Node id name" >
+
+<h2>Input FULL</h2>
+<input type="button" onclick="msg()" value="input full" id="input full" name="Node full" >
+<input type="button" onclick="msg()" value="input full" id="input full" name="Node full" >
+
+<h2>Special characters</h2>
+<input type="text" name="text" value="~!@#$%^&*()_+`1234567890-=     {}[]|\;':,./<>?">
+
+<h2>Unicode</h2>
+<input type="password" name="password" value="百度一下你就知道">
+
+
+</body>
+</html>

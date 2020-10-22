@@ -1,0 +1,50 @@
+<html>
+<head>
+<title> Matching Controls </title>
+<script>
+function object_click(click_id)
+{
+document.getElementById("ptest").innerHTML = "Element has clicked : " + click_id;
+}
+</script>
+</head>
+<body>
+<h4>Input HTML tag list</h4>
+Input email : <input type="email" id="eml-Test"><br>
+Input button : <input type="button" id="btn-Test" onclick="object_click(this.id)"><br>
+Input color : <input type="color" id="color-Test"><br>
+Input date : <input type="date" id="date-Test"><br>
+Input datetime : <input type="datetime" id="datetime-Test"><br>
+Input datetime local : <input type="datetime-local" id="datetime-local-test"><br>
+Input FileUpload :  <input type="file" id="file-test"><br>
+Input Hidden :  <input type="hidden" id="hidden-test"><br>
+Input Image :  <input type="image" id="image-test"><br>
+Input Month :  <input type="month" id="month-test"><br>
+Input Number : <input type="number" id="number-test"><br>
+Input Password : <input type="password" id="password-test"><br>
+Input Range : <input type="range" id="range-test"><br>
+Input Radio : <input type="radio" id="radio-test"><br>
+Input Reset : <input type="reset" id="reset-test" onclick="object_click(this.id)"><br>
+Input Search : <input type="search" id="search-test" style="border:5px dotted #000000;outline:0;height:25px;width:275px;"><br>
+Input Submit : <input type="submit" id="submit-test" onclick="object_click(this.id)"><br>
+Input Text : <input type="text" id="text-test"><br>
+Input Time : <input type="time" id="time-test"><br>
+Input URL : <input type="url" id="url-test"><br>
+Input Week : <input type="week" id="week-test"><br>
+Select-one : 
+<select id="sel-one-test">
+  <option>Apple</option>
+  <option>Pear</option>
+  <option>Banana</option>
+  <option>Orange</option>
+</select>
+Select-multiple : 
+<select id="sel-multiple-test" multiple>
+  <option>Car</option>
+  <option>Bicycle</option>
+  <option>Bike</option>
+  <option>Train</option>
+</select>
+<p id="ptest">
+</body>
+</html>

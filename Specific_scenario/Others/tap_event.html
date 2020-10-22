@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sample tap event</title>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#btnTest").on("tap",function(){
+    document.getElementById("pResult").innerHTML = "Tap event was raise";
+  });                       
+});
+</script>
+</head>
+<body>
+<input type="button" id="btnTest" value="Tap me please">
+<p id="pResult"></p>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+<head>
+<title>Page Reload every 1 mins</title>
+<script type="text/JavaScript">
+<!--
+function timedRefresh(timeoutPeriod) {
+	setTimeout("location.reload(true);",timeoutPeriod);
+}
+function ClickMe()
+{
+ document.getElementById("ptest").innerHTML = "You have clicked the button";
+}
+//   -->
+</script>
+</head>
+<body onload="JavaScript:timedRefresh(1000);">
+<p>This page will refresh every 1 seconds</p>
+<input type="button" id="btnTest" title="Test button" value="Test Button" onclick="ClickMe()">
+<p id="ptest"></p>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<input type="button" onclick="test_alert()" value="Test Alert">
+
+<input type="button" onclick="test_confirm()" value="Test Confirm">
+
+<input type="button" onclick="combine_Confirm()" value="Conbine Confirm">
+
+<input type="button" onclick="test_prompt('Input Name','Your Name')" value="Test Prompt">
+
+<input type="button" onclick="test_prompt_2('Input Name','Your Name')" value="Test Prompt 2">
+
+<input type="button" onclick="test_prompt_3('Input Name','Your Name 1')" value="Test Prompt 3">
+
+<p id="text"></p>
+<p id="text1"></p>
+<p id="text2"></p>
+<script>
+function test_alert(){
+	alert ('Hello, \nHow are you today?');
+}
+
+function test_confirm(){
+	var result = confirm ('Do you want to navigate Google page??');
+	if (result == true){
+		document.getElementById('text').innerHTML = "You choose OK Option";
+		window.open("http://google.com.vn");
+	}
+	else{
+		document.getElementById('text').innerHTML = "You choose Cancel Option";
+	}
+}
+
+function combine_Confirm(){
+	var result = confirm ('Do you want to format all?');
+	if (result == true){
+		document.getElementById('text').innerHTML = "You choose OK Option";
+		alert('You are brave');
+	}
+	else{
+		document.getElementById('text').innerHTML = "You choose Cancel Option";
+		alert('You are so shy');
+	}
+}
+
+function test_prompt(str, mess){
+	var result = prompt(str,mess);
+	if (result != null){
+		document.getElementById('text').innerHTML = "You Choose OK Option with value : "+result;
+	}else{
+		document.getElementById('text').innerHTML = "You Choose Cancel Option";
+	}
+}	
+
+function test_prompt_2(str, mess){
+	var result = prompt(str,mess);
+	if (result != null){
+		document.getElementById('text').innerHTML = "You Choose OK Option with value : "+result;
+		result = prompt('Input Again','Your Name Again');
+		if (result != null){
+			document.getElementById('text1').innerHTML = "You Choose OK Option with value : "+result;
+			result = confirm('Is it OK?');
+			if (result==true){
+				document.getElementById('text2').innerHTML = "You choose OK Option";
+			}else{
+				document.getElementById('text2').innerHTML = "You choose Cancel option";
+			}
+		}else{
+			document.getElementById('text1').innerHTML = "You Choose Cancel Option";
+		}
+	}else{
+		document.getElementById('text').innerHTML = "You Choose Cancel Option";
+	}
+}	
+
+function test_prompt_3(str, mess){
+	var result = prompt(str,mess);
+	if (result != null){
+		document.getElementById('text').innerHTML = "You Choose OK Option with value : "+result;
+		result = prompt('Input Name','Your Name 2');
+		if (result != null){
+			document.getElementById('text1').innerHTML = "You Choose OK Option with value : "+result;
+			result = prompt('Input Name','Your Name 3');;
+			if (result!=null){
+				document.getElementById('text2').innerHTML = "You Choose OK Option with value : "+result;
+			}else{
+				document.getElementById('text2').innerHTML = "You choose Cancel option";
+			}
+		}else{
+			document.getElementById('text1').innerHTML = "You Choose Cancel Option";
+		}
+	}else{
+		document.getElementById('text').innerHTML = "You Choose Cancel Option";
+	}
+}	
+</script>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+ <form id="contact_form" action="http://www.google.com">
+Form Submit (Press GO button to navigate Google.com):<br>
+<input type="text" id="A">
+<br>
+Key Event (Press GO button to navigate Bing.com)<br>
+<input type="text" id="B" onkeypress="handleEvent(event);">
+<br>
+Submit Button<br>
+<input type="submit" id="S" value="Submit">
+</form> 
+
+<script>
+function handleEvent(event){
+	if(event.which == 13)
+	{
+		window.open("http://www.bing.com","_self");
+		event.preventDefault();
+	}
+}
+</script>
+
+</body>
+</html>

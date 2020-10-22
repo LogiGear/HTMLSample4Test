@@ -1,0 +1,26 @@
+<html>
+<head>
+<body>
+<script language="javascript" type="text/javascript" >
+function jumpto(x){
+if (document.form1.jumpmenu.value != "null") 
+{
+	alert('Sorry to see you leaving this place. Hope to see you back soon!');
+}
+}
+</script>
+<form name="form1">
+<select name="jumpmenu"
+onChange="jumpto(document.form1.jumpmenu.options[document.form1.jumpmenu.options.selectedIndex].value)">
+<option>Jump to...</option>
+<option value="http://www.twitter.com">Twitter webpage</option>
+<option value="http://www.google.com">Google webpage</option>
+<option value="http://www.vnexpress.net">Vnexpress webpage</option>
+<option value="http://www.yahoo.com.vn">Yahoo webpage</option>
+<option value="http://www.docbao.vn">DocBao webpage</option>
+</select>
+</form>
+</body>
+</html>
+
+

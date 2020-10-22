@@ -1,0 +1,20 @@
+<html>
+<head>
+<title>Frame reload</title>
+<script>
+window.onload = choosePic;
+var myPix = new Array("images/lion.jpg","images/tiger.jpg","images/bear.jpg");
+function choosePic() {
+     var randomNum = Math.floor(Math.random() * myPix.length);
+     document.getElementById("myPicture").src = myPix[randomNum];
+}
+</script>
+</head>
+<body>
+<button id="test">Click Me! </button>
+<img src="images/spacer.gif" width="305" height="312" id="myPicture" alt="some image">
+<iframe src="http://192.168.167.220/HTML5/Reload.html">
+
+</iframe>
+</body>
+</html>

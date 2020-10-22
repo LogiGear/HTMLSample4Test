@@ -1,0 +1,43 @@
+
+<html>
+<title>List Sort</title>
+<head>
+<script language="JavaScript" type="text/javascript">
+function sortlist() {
+var lb = document.getElementById('mylist');
+arrTexts = new Array();
+
+for(i=0; i<lb.length; i++)  {
+  arrTexts[i] = lb.options[i].text;
+}
+arrTexts.sort();
+for(i=0; i<lb.length; i++)  {
+  lb.options[i].text = arrTexts[i];
+  lb.options[i].value = arrTexts[i];
+}
+}
+</script>
+</head>
+<body>
+<form action="#">
+<select name=mylist id=mylist size=5>
+<optgroup label="Names">
+<option value="Anton">Anton
+<option value="Mike">Mike
+<option value="Peter">Peter
+<option value="Bill">Bill
+<option value="Carl">Carl
+</optgroup>
+<optgroup label="Position">
+<option value="Anton">QA Manager
+<option value="Mike">QA Lead
+<option value="Peter">Senior tester
+<option value="Bill">Junior tester
+<option value="Carl">Product Manager
+</optgroup>
+</select>
+<br>
+<a href="javascript:sortlist()">sort</a>
+</form>
+</body>
+</html>

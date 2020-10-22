@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html>
+<html>
+<body>
+
+<p><h3> Textarea </h3></p>
+<textarea rows="4" cols="50" onchange="myFunction1()" id="textarea">
+At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.
+</textarea>
+
+<p></p>
+
+<p><h3> Checkbox </h3></p>
+<input type="checkbox" id="checkbox" onchange="myFunction2()"><p></p>
+
+<p><h3> Date </h3></p>
+<input type="date" id="myDate" onchange="myFunction3()"><p></p>
+
+<p><h3> Datetime </h3></p>
+<input type="datetime" id="myDatetime"  onchange="myFunction4()"><p></p>
+
+<p><h3> Datetime local </h3></p>
+<input type="datetime-local" id="myLocalDate"  onchange="myFunction5()"><p></p>
+
+<p><h3> Email </h3></p>
+<input type="email" id="myEmail" value="john@example.com" onchange="myFunction6()"><p></p>
+
+<p><h3> Month </h3></p>
+<input type="month" id="myMonth"  onchange="myFunction7()"><p></p>
+
+<p><h3> Number </h3></p>
+<input type="number" id="myNumber" value="2" onchange="myFunction8()"><p></p>
+
+<p><h3> Password </h3></p>
+<input type="password" id="myPsw" value="psw123" onchange="myFunction9()"><p></p>
+
+<p><h3> Radiobutton </h3></p>
+<input type="radio" id="myRadio" onchange="myFunction10()"><p></p>
+
+<p><h3> Range </h3></p>
+<input type="range" id="myRange" value="90" onchange="myFunction11()"><p></p>
+
+<p><h3> Search </h3></p>
+<input type="search" id="mySearch" placeholder="Search for something.." onchange="myFunction12()"><p></p>
+
+<p><h3> Textbox </h3></p>
+<input type="text" id="myText" value="Some text..." onchange="myFunction13()"><p></p>
+
+<input type="time" id="myTime" onchange="myFunction14()"><p></p>
+
+<input type="url" id="myURL" value="http://www.google.com" onchange="myFunction15()"><p></p>
+
+<input type="week" id="myWeek" onchange="myFunction16()">
+
+
+<p id="demo"></p>
+
+
+<script>
+function myFunction1() {
+    var x = document.getElementById("textarea").value;
+    document.getElementById("demo").innerHTML = x;
+}
+</script>
+
+<script>
+function myFunction2() {
+    var y = document.getElementById("checkbox").value;
+    document.getElementById("demo").innerHTML = y;
+}
+</script>
+
+<script>
+function myFunction3() {
+    var z = document.getElementById("myDate").value;
+    document.getElementById("demo").innerHTML = z;
+}
+</script>
+
+<script>
+function myFunction4() {
+    var a = document.getElementById("myDatetime").value;
+    document.getElementById("demo").innerHTML = a;
+}
+</script>
+
+<script>
+function myFunction5() {
+    var b = document.getElementById("myLocalDate").value;
+    document.getElementById("demo").innerHTML = b;
+}
+</script>
+
+<script>
+function myFunction6() {
+    var c = document.getElementById("myEmail").value;
+    document.getElementById("demo").innerHTML = c;
+}
+</script>
+
+<script>
+function myFunction7() {
+    var d = document.getElementById("myMonth").value;
+    document.getElementById("demo").innerHTML = d;
+}
+</script>
+
+<script>
+function myFunction8() {
+    var e = document.getElementById("myNumber").value;
+    document.getElementById("demo").innerHTML = e;
+}
+</script>
+
+<script>
+function myFunction9() {
+    var f = document.getElementById("myPsw").value;
+    document.getElementById("demo").innerHTML = f;
+}
+</script>
+
+<script>
+function myFunction10() {
+    var g = document.getElementById("myRadio").value;
+    document.getElementById("demo").innerHTML = g;
+}
+</script>
+
+<script>
+function myFunction11() {
+    var h = document.getElementById("myRange").value;
+    document.getElementById("demo").innerHTML = h;
+}
+</script>
+
+<script>
+function myFunction12() {
+    var i = document.getElementById("mySearch").value;
+    document.getElementById("demo").innerHTML = i;
+}
+</script>
+
+<script>
+function myFunction13() {
+    var j = document.getElementById("myText").value;
+    document.getElementById("demo").innerHTML = j;
+}
+</script>
+
+<script>
+function myFunction14() {
+    var k = document.getElementById("myTime").value;
+    document.getElementById("demo").innerHTML = k;
+}
+</script>
+
+<script>
+function myFunction15() {
+    var l = document.getElementById("myURL").value;
+    document.getElementById("demo").innerHTML = l;
+}
+</script>
+
+<script>
+function myFunction16() {
+    var m = document.getElementById("myWeek").value;
+    document.getElementById("demo").innerHTML = m;
+}
+</script>
+
+</body>
+</html>
+

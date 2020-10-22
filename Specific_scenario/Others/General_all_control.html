@@ -1,0 +1,1342 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/layout.dwt" codeOutsideHTMLIsLocked="false" --><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1258">
+    <script src="Standard%20Control_files/jquery-1.js" type="text/javascript"></script>
+    <script type="text/javascript" src="Standard%20Control_files/Util.js"></script>
+<title>Standard Control</title>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/JavaScript">
+$(document).ready(function(){
+var elems = document.querySelectorAll( 'body *' );
+Array.prototype.forEach.call(elems, function(el) {
+	el.addEventListener('focus',handleFocus,false);
+});
+});
+</script>
+<script>
+function handleFocus()
+{
+var act = document.activeElement.id;
+document.getElementById('demo').innerHTML = act;
+}
+</script>
+
+<style type="text/css">
+body {
+	background-image: url(../images/background.jpg);
+}
+
+html, body, #wrapper {
+      height:100%;
+	  width: 100%;
+      margin: 0;
+      padding: 0;
+      border: none;
+	  white-space:0;
+   }
+
+#content
+{
+	height: 100%;
+	overflow: scroll;
+}
+
+   
+.style1 {color: #FFFFFF; font-weight: bold; font-family: Tahoma; font-size: 15px; }
+
+.style2 {color: #00F; font-weight: bold; font-family: Tahoma; font-size: 15px; }
+
+.style3 {color: #00F; font-family: Tahoma; font-size: 12px;}
+
+.style4 {color: #00F; font-weight: bold; font-family: Tahoma; font-size: 13px;}
+
+a:link {
+COLOR: #FFFFFF;
+text-decoration:none;
+}
+a:visited {
+COLOR: #FFFFFF;
+}
+a:hover {
+COLOR: #FFFFFF;
+}
+a:active {
+COLOR: #FFFFFF;
+}
+</style>
+
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+</head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<!-- InstanceEndEditable -->
+<body>
+
+<table id="wrapper" cellspacing="0">
+
+<tbody><tr>
+<td colspan="4" align="right" height="1%"></td>
+</tr>
+
+<tr>
+<td rowspan="4" width="2%"></td>
+<td style="vertical-align:middle" align="left" bgcolor="#0000CC" width="34%"><span class="style1">&nbsp;&nbsp;&nbsp;Standard Control</span></td>
+<td style="vertical-align:middle" align="right" bgcolor="#0000CC" height="5%" width="17%"><!-- InstanceBeginEditable name="Home" --><span class="style1"><a href="http://lgvn14027/HTML5/HTML5_ver_3/index.html">Home&nbsp;&nbsp;&nbsp;</a></span> <!-- InstanceEndEditable --></td>
+<td rowspan="4" width="2%"></td>
+</tr>
+<tr>
+	<td colspan="2" bgcolor="#FFFFFF" height="100%" valign="top"><!-- InstanceBeginEditable name="Row2" -->
+	<div style="height: 737px;" id="content">
+
+
+<link rel="stylesheet" type="text/css" href="Standard%20Control_files/theme.htm">
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1258">
+
+<p id="demo"></p>
+
+<h2><p style="color:#FF0000"><b>Button</b></p></h2><input id="button_controltest" value="Button test" type="button"><br><input id="disabled_button_controltest" value="Button disable" disabled="disabled" type="button"><br><input id="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" value="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" type="button"><h2><p style="color:#FF0000"><b>Address</b></p></h2>This is disabled address<h2><p style="color:#FF0000"><b>Link</b></p></h2><a href="http://www.logigear.vn/" id="navigate_ControlTest" title="navigate_ControlTest" name="navigate_ControlTest">Visit logigear.vn!</a><br><a href="http://www.logigear.vn/" id="disabled_navigate_ControlTest" title="disabled_navigate_ControlTest" disabled="" name="disabled_navigate_ControlTest">This is disabled link</a><br><a href="http://www.logigear.vn/" id="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" title="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" name="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào">cơn
+ s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; 
+!@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n 
+thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern
+ bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào!</a><br><a href="http://www.logigear.vn/" id="" title="" name=""></a><br><h2><p style="color:#FF0000"><b>Image</b></p></h2><img id="image_ControlTest" title="Image test" src="Standard%20Control_files/lgvn10003AUTAUT_samplesHTML_StandardControlHTML5imagesimg_pu.htm" alt="Pulpit rock" border="0" height="228" width="304"><b>
+<img title="disabled_Image test" src="Standard%20Control_files/lgvn10003AUTAUT_samplesHTML_StandardControlHTML5imagesimg_pu.htm" alt="Pulpit rock" disabled="" border="0" height="228" width="304"><b>
+
+<img title="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" src="Standard%20Control_files/lgvn10003AUTAUT_samplesHTML_StandardControlHTML5imagesimg_pu.htm" alt="Pulpit rock" border="0" height="228" width="304">
+<img title="" src="Standard%20Control_files/lgvn10003AUTAUT_samplesHTML_StandardControlHTML5imagesimg_pu.htm" alt="Pulpit rock" border="0" height="228" width="304"><br>
+
+<!------------------------------------------------------- CHECKBOX -------------------------------------------------------------->
+
+<h2><p style="color:#FF0000"><b>Checkbox</b></p></h2>
+
+<p><span style="font-weight: bold;color: #F09"> CheckBox Test <input id="checkbox_ControlTest" title="checkbox_ControlTest" name="checkbox_ControlTest" value="CheckBoxTest" onclick="DisplayComment('Single click control test');" ondblclick="DisplayComment('Double click control test');" oncontextmenu="DisplayComment('Right click control test');" style="position: relative; top: 0px;" type="CheckBox"></span></p>
+
+<p><span style="font-weight: bold;color: #F09"> CheckBox Test <input id="disabled_checkbox_ControlTest" title="disabled_checkbox_ControlTest" name="disabled_checkbox_ControlTest" value="disabled_CheckBoxTest" disabled="disabled" onclick="DisplayComment('Single click control test');" ondblclick="DisplayComment('Double click control test');" oncontextmenu="DisplayComment('Right click control test');" style="position: relative; top: 0px;" type="CheckBox"></span></p>
+
+<p><span style="font-weight: bold;color: #F09"> cơn s&#7889;t apple ipad m&#7899;i 
+CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; 
+L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a 
+qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote 
+là như th&#7871; nào <input id="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" title="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" name="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" value="CheckBoxTest" onclick="DisplayComment('Single click control test');" ondblclick="DisplayComment('Double click control test');" oncontextmenu="DisplayComment('Right click control test');" style="position: relative; top: 0px;" type="CheckBox"></span></p>
+
+<p><span style="font-weight: bold;color: #F09"> <input id="" title="" name="" value="CheckBoxTest" disabled="disabled" onclick="DisplayComment('Single click control test');" ondblclick="DisplayComment('Double click control test');" oncontextmenu="DisplayComment('Right click control test');" style="position: relative; top: 0px;" type="CheckBox"></span></p>
+
+<!------------------------------------------------------- FILE ----------------------------------------------------------->
+
+
+
+<h2><p style="color:#FF0000"><b>File</b></p></h2>
+<input id="file_ControlTest" title="file_ControlTest" name="file_ControlTest" style="-webkit-appearance: textfield; position: relative; box-sizing: border-box; top: 0px;" onchange="UpdValueField()" onclick="DisplayComment('Single click control test');" ondblclick="DisplayComment('Double click control test');" oncontextmenu="DisplayComment('Right click control test');" type="FILE"><br>
+<input disabled="disabled" id="disabled_file_ControlTest" title="disabled_file_ControlTest" name="disabled_file_ControlTest" style="-webkit-appearance: textfield; position: relative; box-sizing: border-box; top: 0px;" onchange="UpdValueField()" onclick="DisplayComment('Single click control test');" ondblclick="DisplayComment('Double click control test');" oncontextmenu="DisplayComment('Right click control test');" type="FILE"><br>
+<input id="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" title="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" name="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" style="-webkit-appearance: textfield; position: relative; box-sizing: border-box; top: 0px;" onchange="UpdValueField()" onclick="DisplayComment('Single click control test');" ondblclick="DisplayComment('Double click control test');" oncontextmenu="DisplayComment('Right click control test');" type="FILE"><br>
+
+<input id="" title="" name="" style="-webkit-appearance: textfield; position: relative; box-sizing: border-box; top: 0px;" onchange="UpdValueField()" onclick="DisplayComment('Single click control test');" ondblclick="DisplayComment('Double click control test');" oncontextmenu="DisplayComment('Right click control test');" type="FILE"><br>
+
+<!------------------------------------------------------- INPUT IMAGE ----------------------------------------------------------->
+
+<h2><p style="color:#FF0000"><b>InputImage</b></p></h2>
+
+<input src="Standard%20Control_files/pulpit.jpg" id="imagebtn_ControlTest" title="imagebtn_ControlTest" name="imagebtn_ControlTest" onclick="DisplayComment('Single click control test');" ondblclick="DisplayComment('Double click control test');" oncontextmenu="DisplayComment('Right click control test');" style="position: relative; top: 0px;" height="100" type="image" width="100">
+
+<input disabled="disabled" src="Standard%20Control_files/pulpit.jpg" id="disabled_imagebtn_ControlTest" title="disabled_imagebtn_ControlTest" name="disabled_imagebtn_ControlTest" onclick="DisplayComment('Single click control test');" ondblclick="DisplayComment('Double click control test');" oncontextmenu="DisplayComment('Right click control test');" style="position: relative; top: 0px;" height="100" type="image" width="100">
+
+<input src="Standard%20Control_files/pulpit.jpg" id="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" title="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" name="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" onclick="DisplayComment('Single click control test');" ondblclick="DisplayComment('Double click control test');" oncontextmenu="DisplayComment('Right click control test');" style="position: relative; top: 0px;" height="100" type="image" width="100">
+<input src="Standard%20Control_files/pulpit.jpg" id="" title="" name="" onclick="DisplayComment('Single click control test');" ondblclick="DisplayComment('Double click control test');" oncontextmenu="DisplayComment('Right click control test');" style="position: relative; top: 0px;" height="100" type="image" width="100"><br>
+
+<!-----------------------------------------------------INPUT PASSWORD ----------------------------------------------------------->
+
+<h2><p style="color:#FF0000"><b>InputPassword</b></p></h2>
+
+<input id="password_ControlTest" title="password_ControlTest" name="password_ControlTest" maxlength="8" value="abc123" onchange="UpdValueField()" onclick="DisplayComment('Single click control test');" ondblclick="DisplayComment('Double click control test');" oncontextmenu="DisplayComment('Right click control test');" style="position: relative; top: 0px;" type="PASSWORD">
+
+<input id="disabled_password_ControlTest" disabled="disabled" title="disabled_password_ControlTest" name="disabled_password_ControlTest" maxlength="8" value="abc123" onchange="UpdValueField()" onclick="DisplayComment('Single click control test');" ondblclick="DisplayComment('Double click control test');" oncontextmenu="DisplayComment('Right click control test');" style="position: relative; top: 0px;" type="PASSWORD">
+
+
+<input id="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" title="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" name="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" maxlength="8" value="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" onchange="UpdValueField()" onclick="DisplayComment('Single click control test');" ondblclick="DisplayComment('Double click control test');" oncontextmenu="DisplayComment('Right click control test');" style="position: relative; top: 0px;" type="PASSWORD">
+<input id="" title="" name="" maxlength="8" value="" onchange="UpdValueField()" onclick="DisplayComment('Single click control test');" ondblclick="DisplayComment('Double click control test');" oncontextmenu="DisplayComment('Right click control test');" style="position: relative; top: 0px;" type="PASSWORD"><br>
+
+<!-----------------------------------------------------RADIO BUTTON -------------------------------------------------------------->
+
+<h2><p style="color:#FF0000"><b>RadioButton</b></p></h2>
+
+<input id="Radiox" value="Radio" name="radio_ControlTest" onclick="radioClick('Radio')" type="Radio">Radio Button<br>
+
+<input id="disabled_Radiox" disabled="disabled" value="disabled_Radio" name="disabled_radio_ControlTest" onclick="radioClick('Radio')" checked="checked" type="Radio">Radio Button<br>
+
+<input id="Radiox" value="Radio" name="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" onclick="radioClick('Radio')" checked="checked" type="Radio">cơn
+ s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; 
+!@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n 
+thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern
+ bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào<br>
+<input id="Radiox" value="Radio" name="radio_ControlTest" onclick="radioClick('Radio')" checked="checked" type="Radio"><br>
+
+<!------------------------------------------------------- INPUT RESET ---------------------------------------------------------->
+
+<h2><p style="color:#FF0000"><b>InputReset</b></p></h2>
+
+<form name="myform" action="#" method="POST"></form><div align="left"><input id="idName" size="25" type="text"> <input id="reset_ControlTest" name="reset_ControlTest" title="reset_ControlTest" value="Reset Button" onclick="DisplayComment('Single click control test');" ondblclick="DisplayComment('Double click control test');" oncontextmenu="DisplayComment('Right click control test');" style="position: relative; top: 0px;" type="reset"></div><br>
+
+<form name="myform" action="#" method="POST"></form><div align="left"><input id="idName" size="25" disabled="disabled" type="text"> <input id="disabled_reset_ControlTest" name="disabled_reset_ControlTest" disabled="disabled" title="disabled_reset_ControlTest" value="disabled_Reset Button" onclick="DisplayComment('Single click control test');" ondblclick="DisplayComment('Double click control test');" oncontextmenu="DisplayComment('Right click control test');" style="position: relative; top: 0px;" type="reset"></div><br>
+
+<form name="myform" action="#" method="POST"></form><div align="left"><input id="idName" size="25" type="text"> <input id="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" name="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" title="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" value="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" onclick="DisplayComment('Single click control test');" ondblclick="DisplayComment('Double click control test');" oncontextmenu="DisplayComment('Right click control test');" style="position: relative; top: 0px;" type="reset"></div><br>
+<form name="myform" action="#" method="POST"></form><div align="left"><input id="idName" size="25" type="text"> <input id="" name="" title="" value="" onclick="DisplayComment('Single click control test');" ondblclick="DisplayComment('Double click control test');" oncontextmenu="DisplayComment('Right click control test');" style="position: relative; top: 0px;" type="reset"></div>
+
+<!------------------------------------------------------- INPUT SUBMIT ---------------------------------------------------------->
+
+<h2><p style="color:#FF0000"><b>InputSubmit</b></p></h2>
+
+<form name="input" method="get" action="http://www.w3schools.com/html/html_form_action.asp"></form><input name="user" type="text"><input id="submit_ControlTest" name="submit_ControlTest" title="submit_ControlTest" value="Submit Button" onclick="DisplayComment('Single click control test');" ondblclick="DisplayComment('Double click control test');" oncontextmenu="DisplayComment('Right click control test');" style="position: relative; top: 0px;" type="submit"><br>
+
+<form name="input" method="get" action="http://www.w3schools.com/html/html_form_action.asp"></form><input name="user" disabled="disabled" type="text"><input id="disabled_submit_ControlTest" disabled="disabled" name="disabled_submit_ControlTest" title="disabled_submit_ControlTest" value="disabled_Submit Button" onclick="DisplayComment('Single click control test');" ondblclick="DisplayComment('Double click control test');" oncontextmenu="DisplayComment('Right click control test');" style="position: relative; top: 0px;" type="submit"><br>
+
+
+<form name="input" method="get" action="http://www.w3schools.com/html/html_form_action.asp"></form><input name="user" type="text"><input id="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" name="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" title="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" value="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" onclick="DisplayComment('Single click control test');" ondblclick="DisplayComment('Double click control test');" oncontextmenu="DisplayComment('Right click control test');" style="position: relative; top: 0px;" type="submit"><br>
+
+<form name="input" method="get" action="http://www.w3schools.com/html/html_form_action.asp"></form><input name="user" type="text"><input id="" name="" title="" value="" onclick="DisplayComment('Single click control test');" ondblclick="DisplayComment('Double click control test');" oncontextmenu="DisplayComment('Right click control test');" style="position: relative; top: 0px;" type="submit"><br>
+
+<!------------------------------------------------------- INPUT TEXT ------------------------------------------------------------>
+
+<h2><p style="color:#FF0000"><b>InputText</b></p></h2>
+
+<input id="text_ControlTest" title="text_ControlTest" name="text_ControlTest" maxlength="20" value="textbox" onchange="UpdValueField()" textcontent="abc" onclick="DisplayComment('Single click control test');" ondblclick="DisplayComment('Double click control test');" oncontextmenu="DisplayComment('Right click control test');" style="position: relative; top: 0px;" type="text"><br>
+
+
+<input id="disabled_text_ControlTest" title="disabled_text_ControlTest" disabled="disabled" name="disabled_text_ControlTest" maxlength="20" value="disabled_textbox" onchange="UpdValueField()" textcontent="abc" onclick="DisplayComment('Single click control test');" ondblclick="DisplayComment('Double click control test');" oncontextmenu="DisplayComment('Right click control test');" style="position: relative; top: 0px;" type="text"><br>
+
+<input id="text_ControlTest" title="text_ControlTest" name="text_ControlTest" maxlength="20" value="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" onchange="UpdValueField()" textcontent="abc" onclick="DisplayComment('Single click control test');" ondblclick="DisplayComment('Double click control test');" oncontextmenu="DisplayComment('Right click control test');" style="position: relative; top: 0px;" type="text"><br>
+
+<input id="text_ControlTest" title="text_ControlTest" name="text_ControlTest" maxlength="20" onchange="UpdValueField()" textcontent="abc" onclick="DisplayComment('Single click control test');" ondblclick="DisplayComment('Double click control test');" oncontextmenu="DisplayComment('Right click control test');" style="position: relative; top: 0px;" type="text"><br>
+
+<!------------------------------------------------------- SELECT -------------------------------------------------------------->
+
+<h2><p style="color:#FF0000"><b>Select</b></p></h2>
+
+<select id="select_ControlTest" title="select_ControlTest" name="select_ControlTest" size="1" style="width: 200px; position: relative; top: 0px;" onchange="UpdSelectValue()" onclick="DisplayComment('Single click control test');" ondblclick="DisplayComment('Double click control test');" oncontextmenu="DisplayComment('Right click control test');"><option selected="selected" value="Item1">Item1</option><option value="Item2">Item2</option><option value="Item3">Item3</option><option value="Item3">cơn
+ s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; 
+!@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n 
+thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern
+ bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào</option><option value="Item3"></option></select><br>
+
+<select id="disabled_select_ControlTest" title="disabled_select_ControlTest" disabled="disabled" name="disabled_select_ControlTest" size="1" style="width: 200px; position: relative; top: 0px;" onchange="UpdSelectValue()" onclick="DisplayComment('Single click control test');" ondblclick="DisplayComment('Double click control test');" oncontextmenu="DisplayComment('Right click control test');"><option selected="selected" value="Item1">Item1</option><option value="Item2">Item2</option><option value="Item3">Item3</option><option value="Item3">cơn
+ s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; 
+!@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n 
+thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern
+ bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào</option><option value="Item3"></option></select><br>
+
+<select id="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" title="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" name="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" size="1" style="width: 200px; position: relative; top: 0px;" onchange="UpdSelectValue()" onclick="DisplayComment('Single click control test');" ondblclick="DisplayComment('Double click control test');" oncontextmenu="DisplayComment('Right click control test');"><option selected="selected" value="Item1">Item1</option><option value="Item2">Item2</option><option value="Item3">Item3</option><option value="Item3">cơn
+ s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; 
+!@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n 
+thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern
+ bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào</option><option value="Item3"></option></select><br>
+
+<select id="" title="" name="" size="1" style="width: 200px; position: relative; top: 0px;" onchange="UpdSelectValue()" onclick="DisplayComment('Single click control test');" ondblclick="DisplayComment('Double click control test');" oncontextmenu="DisplayComment('Right click control test');"><option selected="selected" value="Item1">Item1</option><option value="Item2">Item2</option><option value="Item3">Item3</option><option value="Item3">cơn
+ s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; 
+!@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n 
+thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern
+ bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào</option><option value="Item3"></option></select><br>
+
+ 
+ <!------------------------------------------------------- SELECT-MULTIPLE -------------------------------------------------------------->
+ 
+ 
+ <h6><p style="color:#FF0000"><b>Select-MULTIPLE</b></p></h6>
+  
+ <select id="c" name="a" multiple="true">
+  <option>Item1</option>
+  <option>Item2</option>
+  <option>Item3</option>
+  <option>Item4</option>
+</select>
+
+<select id="f" name="b" multiple="true">
+  <option>Apple</option>
+  <option>Pear</option>
+  <option>Banana</option>
+  <option>Orange</option>
+</select>
+
+<select id="c" name="b" multiple="true">
+  <option>Apple</option>
+  <option>Pear</option>
+  <option>Banana</option>
+  <option>Orange</option>
+</select>
+
+<select id="e" name="d" multiple="true">
+  <option>Apple</option>
+  <option>Pear</option>
+  <option>Banana</option>
+  <option>Orange</option>
+</select>
+
+<select id="e" name="d" multiple="true">
+  <option>Apple</option>
+  <option>Pear</option>
+  <option>Banana</option>
+  <option>Orange</option>
+</select>
+
+
+<!------------------------------------------------------- INPUT-HIDDEN -------------------------------------------------------------->
+
+<h2><p style="color:#FF0000"><b>Hidden</b></p></h2>
+
+<input type="hidden" id="myInput" value="W3Schools">
+<input type="hidden" id="myInput" value="W3Schools">
+<input type="hidden" id="myInput" value="W3Schools">
+<input type="hidden" id="myInput" value="W3Schools">
+<input type="hidden" id="myInput" value="W3Schools">
+
+
+<!------------------------------------------------------- LABEL -------------------------------------------------------------->
+
+<h2><p style="color:#FF0000"><b>Label</b></p></h2>
+
+<label id="c">Label1</label>
+
+<label id="f">Label2</label>
+
+<label id="c">Label2</label>
+
+<label id="e">Label4</label>
+
+<label id="e">Label4</label>
+
+<!------------------------------------------------------- STRONG -------------------------------------------------------------->
+
+<h2><p style="color:#FF0000"><b>Strong</b></p></h2>
+
+<strong>Strong text</strong>
+<strong>Strong text</strong>
+<strong>Strong text</strong>
+
+<!------------------------------------------------------- CODE -------------------------------------------------------------->
+
+<h2><p style="color:#FF0000"><b>Code</b></p></h2>
+
+<code>A piece of computer code</code>
+<code>A piece of computer code</code>
+
+<!------------------------------------------------------- SAMP -------------------------------------------------------------->
+
+<h2><p style="color:#FF0000"><b>Samp</b></p></h2>
+
+<samp>Sample output from a computer program</samp>
+<samp>Sample output from a computer program</samp>
+<samp>Sample output from a computer program</samp>
+
+<!------------------------------------------------------- FEBLEND -------------------------------------------------------------->
+ 
+ <h2><p style="color:#FF0000"><b>Feblend</b></p></h2>
+
+ <feBlend mode="normal" in2="BackgroundImage" in="SourceGraphic" />
+ 
+ <!------------------------------------------------------- LINEARGRADIENT -------------------------------------------------------------->
+ 
+ <h2><p style="color:#FF0000"><b>Lineargradient</b></p></h2>
+ 
+ <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%"></linearGradient>
+ 
+ <!------------------------------------------------------- S -------------------------------------------------------------->
+ 
+ <h2><p style="color:#FF0000"><b>S</b></p></h2>
+ 
+ <s>My car is blue.</s>
+ 
+ <!------------------------------------------------------- RadialGradient -------------------------------------------------------------->
+ 
+ <h2><p style="color:#FF0000"><b>RadialGradient</b></p></h2>
+ 
+<radialGradient id="grad1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"></radialGradient>
+ 
+<!------------------------------------------------------- TABLE -------------------------------------------------------------->
+
+<h2><p style="color:#FF0000"><b>Table</b></p></h2>
+
+</b></b><table id="HTMLContent">
+
+
+<!------------------------------------------------------- BUTTON -------------------------------------------------------------->
+
+<h4>A demonstration of how to access a Button</h4>
+<button id="button" type="button" onclick="alert('Hello world!')">Click Me!</button>
+<button type="button" onclick="alert('Hello world!')">Click Me!</button>
+<button type="button" onclick="alert('Hello world!')">Click Me!</button>
+<button type="button" onclick="alert('Hello world!')">Click Me!</button>
+<button type="button" onclick="alert('Hello world!')">Click Me!</button>
+
+<!------------------------------------------------------- ADDRESS -------------------------------------------------------------->
+
+
+<tbody><tr>
+   <td id="DisplayCell" colspan="2" style="text-align:center">
+                    <address id="address_ControlTest" title="address_ControlTest" style="text-align: left; width: 500px; height: 150px; padding-left: 30px; padding-top: 30px; position: relative; top: 0px; background: url(file:///C:/AUT_samples/HTML_StandardControl/HTML5/images/address.jpg) no-repeat;"><font color="black">Written by:<a href="mailto:tester@logigear.com">Jon Doe</a>Visit us at:<br>http://logigear.vn<br>1A Phan Xich Long, Ward 2, Phu Nhuan District, HCMC, Vietnam</font></address>
+   </td>
+</tr>
+
+<tr></tr> 
+<tr>
+   <td id="DisplayCell" colspan="2" style="text-align:center">
+                    <address disabled="" id="disabled_address_ControlTest" title="disabled_address_ControlTest" style="text-align: left; width: 500px; height: 150px; padding-left: 30px; padding-top: 30px; position: relative; top: 0px; background: url(file:///C:/AUT_samples/HTML_StandardControl/HTML5/images/address.jpg) no-repeat;"><font color="black">Written by:<a href="mailto:tester@logigear.com">Jon Doe</a>Visit us at:<br>http://logigear.vn<br>1A Phan Xich Long, Ward 2, Phu Nhuan District, HCMC, Vietnam</font></address>
+   </td>
+</tr>
+<tr>
+                <td id="DisplayCell" colspan="2" style="text-align:center">
+                    <address id="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" title="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" style="text-align: left; width: 500px; height: 150px; padding-left: 30px; padding-top: 30px; position: relative; top: 0px; background: url(file:///C:/AUT_samples/HTML_StandardControl/HTML5/images/address.jpg) no-repeat;"><font color="black">Written by:<a href="mailto:tester@logigear.com">Jon Doe</a>Visit us at:<br>http://logigear.vn<br>1A Phan Xich Long, Ward 2, Phu Nhuan District, HCMC, Vietnam</font></address>
+                </td>
+            </tr>
+<tr>
+                <td id="DisplayCell" colspan="2" style="text-align:center">
+                    <address id="" title="" style="text-align: left; width: 500px; height: 150px; padding-left: 30px; padding-top: 30px; position: relative; top: 0px; background: url(file:///C:/AUT_samples/HTML_StandardControl/HTML5/images/address.jpg) no-repeat;"><font color="black">Written by:<a href="mailto:tester@logigear.com">Jon Doe</a>Visit us at:<br>http://logigear.vn<br>1A Phan Xich Long, Ward 2, Phu Nhuan District, HCMC, Vietnam</font></address>
+                </td>
+            </tr>
+
+<!------------------------------------------------------- LINK------------------------------------------------------------->		
+			
+
+
+
+
+
+<style>
+.disabled {
+   pointer-events: none;
+   cursor: default;
+}
+</style>
+
+
+
+
+<!-------------------------------------------------- IMAGE ----------------------------------------------------------------->
+
+
+
+</tbody></table><table id="table_ControlTest" caption="table_test" title="table_ControlTest" name="table_ControlTest" rules="GROUPS" frame="BOX" style="width: 400px; text-align: center; margin: auto; position: relative; top: 0px;" border="1"><caption><b> Table Element Default</b> </caption><thead><tr><td onclick="DisplayComment('Header String')" width="20%">tbl_table test</td></tr></thead><tfoot onclick="DisplayComment('Footer of Element')"><tr><th colspan="5" id="footerID" align="center">Footer of Element </th></tr></tfoot></table><b><b><br>
+
+<table id="disabled_table_ControlTest" title="disabled_table_ControlTest" disabled="" name="disabled_table_ControlTest" rules="GROUPS" frame="BOX" style="width: 400px; text-align: center; margin: auto; position: relative; top: 0px;" border="1"><caption><b> Table Element Default</b> </caption><thead><tr><td onclick="DisplayComment('Header String')" width="20%">cơn
+ s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; 
+!@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n 
+thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern
+ bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào</td></tr></thead><tfoot onclick="DisplayComment('Footer of Element')"><tr><th colspan="5" id="footerID" align="center">Footer of Element </th></tr></tfoot></table><br>
+
+
+<table id="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" title="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" name="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" rules="GROUPS" frame="BOX" style="width: 400px; text-align: center; margin: auto; position: relative; top: 0px;" border="1"><caption><b> Table Element Unicode</b> </caption><thead><tr><td onclick="DisplayComment('Header String')" width="20%">cơn
+ s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; 
+!@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n 
+thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern
+ bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào</td></tr></thead><tfoot onclick="DisplayComment('Footer of Element')"><tr><th colspan="5" id="footerID" align="center">Footer of Element </th></tr></tfoot></table><br>
+
+<table id="" title="" name="" rules="GROUPS" frame="BOX" style="width: 400px; text-align: center; margin: auto; position: relative; top: 0px;" border="1"><caption><b> Table Element Blank</b> </caption><thead><tr><td onclick="DisplayComment('Header String')" width="20%">cơn
+ s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; 
+!@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n 
+thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern
+ bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào</td></tr></thead><tfoot onclick="DisplayComment('Footer of Element')"><tr><th colspan="5" id="footerID" align="center">Footer of Element </th></tr></tfoot></table><br>
+
+<!------------------------------------------------------- TEXT AREA -------------------------------------------------------------->
+
+<h2><p style="color:#FF0000"><b>TextArea</b></p></h2>
+
+<textarea id="textarea_ControlTest" title="textarea_ControlTest" name="textarea_ControlTest" cols="40" rows="4" onchange="UpdValueField()" onclick="DisplayComment('Single click control test');" ondblclick="DisplayComment('Double click control test');" oncontextmenu="DisplayComment('Right click control test');" style="position: relative; top: 0px;">At W3Schools you will find all the Web-building tutorials you need from basic HTML to advanced XML SQL ASP and PHP</textarea><br>
+
+
+<textarea id="disabled_textarea_ControlTest" title="disabled_textarea_ControlTest" disabled="disabled" name="disabled_textarea_ControlTest" cols="40" rows="4" onchange="UpdValueField()" onclick="DisplayComment('Single click control test');" ondblclick="DisplayComment('Double click control test');" oncontextmenu="DisplayComment('Right click control test');" style="position: relative; top: 0px;">At W3Schools you will find all the Web-building tutorials you need from basic HTML to advanced XML SQL ASP and PHP</textarea><br>
+
+<textarea id="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" title="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" name="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" cols="40" rows="4" onchange="UpdValueField()" onclick="DisplayComment('Single click control test');" ondblclick="DisplayComment('Double click control test');" oncontextmenu="DisplayComment('Right click control test');" style="position: relative; top: 0px;">cơn
+ s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; 
+!@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n 
+thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern
+ bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào</textarea><br>
+
+<textarea id="" title="" name="" cols="40" rows="4" onchange="UpdValueField()" onclick="DisplayComment('Single click control test');" ondblclick="DisplayComment('Double click control test');" oncontextmenu="DisplayComment('Right click control test');" style="position: relative; top: 0px;"></textarea><br>
+
+<!------------------------------------------------------- PROGRESS -------------------------------------------------------------->
+
+
+<h2><p style="color:#FF0000"><b>Progress</b></p></h2>
+
+<progress value="50" max="100" id="progress_ControlTest" name="progress_ControlTest" title="progress_ControlTest" style="position: relative; top: 0px;"></progress><br>
+
+<progress value="50" max="100" id="progress_ControlTest" disabled="" name="progress_ControlTest" title="progress_ControlTest" style="position: relative; top: 0px;"></progress><br>
+
+<progress value="50" max="100" id="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" name="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" title="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" style="position: relative; top: 0px;"></progress><br>
+
+<progress value="50" max="100" id="" name="" title="" style="position: relative; top: 0px;"></progress><br>
+
+<!------------------------------------------------------- AREA -------------------------------------------------------------->
+
+
+
+<h2><p style="color:#FF0000"><b>Area</b></p></h2>
+
+
+                
+                    <img src="Standard%20Control_files/planets.gif" alt="Planets" title="area" usemap="#map" height="126" width="145"><map name="map" id=" MapControl" style="color:red"><area shape="rect" coords="0,0,82,126" alt="Sun" href="http://www.w3schools.com/tags/sun.htm" id="area_ControlTest" style="position: relative; top: 0px;"></map>
+                
+<br>
+
+
+                
+                    <img src="Standard%20Control_files/planets.gif" alt="Planets" title="area" usemap="#map" height="126" width="145"><map name="map" id=" MapControl" style="color:red"><area shape="rect" disabled="" coords="0,0,82,126" alt="Sun" href="http://www.w3schools.com/tags/sun.htm" id="area_ControlTest" style="position: relative; top: 0px;"></map>
+                
+<br>
+
+
+
+                
+                    <img src="Standard%20Control_files/planets.gif" alt="Planets" title="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" usemap="#map" height="126" width="145"><map name="map" id="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" style="color:red"><area shape="rect" coords="0,0,82,126" alt="Sun" href="http://www.w3schools.com/tags/sun.htm" id="area_ControlTest" style="position: relative; top: 0px;"></map>
+                
+<br>
+
+                
+                    <img src="Standard%20Control_files/planets.gif" alt="Planets" usemap="#map" height="126" width="145"><map name="map" id="" style="color:red"><area shape="rect" coords="0,0,82,126" alt="Sun" href="http://www.w3schools.com/tags/sun.htm" id="area_ControlTest" style="position: relative; top: 0px;"></map>
+                
+<br>
+
+<!------------------------------------------------------- OUTPUT -------------------------------------------------------------->
+
+
+
+<h2><p style="color:#FF0000"><b>Output</b></p></h2>
+
+<form oninput="x.value=parseInt(a.value)+parseInt(b.value)">0<input name="a" value="50" type="range">100+<input name="b" value="50" type="number">Out put :<output id="output_ControlTest" name="x" title="output_ControlTest" for="a b" style="position: relative; top: 0px;"></output></form>
+
+<form oninput="x.value=parseInt(a.value)+parseInt(b.value)">0<input name="a" value="50" disabled="disabled" type="range">100+<input name="b" value="50" disabled="disabled" type="number">Out put :<output id="output_ControlTest" name="x" disabled="" title="output_ControlTest" for="a b" style="position: relative; top: 0px;"></output></form>
+
+<form oninput="x.value=parseInt(a.value)+parseInt(b.value)">0<input name="a" value="50" type="range">100+<input name="b" value="50" type="number">Out put :<output id="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" name="x" title="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" for="a b" style="position: relative; top: 0px;"></output></form>
+
+<form oninput="x.value=parseInt(a.value)+parseInt(b.value)">0<input name="a" value="50" type="range">100+<input name="b" value="50" type="number">Out put :<output id="" name="x" title="" for="a b" style="position: relative; top: 0px;"></output></form><br>
+
+<!------------------------------------------------------- MAP -------------------------------------------------------------->
+
+<h2><p style="color:#FF0000"><b>Map</b></p></h2>
+
+
+                
+                    <p></p><img src="Standard%20Control_files/planets.gif" alt="Planets" usemap="#map_ControlTest" height="126" width="145"><map name="map_ControlTest" id="map_ControlTest" title="map_ControlTest" style="color: red; position: relative; top: 0px;"><area shape="rect" coords="0,0,82,126" alt="Sun" href="http://www.w3schools.com/tags/sun.htm"><area shape="circle" coords="90,58,3" alt="Mercury" href="http://www.w3schools.com/tags/mercur.htm"><area shape="circle" coords="124,58,8" alt="Venus" href="http://www.w3schools.com/tags/venus.htm"></map>
+                
+<br>
+
+
+                
+                    <p></p><img src="Standard%20Control_files/planets.gif" alt="Planets" disabled="" usemap="#map_ControlTest" height="126" width="145"><map name="map_ControlTest" disabled="" id="map_ControlTest" title="map_ControlTest" style="color: red; position: relative; top: 0px;"><area shape="rect" coords="0,0,82,126" alt="Sun" href="http://www.w3schools.com/tags/sun.htm" disabled=""><area shape="circle" coords="90,58,3" alt="Mercury" href="http://www.w3schools.com/tags/mercur.htm" disabled=""><area shape="circle" coords="124,58,8" alt="Venus" href="http://www.w3schools.com/tags/venus.htm" disabled=""></map>
+                
+<br>
+
+
+
+
+                
+                    <p></p><img src="Standard%20Control_files/planets.gif" alt="Planets" usemap="#cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" height="126" width="145"><map name="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" id="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" title="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" style="color: red; position: relative; top: 0px;"><area shape="rect" coords="0,0,82,126" alt="Sun" href="http://www.w3schools.com/tags/sun.htm"><area shape="circle" coords="90,58,3" alt="Mercury" href="http://www.w3schools.com/tags/mercur.htm"><area shape="circle" coords="124,58,8" alt="Venus" href="http://www.w3schools.com/tags/venus.htm"></map>
+                
+<br>
+
+
+                
+                    <p></p><img src="Standard%20Control_files/planets.gif" alt="Planets" usemap="#" height="126" width="145"><map name="" id="" title="" style="color: red; position: relative; top: 0px;"><area shape="rect" coords="0,0,82,126" alt="Sun" href="http://www.w3schools.com/tags/sun.htm"><area shape="circle" coords="90,58,3" alt="Mercury" href="http://www.w3schools.com/tags/mercur.htm"><area shape="circle" coords="124,58,8" alt="Venus" href="http://www.w3schools.com/tags/venus.htm"></map>
+                
+<br>
+
+<!------------------------------------------------------- NAV -------------------------------------------------------------->
+
+<h2><p style="color:#FF0000"><b>Nav</b></p></h2>
+
+
+                
+                    <nav id="nav_ControlTest" name="nav_ControlTest" title="nav_ControlTest" style="position: relative; top: 0px;"><a href="http://www.w3schools.com/html/">HTML</a> |<a href="http://www.w3schools.com/css/">CSS</a> |<a href="http://www.w3schools.com/js/">JavaScript</a> |<a href="http://www.w3schools.com/jquery/">jQuery</a></nav>
+                
+            <br>
+			
+
+                
+                    <nav id="nav_ControlTest" name="nav_ControlTest" title="nav_ControlTest" disabled="" style="position: relative; top: 0px;"><a href="http://www.w3schools.com/html/">HTML</a> |<a href="http://www.w3schools.com/css/">CSS</a> |<a href="http://www.w3schools.com/js/">JavaScript</a> |<a href="http://www.w3schools.com/jquery/">jQuery</a></nav>
+                
+            <br>			
+			
+			
+
+                
+                    <nav id="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" name="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" title="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" style="position: relative; top: 0px;"><a href="http://www.w3schools.com/html/">HTML</a> |<a href="http://www.w3schools.com/css/">CSS</a> |<a href="http://www.w3schools.com/js/">JavaScript</a> |<a href="http://www.w3schools.com/jquery/">jQuery</a></nav>
+                
+            <br>
+			
+                
+                    <nav id="" name="" title="" style="position: relative; top: 0px;"><a href="http://www.w3schools.com/html/">HTML</a> |<a href="http://www.w3schools.com/css/">CSS</a> |<a href="http://www.w3schools.com/js/">JavaScript</a> |<a href="http://www.w3schools.com/jquery/">jQuery</a></nav>
+                
+            <br>
+
+			
+<!------------------------------------------------------- METER -------------------------------------------------------------->		
+			
+<h2><p style="color:#FF0000"><b>Meter</b></p></h2>
+
+
+                
+                    <meter min="0" low="40" high="90" max="100" value="65" id="meter_ControlTest" name="meter_ControlTest" title="meter_ControlTest" style="position: relative; top: 0px;"></meter>
+                
+
+
+
+                
+                    <meter min="0" low="40" high="90" max="100" value="65" id="meter_ControlTest" name="meter_ControlTest" title="meter_ControlTest" style="position: relative; top: 0px;"></meter>
+                
+
+
+
+
+                
+                    <meter min="0" low="40" high="90" max="100" value="65" id="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" name="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" title="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" style="position: relative; top: 0px;"></meter>
+                
+
+
+                
+                    <meter min="0" low="40" high="90" max="100" value="65" id="" name="" title="" style="position: relative; top: 0px;"></meter>
+                
+<br>
+
+<!------------------------------------------------------- INPUT URL -------------------------------------------------------------->
+
+
+<h2><p style="color:#FF0000"><b>InputURL</b></p></h2>
+
+                
+                    <form action="http://www.w3schools.com/tags/demo_form.asp"><p>Add your homepage: <input id="url_ControlTest" name="url_ControlTest" title="url_ControlTest" style="position: relative; top: 0px;" type="url"></p><input type="submit"></form>
+                
+            
+			
+
+                
+                    <form action="http://www.w3schools.com/tags/demo_form.asp"><p>Add your homepage: <input id="url_ControlTest" disabled="disabled" name="url_ControlTest" title="url_ControlTest" style="position: relative; top: 0px;" type="url"></p><input disabled="disabled" type="submit"></form>
+                
+            			
+			
+	
+                
+                    <form action="http://www.w3schools.com/tags/demo_form.asp"><p>Add your homepage: <input id="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" name="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" title="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" style="position: relative; top: 0px;" type="url"></p><input type="submit"></form>
+                
+            
+
+                
+                    <form action="http://www.w3schools.com/tags/demo_form.asp"><p>Add your homepage: <input id="" name="t" title="" style="position: relative; top: 0px;" type="url"></p><input type="submit"></form>
+                
+            <br>			
+
+<!------------------------------------------------------- TIME TAG ----------------------------------------------------------->	
+			
+<h2><p style="color:#FF0000"><b>TimeTag</b></p></h2>
+
+                    We open at <time id="timetag_ControlTest" title="timetag_ControlTest" datetime="2012-10-24" pubdate="pubdate" style="position: relative; top: 0px;">10:00</time> every morning.
+<br>
+
+
+                    We open at <time id="timetag_ControlTest" title="timetag_ControlTest" datetime="2012-10-24" disabled="" pubdate="pubdate" style="position: relative; top: 0px;">10:00</time> every morning.
+<br>
+
+
+
+
+                    We open at <time id="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" title="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" datetime="2012-10-24" pubdate="pubdate" style="position: relative; top: 0px;">11:00</time> every morning.
+<br>
+
+                    We open at <time id="" title="" datetime="2012-10-24" pubdate="pubdate" style="position: relative; top: 0px;">12:00</time> every morning.
+<br>
+
+<!------------------------------------------------------- INPUT EMAIL ----------------------------------------------------------->
+
+
+
+<h2><p style="color:#FF0000"><b>InputEmail</b></p></h2>
+
+                    <form action="http://www.w3schools.com/tags/demo_form.asp">E-mail: <input id="email_ControlTest" name="email_ControlTest" title="email_ControlTest" style="position: relative; top: 0px;" type="email"><br><input type="submit"></form>
+
+
+
+                    <form action="http://www.w3schools.com/tags/demo_form.asp">E-mail: <input id="email_ControlTest" name="email_ControlTest" title="email_ControlTest" disabled="disabled" style="position: relative; top: 0px;" type="email"><br><input disabled="disabled" type="submit"></form>
+
+
+
+
+
+                    <form action="http://www.w3schools.com/tags/demo_form.asp">E-mail: <input id="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" name="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" title="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" style="position: relative; top: 0px;" type="email"><br><input type="submit"></form>
+
+
+                    <form action="http://www.w3schools.com/tags/demo_form.asp">E-mail: <input id="" name="" title="" style="position: relative; top: 0px;" type="email"><br><input type="submit"></form>
+<br>
+
+<!------------------------------------------------------- OUTPUT -------------------------------------------------------------->
+	
+<h2><p style="color:#FF0000"><b>Output</b></p></h2>			
+
+                
+                    <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">0<input name="a" value="50" type="range">100+<input name="b" value="50" type="number">Out put :<output id="output_ControlTest" name="x" title="output_ControlTest" for="a b" style="position: relative; top: 0px;"></output></form>
+                
+
+
+
+                
+                    <form oninput="x.value=parseInt(a.value)+parseInt(b.value)" disabled="">0<input name="a" value="50" disabled="disabled" type="range">100+<input name="b" value="50" disabled="disabled" type="number">Out put :<output id="output_ControlTest" disabled="" name="x" title="output_ControlTest" for="a b" style="position: relative; top: 0px;"></output></form>
+                
+		
+			
+			
+                
+                    <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">0<input name="a" value="50" type="range">100+<input name="b" value="50" type="number">Out put :<output id="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" name="x" title="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" for="a b" style="position: relative; top: 0px;"></output></form>
+                
+            
+			
+                
+                    <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">0<input name="a" value="50" type="range">100+<input name="b" value="50" type="number">Out put :<output id="" name="x" title="" for="a b" style="position: relative; top: 0px;"></output></form>
+                
+            <br>		
+
+			
+<!------------------------------------------------------- VIDEO-------------------------------------------------------------->		
+			
+<h2><p style="color:#FF0000"><b>Video</b></p></h2>
+
+                    <video controls="controls" id="video_ControlTest" name="video_ControlTest" title="video_ControlTest" preload="auto" style="position: relative; top: 0px;" height="240" width="320"><source id="source" src="Standard%20Control_files/lgvn10003AUTAUT_samplesHTML_StandardControlHTML5Videomov_bbb.htm" type="video/mp4"><source src="Standard%20Control_files/lgvn10003AUTAUT_samplesHTML_StandardControlHTML5Videomovie.htm" type="video/ogg"></video>
+                
+				
+
+                    <video controls="controls" id="video_ControlTest" name="video_ControlTest" title="video_ControlTest" preload="auto" style="position: relative; top: 0px;" disabled="" height="240" width="320"><source src="Standard%20Control_files/lgvn10003AUTAUT_samplesHTML_StandardControlHTML5Videomov_bbb.htm" type="video/mp4" disabled=""><source src="Standard%20Control_files/lgvn10003AUTAUT_samplesHTML_StandardControlHTML5Videomovie.htm" type="video/ogg" disabled=""></video>
+                			
+				
+				
+
+                    <video controls="controls" id="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" name="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" title="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" preload="auto" style="position: relative; top: 0px;" height="240" width="320"><source src="Standard%20Control_files/lgvn10003AUTAUT_samplesHTML_StandardControlHTML5Videomov_bbb.htm" type="video/mp4"><source src="Standard%20Control_files/lgvn10003AUTAUT_samplesHTML_StandardControlHTML5Videomovie.htm" type="video/ogg"></video>
+                
+				
+                    <video controls="controls" id="" name="" title="" preload="auto" style="position: relative; top: 0px;" height="240" width="320"><source src="Standard%20Control_files/lgvn10003AUTAUT_samplesHTML_StandardControlHTML5Videomov_bbb.htm" type="video/mp4"><source src="Standard%20Control_files/lgvn10003AUTAUT_samplesHTML_StandardControlHTML5Videomovie.htm" type="video/ogg"></video>
+                <br>
+	<br><br>
+
+<!------------------------------------------------------- AUDIO -------------------------------------------------------------->
+	
+	
+	
+<h2><p style="color:#FF0000"><b>Audio</b></p></h2>
+
+
+                    <audio controls="controls" id="audio_ControlTest" name="audio_ControlTest" disabled="" title="audio_ControlTest" preload="auto" style="position: relative; top: 0px;"><source src="Standard%20Control_files/lgvn10003AUTAUT_samplesHTML_StandardControlHTML5VideoLov_002.htm" type="audio/ogg"><source src="Standard%20Control_files/lgvn10003AUTAUT_samplesHTML_StandardControlHTML5VideoLoving_.htm" type="audio/mp3"></audio>
+                	
+
+
+                    <audio controls="controls" id="audio_ControlTest" name="audio_ControlTest" title="audio_ControlTest" preload="auto" style="position: relative; top: 0px;" disabled=""><source src="Standard%20Control_files/lgvn10003AUTAUT_samplesHTML_StandardControlHTML5VideoLov_002.htm" type="audio/ogg" disabled=""><source src="Standard%20Control_files/lgvn10003AUTAUT_samplesHTML_StandardControlHTML5VideoLoving_.htm" type="audio/mp3" disabled=""></audio>
+                
+				
+			
+				
+				
+
+                    <audio controls="controls" id="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" name="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" title="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" preload="auto" style="position: relative; top: 0px;"><source src="Standard%20Control_files/lgvn10003AUTAUT_samplesHTML_StandardControlHTML5VideoLov_002.htm" type="audio/ogg"><source src="Standard%20Control_files/lgvn10003AUTAUT_samplesHTML_StandardControlHTML5VideoLoving_.htm" type="audio/mp3"></audio>
+                
+                    <audio controls="controls" id="" name="" title="" preload="auto" style="position: relative; top: 0px;"><source src="Standard%20Control_files/lgvn10003AUTAUT_samplesHTML_StandardControlHTML5VideoLov_002.htm" type="audio/ogg"><source src="Standard%20Control_files/lgvn10003AUTAUT_samplesHTML_StandardControlHTML5VideoLoving_.htm" type="audio/mp3"></audio>
+                	
+
+				
+<!------------------------------------------------------- DETAILS ------------------------------------------------------------>	
+				
+<h2><p style="color:#FF0000"><b>Details</b></p></h2>
+
+                    <details id="details_ControlTest" name="details_ControlTest" title="details_ControlTest" style="position: relative; top: 0px;"><summary>LogiGear</summary><p>Founded in 1994 by top thought leaders in the software testing industry, LogiGear has completed over 3,000 projects </p>for hundreds of companies across a broad range of industries and technologies.<p></p></details>
+<br>
+
+
+                    <details id="disabled_details_ControlTest" name="disabled_details_ControlTest" title="disabled_details_ControlTest" style="position: relative; top: 0px;" disabled=""><summary>LogiGear</summary><p>Founded in 1994 by top thought leaders in the software testing industry, LogiGear has completed over 3,000 projects </p>for hundreds of companies across a broad range of industries and technologies.<p></p></details>
+<br>
+
+
+
+
+                    <details id="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" name="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" title="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" style="position: relative; top: 0px;"><summary>LogiGear</summary><p>Founded in 1994 by top thought leaders in the software testing industry, LogiGear has completed over 3,000 projects </p>for hundreds of companies across a broad range of industries and technologies.<p></p></details>
+<br>
+
+                    <details id="" name="" title="" style="position: relative; top: 0px;"><summary>LogiGear</summary><p>Founded in 1994 by top thought leaders in the software testing industry, LogiGear has completed over 3,000 projects </p>for hundreds of companies across a broad range of industries and technologies.<p></p></details>
+<br>				
+
+<!------------------------------------------------------- CANVAS -------------------------------------------------------------->
+
+
+<h2><p style="color:#FF0000"><b>Canvas</b></p></h2>
+
+                
+                    <canvas id="canvas_ControlTest" title="canvas_ControlTest" width="200" height="100" style="border: 1px solid rgb(211, 211, 211); position: relative; top: 0px;">Your browser does not support the HTML5 canvas tag.</canvas>
+                
+            
+			
+		
+                
+                    <canvas disabled="" id="disabled_canvas_ControlTest" title="disabled_canvas_ControlTest" width="200" height="100" style="border: 1px solid rgb(211, 211, 211); position: relative; top: 0px;">Your browser does not support the HTML5 canvas tag.</canvas>
+                
+            	
+			
+			
+			
+                
+                    <canvas id="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" title="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" width="200" height="100" style="border: 1px solid rgb(211, 211, 211); position: relative; top: 0px;">Your browser does not support the HTML5 canvas tag.</canvas>
+                
+            
+			
+                
+                    <canvas id="" title="" width="200" height="100" style="border: 1px solid rgb(211, 211, 211); position: relative; top: 0px;">Your browser does not support the HTML5 canvas tag.</canvas>
+                
+            <br>
+
+<!------------------------------------------------------- FIG CAPTION -------------------------------------------------------->		
+			
+			
+<h2><p style="color:#FF0000"><b>FigCaption</b></p></h2>
+			
+                
+                    <figure><img src="Standard%20Control_files/lgvn10003AUTAUT_samplesHTML_StandardControlHTML5imagesimg_pu.htm" alt="The Pulpit Rock" height="228" width="304"><figcaption style="position: relative; top: 0px; background-color: rgb(100, 149, 237);" id="figcaption_ControlTest" name="figcaption_ControlTest" title="figcaption_ControlTest">Fig1. - A view of the pulpit rock in Norway.</figcaption></figure>
+                
+            
+			
+			
+                
+                    <figure disabled="disabled"><img src="Standard%20Control_files/lgvn10003AUTAUT_samplesHTML_StandardControlHTML5imagesimg_pu.htm" alt="The Pulpit Rock" height="228" width="304"><figcaption style="position: relative; top: 0px; background-color: rgb(100, 149, 237);" id="figcaption_ControlTest" disabled="disabled" name="figcaption_ControlTest" title="figcaption_ControlTest">Fig1. - A view of the pulpit rock in Norway.</figcaption></figure>
+                
+            		
+			
+			
+			
+			
+                
+                    <figure><img src="Standard%20Control_files/lgvn10003AUTAUT_samplesHTML_StandardControlHTML5imagesimg_pu.htm" alt="The Pulpit Rock" height="228" width="304"><figcaption style="position: relative; top: 0px; background-color: rgb(100, 149, 237);" id="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" name="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" title="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào">Fig1. - A view of the pulpit rock in Norway.</figcaption></figure>
+                
+            
+			
+                
+                    <figure><img src="Standard%20Control_files/lgvn10003AUTAUT_samplesHTML_StandardControlHTML5imagesimg_pu.htm" alt="The Pulpit Rock" height="228" width="304"><figcaption style="position: relative; top: 0px; background-color: rgb(100, 149, 237);" id="" name="" title="">Fig1. - A view of the pulpit rock in Norway.</figcaption></figure>
+                
+            <br>
+
+<!------------------------------------------------------- SUMMARY -------------------------------------------------------------->
+			
+<h2><p style="color:#FF0000"><b>Summary</b></p></h2>		
+
+                
+                    <details><summary id="summary_ControlTest" name="summary_ControlTest" title="summary_ControlTest" style="position: relative; top: 0px;">LogiGear</summary><p>Founded in 1994 by top thought leaders in the software testing industry, LogiGear has completed over 3,000 projects </p>for hundreds of companies across a broad range of industries and technologies.<p></p></details>
+                
+            <br>	
+			
+	
+                
+                    <details><summary id="disabled_summary_ControlTest" name="disabled_summary_ControlTest" disabled="" title="disabled_summary_ControlTest" style="position: relative; top: 0px;">LogiGear</summary><p>Founded in 1994 by top thought leaders in the software testing industry, LogiGear has completed over 3,000 projects </p>for hundreds of companies across a broad range of industries and technologies.<p></p></details>
+                
+            <br>			
+			
+			
+			
+			
+
+                
+                    <details><summary id="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" name="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" title="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" style="position: relative; top: 0px;">LogiGear</summary><p>Founded in 1994 by top thought leaders in the software testing industry, LogiGear has completed over 3,000 projects </p>for hundreds of companies across a broad range of industries and technologies.<p></p></details>
+                
+            <br>
+
+                
+                    <details><summary id="" name="" title="" style="position: relative; top: 0px;">LogiGear</summary><p>Founded in 1994 by top thought leaders in the software testing industry, LogiGear has completed over 3,000 projects </p>for hundreds of companies across a broad range of industries and technologies.<p></p></details>
+                
+            <br>			
+	
+	
+<!------------------------------------------------------- SVG -------------------------------------------------------------->
+	
+<h2><p style="color:#FF0000"><b>SVG</b></p></h2>
+
+                
+                    <svg id="svg_ControlTest" title="svg_ControlTest" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="200"><polygon id= "polygon" points="100,10 40,180 190,60 10,60 160,180" style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;"></polygon></svg>
+                
+            
+			
+	
+                
+                    <svg id="disabled_svg_ControlTest" disabled="" title="disabled_svg_ControlTest" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="200"><polygon disabled="" points="100,10 40,180 190,60 10,60 160,180" style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;"></polygon></svg>
+                
+            		
+			
+			
+			
+			
+                
+                    <svg id="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" title="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="200"><polygon points="100,10 40,180 190,60 10,60 160,180" style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;"></polygon></svg>
+                
+            
+			
+                
+                    
+					<svg id="" title="" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="200"><polygon points="100,10 40,180 190,60 10,60 160,180" style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;"></polygon></svg>
+                
+            <br>
+
+
+<!------------------------------------------------------- EMBED ------------------------------------------------------------>		
+			
+			
+<h2><p style="color:#FF0000"><b>Embed</b></p></h2>		
+
+                
+                    <embed id="embed_ControlTest" name="embed_ControlTest" title="embed_ControlTest" type="application/x-shockwave-flash" src="Standard%20Control_files/helloworld.swf" style="border: 1px solid; position: relative; top: 0px;" height="100" width="200">
+                
+            	
+
+
+                
+                    <embed id="embed_ControlTest" disabled="" name="embed_ControlTest" title="embed_ControlTest" type="application/x-shockwave-flash" src="Standard%20Control_files/helloworld.swf" style="border: 1px solid; position: relative; top: 0px;" height="100" width="200">
+                
+            	
+			
+
+                
+                    <embed id="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" name="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" title="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" type="application/x-shockwave-flash" src="Standard%20Control_files/helloworld.swf" style="border: 1px solid; position: relative; top: 0px;" height="100" width="200">
+                
+            	
+			
+                
+                    <embed id="" name="" title="" type="application/x-shockwave-flash" src="Standard%20Control_files/helloworld.swf" style="border: 1px solid; position: relative; top: 0px;" height="100" width="200">
+                
+            	<br>
+			<br><br>
+			
+<!------------------------------------------------------- KEYGEN -------------------------------------------------------------->
+			
+			
+<h2><p style="color:#FF0000"><b>Keygen</b></p></h2>
+<br><br>
+
+                
+                    <form action="http://www.w3schools.com/tags/demo_keygen.asp" method="get">Username: <input name="usr_name" type="text">Key Gen: <select name="security" id="keygen_ControlTest" title="keygen_ControlTest" style="position: relative; top: 0px;"><option selected="selected">B&#7853;c Cao</option><option>B&#7853;c Trung</option></select><input type="submit"></form>
+                
+            
+			
+	
+                
+                    <form action="http://www.w3schools.com/tags/demo_keygen.asp" method="get">Username: <input name="usr_name" type="text">Key Gen: <select name="security" id="keygen_ControlTest" disabled="disabled" title="keygen_ControlTest" style="position: relative; top: 0px;"><option selected="selected">B&#7853;c Cao</option><option>B&#7853;c Trung</option></select><input type="submit"></form>
+                
+            		
+			
+			
+			
+                
+                    <form action="http://www.w3schools.com/tags/demo_keygen.asp" method="get">Username: <input name="usr_name" type="text">Key Gen: <select name="security" id="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" title="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" style="position: relative; top: 0px;"><option selected="selected">B&#7853;c Cao</option><option>B&#7853;c Trung</option></select><input type="submit"></form>
+                
+            
+			
+                
+                    <form action="http://www.w3schools.com/tags/demo_keygen.asp" method="get">Username: <input name="usr_name" type="text">Key Gen: <select name="security" id="" title="" style="position: relative; top: 0px;"><option selected="selected">B&#7853;c Cao</option><option>B&#7853;c Trung</option></select><input type="submit"></form>
+                
+            
+<br><br>
+
+<!------------------------------------------------------- ARTICLE -------------------------------------------------------------->
+
+
+<h2><p style="color:#FF0000"><b>Article</b></p></h2>
+<br><br>			
+	
+                
+                    <article title="article_ControlTest" id="article_ControlTest" name="article_ControlTest" style="text-align: center; margin: auto; position: relative; top: 0px;">This is a text in article tag</article>
+                
+            
+			
+	
+                
+                    <article title="disabled_article_ControlTest" id="disabled_article_ControlTest" disabled="" name="disabled_article_ControlTest" style="text-align: center; margin: auto; position: relative; top: 0px;">This is a text in article tag</article>
+                
+            		
+			
+
+                
+                    <article title="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" id="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" name="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" style="text-align: center; margin: auto; position: relative; top: 0px;">This is a text in article tag</article>
+                
+            
+
+                
+                    <article title="" id="" name="" style="text-align: center; margin: auto; position: relative; top: 0px;">This is a text in article tag</article>
+                
+            			
+			
+<!------------------------------------------------------- RUBY -------------------------------------------------------------->
+			
+			
+<h2><p style="color:#FF0000"><b>Ruby</b></p></h2>
+
+
+                
+                    <ruby id="ruby_ControlTest" title="ruby_ControlTest" style="position: relative; top: 0px;">&#28450; <rt> &#12559;&#12578;&#715; </rt></ruby>
+                
+            
+			
+	
+                
+                    <ruby id="ruby_ControlTest" disabled="" title="ruby_ControlTest" style="position: relative; top: 0px;">&#28450; <rt> &#12559;&#12578;&#715; </rt></ruby>
+                
+            		
+			
+			
+
+                
+                    <ruby id="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" title="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" style="position: relative; top: 0px;">&#28450; <rt> &#12559;&#12578;&#715; </rt></ruby>
+                
+            
+
+                
+                    <ruby id="ruby_ControlTest" title="ruby_ControlTest" style="position: relative; top: 0px;">&#28450; <rt> &#12559;&#12578;&#715; </rt></ruby>
+                
+            
+
+<!------------------------------------------------------- SECTION------------------------------------------------------------>
+	
+	
+<h2><p style="color:#FF0000"><b>Section</b></p></h2>
+	
+	
+                
+                    <section title="section_ControlTest" id="section_ControlTest" name="section_ControlTest" style="text-align: center; margin: auto; position: relative; top: 0px;">This is a text in section tag</section>
+                
+            
+			
+	
+                
+                    <section title="section_ControlTest" disabled="" id="section_ControlTest" name="section_ControlTest" style="text-align: center; margin: auto; position: relative; top: 0px;">This is a text in section tag</section>
+                
+            		
+			
+			
+			
+                
+                    <section title="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" id="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" name="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" style="text-align: center; margin: auto; position: relative; top: 0px;">This is a text in section tag</section>
+                
+            
+			
+                
+                    <section title="" id="" name="" style="text-align: center; margin: auto; position: relative; top: 0px;">This is a text in section tag</section>
+                
+            
+	
+<!------------------------------------------------------- ASIDE -------------------------------------------------------------->
+	
+	
+<h2><p style="color:#FF0000"><b>Aside</b></p></h2>
+
+
+                
+                    <aside title="aside_ControlTest" id="aside_ControlTest" name="aside_ControlTest" style="text-align: center; margin: auto; position: relative; top: 0px;">This is a text in aside tag</aside>
+                
+				
+	
+                
+                    <aside title="disabled_aside_ControlTest" disabled="" id="disabled_aside_ControlTest" name="disabled_aside_ControlTest" style="text-align: center; margin: auto; position: relative; top: 0px;">This is a text in aside tag</aside>
+                			
+				
+            
+
+                
+                    <aside title="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" id="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" name="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" style="text-align: center; margin: auto; position: relative; top: 0px;">This is a text in aside tag</aside>
+                
+            
+
+                
+                    <aside title="" id="" name="" style="text-align: center; margin: auto; position: relative; top: 0px;">This is a text in aside tag</aside>
+                
+            			
+
+<!------------------------------------------------------- MARK -------------------------------------------------------------->		
+			
+			
+			
+<h2><p style="color:#FF0000"><b>Mark</b></p></h2>
+
+
+
+                
+                    <mark title="mark_ControlTest" id="mark_ControlTest" name="mark_ControlTest" style="text-align: center; margin: auto; position: relative; top: 0px;">This is a text in mark tag</mark>
+                
+            <br>
+			
+
+                
+                    <mark title="mark_ControlTest" id="mark_ControlTest" disabled="" name="mark_ControlTest" style="text-align: center; margin: auto; position: relative; top: 0px;">This is a text in mark tag</mark>
+                
+            <br>			
+			
+
+                
+                    <mark title="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" id="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" name="cơn s&#7889;t apple ipad m&#7899;i CƠN S&#7888;T APPLE IPAD M&#7898;I 123456 &#25105;&#24859;&#20320; &#1571;&#1606;&#1575; &#1571;&#1581;&#1576;&#1603; !@d#%&amp;'control Quy&#7873;n th&#7871; L&#242;ng kiêu h&#227;nh c&#7911;a FlexNote đ&#227; b&#7883; t&#7893;n thương r&#7845;t nhi&#7873;u sau tr&#7853;n đ&#7845;u v&#7915;a qua và t&#7889;i nay chúng tôi s&#7869; cho Intern bi&#7871;t con th&#7883;nh n&#7897; c&#7911;a FlexnNote là như th&#7871; nào" style="text-align: center; margin: auto; position: relative; top: 0px;">This is a text in mark tag</mark>
+                
+            <br>
+			
+                
+                    <mark title="" id="" name="" style="text-align: center; margin: auto; position: relative; top: 0px;">This is a text in mark tag</mark>
+                
+            
+  <!------------------------------------------------------- input color -------------------------------------------------------------->		
+					
+<h2><p style="color:#FF0000"><b><h2><p style="color:#FF0000"><b>input color</b></p></h2></b></p></h2>
+
+	
+ <div>
+                    Select your favorite color: <input type="color" id="color_ControlTest" autocomplete="on" required="" name="color_ControlTest" title="color_ControlTest" style="position: relative; top: 0px;"><br>
+              Select your favorite color: <input type="color" id="color_ControlTest" autocomplete="on" required="" name="color_ControlTest" title="color_ControlTest" style="position: relative; top: 0px;"><br>
+              Select your favorite color: <input type="color" id="color_ControlTest" autocomplete="on" required="" name="color_ControlTest" title="color_ControlTest" style="position: relative; top: 0px;"><br>
+ Select your favorite color: <input type="color" id="color_ControlTest" autocomplete="on" required="" name="color_ControlTest" title="color_ControlTest" style="position: relative; top: 0px;"><br>
+ </div>               
+
+  <!------------------------------------------------------- input date -------------------------------------------------------------->		
+					
+<h2><p style="color:#FF0000"><b><h2><p style="color:#FF0000"><b>input date</b></p></h2></b></p></h2>
+
+<div>
+<input id="date_ControlTest" type="date" name="date_ControlTest" title="date_ControlTest" autocomplete="on" style="position: relative; top: 0px;"><br>
+<input id="date_ControlTest" type="date" name="date_ControlTest" title="date_ControlTest" autocomplete="on" style="position: relative; top: 0px;"><br>
+<input id="date_ControlTest" type="date" name="date_ControlTest" title="date_ControlTest" autocomplete="on" style="position: relative; top: 0px;"><br>
+<input id="date_ControlTest" type="date" name="date_ControlTest" title="date_ControlTest" autocomplete="on" style="position: relative; top: 0px;"><br>
+
+</div>
+ 
+ <!------------------------------------------------------- input date time -------------------------------------------------------------->		
+					
+<h2><p style="color:#FF0000"><b><h2><p style="color:#FF0000"><b>input date time</b></p></h2></b></p></h2>
+ 
+ <nav>
+ 
+ <input id="datetime_ControlTest" type="datetime" name="datetime_ControlTest" title="datetime_ControlTest" autocomplete="on" style="position: relative; top: 0px;"><br>
+  <input id="datetime_ControlTest" type="datetime" name="datetime_ControlTest" title="datetime_ControlTest" autocomplete="on" style="position: relative; top: 0px;"><br>
+   <input id="datetime_ControlTest" type="datetime" name="datetime_ControlTest" title="datetime_ControlTest" autocomplete="on" style="position: relative; top: 0px;"><br>
+    <input id="datetime_ControlTest" type="datetime" name="datetime_ControlTest" title="datetime_ControlTest" autocomplete="on" style="position: relative; top: 0px;"><br>
+	
+ </nav>
+ 
+ 
+  <!------------------------------------------------------- input date time local -------------------------------------------------------------->		
+					
+<h2><p style="color:#FF0000"><b><h2><p style="color:#FF0000"><b>input date time local</b></p></h2></b></p></h2>
+
+<div>
+<input id="datetime-local_ControlTest" type="datetime-local" name="datetime-local_ControlTest" title="datetime-local_ControlTest" autocomplete="on" style="position: relative; top: 0px;"><br>
+<input id="datetime-local_ControlTest" type="datetime-local" name="datetime-local_ControlTest" title="datetime-local_ControlTest" autocomplete="on" style="position: relative; top: 0px;"><br>
+<input id="datetime-local_ControlTest" type="datetime-local" name="datetime-local_ControlTest" title="datetime-local_ControlTest" autocomplete="on" style="position: relative; top: 0px;"><br>
+<input id="datetime-local_ControlTest" type="datetime-local" name="datetime-local_ControlTest" title="datetime-local_ControlTest" autocomplete="on" style="position: relative; top: 0px;"><br>
+
+</div>
+ 
+ 
+ <!------------------------------------------------------- input Email -------------------------------------------------------------->		
+					
+<h2><p style="color:#FF0000"><b><h2><p style="color:#FF0000"><b>input Email</b></p></h2></b></p></h2>
+
+<div>
+<div>
+Email: <input type="email" id="email_ControlTest" maxlength="20" autocomplete="on" placeholder="email_ControlTest" name="email_ControlTest" title="email_ControlTest" style="position: relative; top: 0px;"><br>
+Email: <input type="email" id="email_ControlTest" maxlength="20" autocomplete="on" placeholder="email_ControlTest" name="email_ControlTest" title="email_ControlTest" style="position: relative; top: 0px;"><br>
+Email: <input type="email" id="email_ControlTest" maxlength="20" autocomplete="on" placeholder="email_ControlTest" name="email_ControlTest" title="email_ControlTest" style="position: relative; top: 0px;"><br>
+Email: <input type="email" id="email_ControlTest" maxlength="20" autocomplete="on" placeholder="email_ControlTest" name="email_ControlTest" title="email_ControlTest" style="position: relative; top: 0px;"><br>
+
+</div>
+</div>
+ 
+ <!------------------------------------------------------- input Month -------------------------------------------------------------->		
+					
+<h2><p style="color:#FF0000"><b><h2><p style="color:#FF0000"><b>input Month</b></p></h2></b></p></h2>
+ 
+ <table>
+ <td>
+ <input id="month_ControlTest" type="month" name="month_ControlTest" title="month_ControlTest" autocomplete="on" style="position: relative; top: 0px;"><br>
+ <input id="month_ControlTest" type="month" name="month_ControlTest" title="month_ControlTest" autocomplete="on" style="position: relative; top: 0px;"><br>
+ <input id="month_ControlTest" type="month" name="month_ControlTest" title="month_ControlTest" autocomplete="on" style="position: relative; top: 0px;"><br>
+ <input id="month_ControlTest" type="month" name="month_ControlTest" title="month_ControlTest" autocomplete="on" style="position: relative; top: 0px;"><br>
+ 
+ </td>
+ </table>
+ 
+  <!------------------------------------------------------- input number -------------------------------------------------------------->		
+					
+<h2><p style="color:#FF0000"><b><h2><p style="color:#FF0000"><b>input number</b></p></h2></b></p></h2>
+ 
+  <table>
+ <td>
+ 
+ <input id="number_ControlTest" type="number" name="number_ControlTest" value="3" max="5" min="1" step="2" title="number_ControlTest" style="position: relative; top: 0px;"><br>
+ <input id="number_ControlTest" type="number" name="number_ControlTest" value="3" max="5" min="1" step="2" title="number_ControlTest" style="position: relative; top: 0px;"><br>
+ <input id="number_ControlTest" type="number" name="number_ControlTest" value="3" max="5" min="1" step="2" title="number_ControlTest" style="position: relative; top: 0px;"><br>
+ <input id="number_ControlTest" type="number" name="number_ControlTest" value="3" max="5" min="1" step="2" title="number_ControlTest" style="position: relative; top: 0px;"><br>
+ 
+ </td>
+ </table>
+ 
+<!------------------------------------------------------- input range -------------------------------------------------------------->		
+					
+<h2><p style="color:#FF0000"><b><h2><p style="color:#FF0000"><b>input range</b></p></h2></b></p></h2>
+
+  <table>
+ <td>
+
+<input id="range_ControlTest" type="range" name="range_ControlTest" value="3" max="5" min="1" step="2" autocomplete="on" title="range_ControlTest" style="position: relative; top: 0px;"><br>
+<input id="range_ControlTest" type="range" name="range_ControlTest" value="3" max="5" min="1" step="2" autocomplete="on" title="range_ControlTest" style="position: relative; top: 0px;"><br>
+<input id="range_ControlTest" type="range" name="range_ControlTest" value="3" max="5" min="1" step="2" autocomplete="on" title="range_ControlTest" style="position: relative; top: 0px;"><br>
+<input id="range_ControlTest" type="range" name="range_ControlTest" value="3" max="5" min="1" step="2" autocomplete="on" title="range_ControlTest" style="position: relative; top: 0px;"><br>
+ 
+
+ </td>
+ </table>
+
+<!------------------------------------------------------- input search -------------------------------------------------------------->		
+					
+<h2><p style="color:#FF0000"><b><h2><p style="color:#FF0000"><b>input search</b></p></h2></b></p></h2>
+ 
+   <table>
+ <td>
+<input type="search" id="search_ControlTest" autocomplete="on" placeholder="search_ControlTest" name="search_ControlTest" title="search_ControlTest" style="position: relative; top: 0px;"><br>
+<input type="search" id="search_ControlTest" autocomplete="on" placeholder="search_ControlTest" name="search_ControlTest" title="search_ControlTest" style="position: relative; top: 0px;"><br>
+<input type="search" id="search_ControlTest" autocomplete="on" placeholder="search_ControlTest" name="search_ControlTest" title="search_ControlTest" style="position: relative; top: 0px;"><br>
+<input type="search" id="search_ControlTest" autocomplete="on" placeholder="search_ControlTest" name="search_ControlTest" title="search_ControlTest" style="position: relative; top: 0px;"><br>
+
+ </td>
+ </table>
+ 
+ <!------------------------------------------------------- input time -------------------------------------------------------------->		
+					
+<h2><p style="color:#FF0000"><b><h2><p style="color:#FF0000"><b>input time</b></p></h2></b></p></h2>
+ 
+ <div>
+ 
+ <input id="time_ControlTest" type="time" name="time_ControlTest" title="time_ControlTest" autocomplete="on" style="position: relative; top: 0px;"><br>
+ <input id="time_ControlTest" type="time" name="time_ControlTest" title="time_ControlTest" autocomplete="on" style="position: relative; top: 0px;"><br>
+ <input id="time_ControlTest" type="time" name="time_ControlTest" title="time_ControlTest" autocomplete="on" style="position: relative; top: 0px;"><br>
+ <input id="time_ControlTest" type="time" name="time_ControlTest" title="time_ControlTest" autocomplete="on" style="position: relative; top: 0px;"><br>
+ 
+ </div>
+ 
+  <!------------------------------------------------------- input week -------------------------------------------------------------->		
+					
+<h2><p style="color:#FF0000"><b><h2><p style="color:#FF0000"><b>input week</b></p></h2></b></p></h2>
+ 
+ <div>
+ 
+ <input id="week_ControlTest" type="week" name="week_ControlTest" title="week_ControlTest" autocomplete="on" style="position: relative; top: 0px;"><br>
+ <input id="week_ControlTest" type="week" name="week_ControlTest" title="week_ControlTest" autocomplete="on" style="position: relative; top: 0px;"><br>
+ <input id="week_ControlTest" type="week" name="week_ControlTest" title="week_ControlTest" autocomplete="on" style="position: relative; top: 0px;"><br>
+ <input id="week_ControlTest" type="week" name="week_ControlTest" title="week_ControlTest" autocomplete="on" style="position: relative; top: 0px;"><br> 
+ 
+ </div>
+ 
+   <!------------------------------------------------------- input url -------------------------------------------------------------->		
+					
+<h2><p style="color:#FF0000"><b><h2><p style="color:#FF0000"><b>input url</b></p></h2></b></p></h2>
+ 
+ <div>
+ 
+ <input type="url" id="url_ControlTest" maxlength="20" autocomplete="on" placeholder="url_ControlTest" name="url_ControlTest" title="url_ControlTest" style="position: relative; top: 0px;"><br>
+ <input type="url" id="url_ControlTest" maxlength="20" autocomplete="on" placeholder="url_ControlTest" name="url_ControlTest" title="url_ControlTest" style="position: relative; top: 0px;"><br>
+ <input type="url" id="url_ControlTest" maxlength="20" autocomplete="on" placeholder="url_ControlTest" name="url_ControlTest" title="url_ControlTest" style="position: relative; top: 0px;"><br>
+ <input type="url" id="url_ControlTest" maxlength="20" autocomplete="on" placeholder="url_ControlTest" name="url_ControlTest" title="url_ControlTest" style="position: relative; top: 0px;"><br>
+ 
+ </div>
+ 
+   <!------------------------------------------------------- Command -------------------------------------------------------------->		
+					
+<h2><p style="color:#FF0000"><b><h2><p style="color:#FF0000"><b>Command</b></p></h2></b></p></h2>
+ 
+ <menu><command type="command" id="command_ControlTest" name="command_ControlTest" title="command_ControlTest" label="Save" onclick="save()" style="position: relative; top: 0px;"></command>Save</menu><br>
+  <menu><command type="command" id="command_ControlTest" name="command_ControlTest" title="command_ControlTest" label="Save" onclick="save()" style="position: relative; top: 0px;"></command>Save</menu><br>
+   <menu><command type="command" id="command_ControlTest" name="command_ControlTest" title="command_ControlTest" label="Save" onclick="save()" style="position: relative; top: 0px;"></command>Save</menu><br>
+    <menu><command type="command" id="command_ControlTest" name="command_ControlTest" title="command_ControlTest" label="Save" onclick="save()" style="position: relative; top: 0px;"></command>Save</menu><br>
+	
+   <!------------------------------------------------------- keygen -------------------------------------------------------------->		
+					
+<h2><p style="color:#FF0000"><b><h2><p style="color:#FF0000"><b>keygen</b></p></h2></b></p></h2>	
+ 
+ <form action="http://www.w3schools.com/tags/demo_keygen.asp" method="get">Username: <input type="text" name="usr_name">Key Gen: <keygen name="security" id="keygen_ControlTest" title="keygen_ControlTest" style="position: relative; top: 0px;"></keygen><input type="submit"></form><br>
+ <form action="http://www.w3schools.com/tags/demo_keygen.asp" method="get">Username: <input type="text" name="usr_name">Key Gen: <keygen name="security" id="keygen_ControlTest" title="keygen_ControlTest" style="position: relative; top: 0px;"></keygen><input type="submit"></form><br>
+ <form action="http://www.w3schools.com/tags/demo_keygen.asp" method="get">Username: <input type="text" name="usr_name">Key Gen: <keygen name="security" id="keygen_ControlTest" title="keygen_ControlTest" style="position: relative; top: 0px;"></keygen><input type="submit"></form><br>
+ <form action="http://www.w3schools.com/tags/demo_keygen.asp" method="get">Username: <input type="text" name="usr_name">Key Gen: <keygen name="security" id="keygen_ControlTest" title="keygen_ControlTest" style="position: relative; top: 0px;"></keygen><input type="submit"></form><br>
+
+  <!------------------------------------------------------- SVG rect -------------------------------------------------------------->		
+					
+<h2><p style="color:#FF0000"><b><h2><p style="color:#FF0000"><b>SVG rect</b></p></h2></b></p></h2>	
+ 
+ <svg id="SVGrect" xmlns="http://www.w3.org/2000/svg" version="1.1" height="190" width="190"><rect id="rect" width="300" height="100" style="fill:rgb(0,0,255);stroke-width:1;stroke:rgb(0,0,0)"></rect></svg>
+  <svg id="SVGrect" xmlns="http://www.w3.org/2000/svg" version="1.1" height="190" width="190"><rect width="300" height="100" style="fill:rgb(0,0,255);stroke-width:1;stroke:rgb(0,0,0)"></rect></svg><br>
+   <svg id="SVGrect" xmlns="http://www.w3.org/2000/svg" version="1.1" height="190" width="190"><rect width="300" height="100" style="fill:rgb(0,0,255);stroke-width:1;stroke:rgb(0,0,0)"></rect></svg>
+    <svg id="SVGrect" xmlns="http://www.w3.org/2000/svg" version="1.1" height="190" width="190"><rect width="300" height="100" style="fill:rgb(0,0,255);stroke-width:1;stroke:rgb(0,0,0)"></rect></svg><br>
+	
+  <!------------------------------------------------------- SVG circle -------------------------------------------------------------->		
+					
+<h2><p style="color:#FF0000"><b><h2><p style="color:#FF0000"><b>SVG circle</b></p></h2></b></p></h2>	
+ 
+ <svg id="SVGcircle" xmlns="http://www.w3.org/2000/svg" version="1.1" height="190" width="190"><circle id="circle" cx="100" cy="50" r="40" stroke="black" stroke-width="2" fill="red"></circle></svg>
+ <svg id="SVGcircle" xmlns="http://www.w3.org/2000/svg" version="1.1" height="190" width="190"><circle cx="100" cy="50" r="40" stroke="black" stroke-width="2" fill="red"></circle></svg><br>
+ <svg id="SVGcircle" xmlns="http://www.w3.org/2000/svg" version="1.1" height="190" width="190"><circle cx="100" cy="50" r="40" stroke="black" stroke-width="2" fill="red"></circle></svg>
+ <svg id="SVGcircle" xmlns="http://www.w3.org/2000/svg" version="1.1" height="190" width="190"><circle cx="100" cy="50" r="40" stroke="black" stroke-width="2" fill="red"></circle></svg><br>
+ 
+   <!------------------------------------------------------- SVG ellipse -------------------------------------------------------------->		
+					
+<h2><p style="color:#FF0000"><b><h2><p style="color:#FF0000"><b>SVG ellipse</b></p></h2></b></p></h2>	
+
+<svg id="SVGellipse" xmlns="http://www.w3.org/2000/svg" version="1.1" height="290" width="290"><ellipse id="ellipse" cx="150" cy="80" rx="100" ry="50" style="fill:yellow;stroke:purple;stroke-width:2"></ellipse></svg>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="290" width="290"><ellipse cx="150" cy="80" rx="100" ry="50" style="fill:yellow;stroke:purple;stroke-width:2"></ellipse></svg><br>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="290" width="290"><ellipse cx="150" cy="80" rx="100" ry="50" style="fill:yellow;stroke:purple;stroke-width:2"></ellipse></svg>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="290" width="290"><ellipse cx="150" cy="80" rx="100" ry="50" style="fill:yellow;stroke:purple;stroke-width:2"></ellipse></svg><br>
+
+  <!------------------------------------------------------- SVG line -------------------------------------------------------------->		
+					
+<h2><p style="color:#FF0000"><b><h2><p style="color:#FF0000"><b>SVG line</b></p></h2></b></p></h2>
+
+<svg id="SVGline" xmlns="http://www.w3.org/2000/svg" version="1.1" height="290" width="500"><line id="line" x1="150" y1="0" x2="300" y2="200" style="stroke:rgb(255,0,0);stroke-width:2"></line></svg>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="290" width="500"><line x1="150" y1="0" x2="300" y2="200" style="stroke:rgb(255,0,0);stroke-width:2"></line></svg><br>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="290" width="500"><line x1="150" y1="0" x2="300" y2="200" style="stroke:rgb(255,0,0);stroke-width:2"></line></svg>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="290" width="500"><line x1="150" y1="0" x2="300" y2="200" style="stroke:rgb(255,0,0);stroke-width:2"></line></svg><br>
+
+  <!------------------------------------------------------- SVG polyline -------------------------------------------------------------->		
+					
+<h2><p style="color:#FF0000"><b><h2><p style="color:#FF0000"><b>SVG polyline</b></p></h2></b></p></h2>	
+ 
+ <svg id="SVGpolyline" xmlns="http://www.w3.org/2000/svg" version="1.1" height="290" width="200"><polyline id="polyline" points="0,40 40,40 40,80 80,80 80,120 120,120 120,160" style="fill:white;stroke:red;stroke-width:4"></polyline></svg>
+ <svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="290" width="200"><polyline points="0,40 40,40 40,80 80,80 80,120 120,120 120,160" style="fill:white;stroke:red;stroke-width:4"></polyline></svg><br>
+ <svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="290" width="200"><polyline points="0,40 40,40 40,80 80,80 80,120 120,120 120,160" style="fill:white;stroke:red;stroke-width:4"></polyline></svg>
+ <svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="290" width="200"><polyline points="0,40 40,40 40,80 80,80 80,120 120,120 120,160" style="fill:white;stroke:red;stroke-width:4"></polyline></svg><br>
+ 
+   <!------------------------------------------------------- SVG path -------------------------------------------------------------->		
+					
+<h2><p style="color:#FF0000"><b><h2><p style="color:#FF0000"><b>SVG path</b></p></h2></b></p></h2>
+
+<svg id="SVGpath" xmlns="http://www.w3.org/2000/svg" version="1.1" height="290" width="300"><path id="path" d="M150 0 L75 200 L225 200 Z"></path></svg>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="290" width="300"><path d="M150 0 L75 200 L225 200 Z"></path></svg><br>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="290" width="300"><path d="M150 0 L75 200 L225 200 Z"></path></svg>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="290" width="300"><path d="M150 0 L75 200 L225 200 Z"></path></svg><br>
+
+   <!------------------------------------------------------- SVG graphic text -------------------------------------------------------------->		
+					
+<h2><p style="color:#FF0000"><b><h2><p style="color:#FF0000"><b>SVG graphic text</b></p></h2></b></p></h2>
+
+<svg id="SVGgraphic" xmlns="http://www.w3.org/2000/svg" version="1.1" height="290" width="200"><text id="graphic" x="0" y="15" fill="red">Lu?ng Toàn R?ng Công</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="290" width="200"><text x="0" y="15" fill="red">Logigear</text></svg><br>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="290" width="200"><text x="0" y="15" fill="red">Lu?ng Toàn R?ng Công</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="290" width="200"><text x="0" y="15" fill="red">Logigear</text></svg><br>
+
+			
+
+
+</b></b></div>
+	</td>
+</tr>
+<tr>
+	<td colspan="4" align="right" height="5%"></td>
+</tr>
+</tbody></table>
+<script type="text/javascript">
+    jQuery(document).ready(function ($) {
+		//work arround set height for div content (bug scrollbar firefox)
+        var iHeight = $("#content").height();
+		$("#content").height(iHeight);
+        sPage = getUrlParm('id').toLowerCase();
+        sPage = "../ScenarioData_HTML/" + sPage + ".html";
+        $("#content").load(sPage);
+		
+    });
+</script>
+
+
+</body><!-- InstanceEnd --></html>

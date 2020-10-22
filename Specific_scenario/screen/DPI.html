@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<input type="button" onclick="getScreenDPI()" value="Click to see screen dpi"></input>
+
+<script>
+
+var getScreenDPI = function(){
+	var para = document.createElement("div");
+	para.setAttribute("id", "dpi");
+	para.setAttribute("style", "height: 1in; width: 1in; left: 100%; position: fixed; top: 100%;");
+	document.documentElement.appendChild(para);
+
+	var dpi_x = document.getElementById('dpi').offsetWidth;
+	var dpi_y = document.getElementById('dpi').offsetHeight;
+
+	alert("dpi_x = " + dpi_x);
+	alert("dpi_y = " + dpi_y);
+	
+	document.documentElement.removeChild(para);
+}
+
+</script>
+
+</body>
+</html>

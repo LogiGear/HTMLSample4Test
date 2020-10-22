@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<video width="320" height="240" controls="controls" id="video_ControlTest" name="video_ControlTest" title="video_ControlTest" preload="auto" style="position: relative; top: 0px;">
+	<source src="http://lgvn14027/HTML5/Video/movie.mp4" type="video/mp4"><source src="http://lgvn14027/HTML5/Video/movie.ogg" type="video/ogg">
+</video>
+
+<button type="button" onclick="myPlay()">Play</button>
+<button type="button" onclick="myPause()">Pause</button>
+<script>
+function myPlay() {
+    document.getElementById("video_ControlTest").play();
+}
+function myPause() {
+    document.getElementById("video_ControlTest").pause();
+}
+</script>
+
+</body>
