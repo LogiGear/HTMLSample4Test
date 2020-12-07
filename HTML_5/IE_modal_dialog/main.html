@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>Test Modal Dialog</title>
+		<script>
+			function showModelDialog(sLink, nWidth, nHeight) {
+				window.showModalDialog(sLink, null, "dialogWidth:" + nWidth + "px;dialogHeight:" + nHeight + "px");
+			}
+		</script>
+	</head>
+	<body>
+		<h1>Enter test link:</h1>
+		<input id="txtLink" type="text" style="width:500px"/>
+		<br />
+		<br />
+		<label for="txtWidth">Width:&nbsp;</label>
+		<input id="txtWidth" type="text" value="800" style="width:40px"/>&nbsp;px
+		<br />
+		<label for="txtHeight">Height:</label>
+		<input id="txtHeight" type="text" value="600" style="width:40px"/>&nbsp;px
+		<br />
+		<br />
+		<button id="btnShow" onclick="showModelDialog(	document.getElementById('txtLink').value,
+														document.getElementById('txtWidth').value, 
+														document.getElementById('txtHeight').value)">
+			Show model dialog
+		</button>
+	</body>
+</html>
