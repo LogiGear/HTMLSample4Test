@@ -4,6 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <title>Standard Control</title>
+<script type="text/javascript" src="../ControlsList/Util.js"></script>
 <style type="text/css">
             a:link {COLOR: blue;text-decoration:none;}
             a:visited {COLOR: blue;}
@@ -2020,7 +2021,14 @@ not supported</video>
 <source src="../Video/movie.mp4" type="video/mp4">
 not supported</video>
  -->
+
+
 </div>
-</frame>			
+</frame>	
 </body>
+<script type="text/javascript">
+    if (getUrlParm('shadow').toLowerCase() === 'true') {
+        attachShadowDOM(document.querySelector("body"));
+    }
+</script>
 </html>

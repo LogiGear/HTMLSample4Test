@@ -12,6 +12,21 @@ function getUrlParm(name) {
         return results[1];
 }
 
+function attachShadowDOM(ele){
+    eleContent = ele.innerHTML
+    ele.innerHTML = '<div id="host-element" name="host-element" class="host-element"></div>';
+    const hostElement = document.querySelector('#host-element');
+    const shadowRoot = hostElement.attachShadow({ mode: 'open' });
+    shadowRoot.innerHTML = eleContent
+}
+
+function getControlByIDAndShadowContext(id){
+    if (getUrlParm('shadow').toLowerCase() === 'true') {
+        return document.querySelector("#host-element").shadowRoot.getElementById(id);
+    }else{
+        return document.getElementById(id);
+    }
+}
 
 function ValidValue(checkStr, minval, maxval) {
     var checkOK = "0123456789";

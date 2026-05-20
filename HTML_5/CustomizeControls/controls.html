@@ -159,10 +159,14 @@
              <tr>
                 <td id="DisplayCell"colspan="2" style="text-align:center">
                     <script type="text/javascript">
-                        createControls();
- 
+                        createControls()
                     </script>
                 </td>
+                <script type="text/javascript">
+                    if (getUrlParm('shadow').toLowerCase() === 'true') {
+                        attachShadowDOM(document.getElementById("DisplayCell"));
+                    }
+                </script>
             </tr>
             <tr bgcolor="#0000CC" >
                 <td id = "WaitProCell"  height ="2%" colspan="2">

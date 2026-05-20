@@ -86,6 +86,10 @@ COLOR: #FFFFFF;
 		$("#content").height(iHeight);
 		$("#content").width(iWidth);
         sPage = getUrlParm('id');
+
+
+
+
         sPage = "../ScenarioData_HTML/" + sPage + ".html";
         $("#content").load(sPage, function (response, status, xhr) {            
             if (status == "error") {
@@ -95,6 +99,11 @@ COLOR: #FFFFFF;
             else
                 $("#txtComment").html("Page loaded successful.");
         });
+
+        if (getUrlParm('shadow').toLowerCase() === 'true') {
+            attachShadowDOM(document.getElementById("content"));
+        }
+
 		var sTitle = document.title;
 		parent.postMessage(sTitle,"*");
     });

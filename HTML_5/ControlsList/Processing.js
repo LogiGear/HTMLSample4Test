@@ -183,7 +183,7 @@ function updDefaultLocation(proName) {
 // Work-around for IE
 function getBoundCtr() {
     if (IDControl != "svg_ControlTest") {
-        rec = document.getElementById(IDControl).getBoundingClientRect();
+        rec = GetControlByID(IDControl).getBoundingClientRect();
         updProperty("top", rec.top);
         iNum = $("#" + IDPropertyList).getDataIDs().length;
         for (iR = 1; iR <= iNum; iR++) {
