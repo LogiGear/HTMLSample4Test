@@ -24,23 +24,25 @@
 
     <script>
         $(document).on("mousemove", function (event) {
-            $("#console").text("Document : pageX: " + Math.round(event.pageX) + ", pageY: " + Math.round(event.pageY));
+            console.log(getControlByIDAndShadowContext("console").tagName)
+            getControlByIDAndShadowContext("console").textContent= "Document : pageX: " + Math.round(event.pageX) + ", pageY: " + Math.round(event.pageY)
+        
         });
 
         $(document).on("mousemove", function (event) {
-            $("#consoleScreen").text("Screen : pageX: " + (event.pageX + getElement_ScreenLeft("body")) + ", pageY: " + (event.pageY + getElement_ScreenTop("body")));
+            getControlByIDAndShadowContext("consoleScreen").textContent= "Screen : pageX: " + (event.pageX + getElement_ScreenLeft("body")) + ", pageY: " + (event.pageY + getElement_ScreenTop("body"));
         });
 
         $(document).on("mousemove", function (event) {
-            $("#consoleWindow").text("Window : pageX: " + (event.pageX + getDomPositionOfWindow()[0]) + ", pageY: " + (event.pageY + getDomPositionOfWindow()[1]));
+            getControlByIDAndShadowContext("consoleWindow").textContent= "Window : pageX: " + (event.pageX + getDomPositionOfWindow()[0]) + ", pageY: " + (event.pageY + getDomPositionOfWindow()[1]);
         });
 
         function load_iframe4() {
-            var frame4_border_left = parseInt(getComputedStyle(document.getElementById("frame_4"))["border-left-width"], 10);
-            var frame4_border_top = parseInt(getComputedStyle(document.getElementById("frame_4"))["border-top-width"], 10);
-            var body_border = parseInt(getComputedStyle(document.getElementsByTagName("body")[0])["border-top-width"], 10);
+            var frame4_border_left = parseInt(getComputedStyle(getControlByIDAndShadowContext("frame_4"))["border-left-width"], 10);
+            var frame4_border_top = parseInt(getComputedStyle(getControlByIDAndShadowContext("frame_4"))["border-top-width"], 10);
+            var body_border = parseInt(getComputedStyle(document.querySelector("body"))["border-top-width"], 10);
             console.log("frame4_border_left: " + frame4_border_left + ", frame4_border_top: " + frame4_border_top + ", body_border: " + body_border);   
-            document.getElementById("frame_4").setAttribute("src", "Sample_Dragmouse2.html?param1=" + (getElement_ScreenLeft("frame_4") + frame4_border_left) + "&param2=" + (getElement_ScreenTop("frame_4") + frame4_border_top))
+            getControlByIDAndShadowContext("frame_4").setAttribute("src", "Sample_Dragmouse2.html?param1=" + (getElement_ScreenLeft("frame_4") + frame4_border_left) + "&param2=" + (getElement_ScreenTop("frame_4") + frame4_border_top))
             //alert(body_border)
         }
         function getElement_ScreenLeft(idElement) {
@@ -108,7 +110,7 @@
         function getElementAbsolutePos(elemID) {
             var element;
             if (typeof (elemID) == "string") {
-                element = getControlByIDAndShadowContext(elemID);
+                element = document.getElementById(elemID);
             }
             else {
                 element = elemID;
@@ -216,7 +218,7 @@
 
 </head>
 
-<body class="wrap" onload="load_iframe4();" onresize="location.reload()"><div id="wraper"></div><div id="content">
+<body class="wrap" onload="load_iframe4();" onresize="location.reload()"><div id="wraper"><div id="content">
     <iframe id="frame_1" class="left_col" src="TestDrag.html" width=500 height=300></iframe>
     <iframe id="frame_2" class="right_col" src="drag_paragraph.html" width=500 height=300></iframe>
     <iframe id="frame_3" class="right_col" src="drag_canvas.html" width=500 height=300></iframe>

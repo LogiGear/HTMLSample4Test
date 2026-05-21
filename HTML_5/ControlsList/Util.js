@@ -28,6 +28,14 @@ function getControlByIDAndShadowContext(id){
     }
 }
 
+function querySelectorAndShadowContext(cssSelector){
+    if (getUrlParm('shadow').toLowerCase() === 'true') {
+        return document.querySelector("#host-element").shadowRoot.querySelector(cssSelector);
+    }else{
+        return document.querySelector(cssSelector);
+    }
+}
+
 function ValidValue(checkStr, minval, maxval) {
     var checkOK = "0123456789";
     var bValid = false;

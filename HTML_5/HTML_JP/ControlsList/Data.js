@@ -7,7 +7,7 @@ controlsArr = [
     { name: "Layout", value: strParagraph },
     { name: "Navigate", value: "Navigate" },
     { name: "Media", value: "Video,Audio,Embed,Source,CustomizeVideo" },
-    { name: "Util", value: "Cookie,WindowWait,ObjectWait" },
+    { name: "Util", value: "Cookie,WindowWait,ObjectWait,TimingObject" },
     { name: "Scenarios", value: "ScenarioControls,ScenarioEvents,ScenarioViewer" }
 ];
 sampleArr = [
@@ -59,6 +59,7 @@ sampleArr = [
     { name: "Navigate", value: "Navigate" },
     { name: "WindowWait", value: "WindowWait" },
     { name: "ObjectWait", value: "ObjectWait" },
+	{ name: "TimingObject", value: "TimingObject" },
     { name: "Video", value: "Video" },
     { name: "Audio", value: "Audio" },
     { name: "Source", value: "Source" },
