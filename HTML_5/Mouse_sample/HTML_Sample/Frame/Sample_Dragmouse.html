@@ -12,6 +12,8 @@
   }
   </style>
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script type="text/javascript" src="../../../ControlsList/Util.js"></script>
+
   <script>
 function getElement_ScreenLeft(idElement) {
     var posEle = getElementAbsolutePos(idElement);
@@ -175,16 +177,20 @@ function getElementAbsolutePos(elemID) {
     }
     return res;
 }
+
+
+
 function getDomPositionOfWindow(){ var borderWidth = (window.outerWidth - window.innerWidth) / 2; var left = Math.round(borderWidth); var top = Math.round(window.outerHeight - window.innerHeight - borderWidth); return [left, top]; }
 $( document ).on( "mousemove", function( event ) {
-  $( "#log" ).text( "Document : pageX: " + Math.round(event.pageX) + ", pageY: " + Math.round(event.pageY) );
+  getControlByIDAndShadowContext("log").textContent = "Document : pageX: " + Math.round(event.pageX) + ", pageY: " + Math.round(event.pageY);
 });
 $( document ).on( "mousemove", function( event ) {
-  $( "#logScreen" ).text( "Page : pageX: " + Math.round(event.pageX+getElement_ScreenLeft("body")) + ", pageY: " + Math.round(event.pageY+getElement_ScreenTop("body")) );
+  getControlByIDAndShadowContext("logScreen").textContent = "Page : pageX: " + Math.round(event.pageX+getElement_ScreenLeft("body")) + ", pageY: " + Math.round(event.pageY+getElement_ScreenTop("body"));
 });
 $( document ).on( "mousemove", function( event ) {
-  $( "#logWindow" ).text( "Window : pageX: " + (event.pageX+getDomPositionOfWindow()[0]) + ", pageY: " + (event.pageY+getDomPositionOfWindow()[1]));
+  getControlByIDAndShadowContext("logWindow").textContent = "Window : pageX: " + (event.pageX+getDomPositionOfWindow()[0]) + ", pageY: " + (event.pageY+getDomPositionOfWindow()[1]);
 });
+
 </script>
 
 </head>
@@ -193,6 +199,10 @@ $( document ).on( "mousemove", function( event ) {
 <div id="log">pageX: 0, pageY: 0</div>
 <div id="logWindow">pageX: 0, pageY: 0</div>
 <div id="logScreen">pageX: 0, pageY: 0</div> 
- 
+<script type="text/javascript">
+    if (getUrlParm('shadow').toLowerCase() === 'true') {
+        attachShadowDOM(document.querySelector("body"));
+    }
+</script>
 </body>
 </html>

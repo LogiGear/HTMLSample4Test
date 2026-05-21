@@ -5,6 +5,7 @@
 <title>Standard Controls</title>
 <script src="Scripts/js/jquery-1.5.2.min.js" type="text/javascript"></script>
 <script src="ControlsList/Data.js" type="text/javascript"></script>
+<script type="text/javascript" src="ControlsList/Util.js"></script>
 
 <style type="text/css">
     body {
@@ -89,6 +90,8 @@
         <script type="text/javascript">
             
             jQuery(document).ready(function ($) {
+				var sTitle = document.title;
+				parent.postMessage(sTitle,"*");
                 loadComponents();
             });
 
@@ -282,6 +285,11 @@
 
                 lstSmp = document.getElementById('lstSamples');
                 selectedCtr = lstSmp.options[lstSmp.selectedIndex].value;
+                if (getUrlParm('shadow').toLowerCase() === 'true') {
+                    ShadowParam = "&shadow=true";
+                } else {
+                    ShadowParam = "";
+                }
 
                 if (lstSmp.options[lstSmp.selectedIndex].value == "VIEWER") {
                     if (lstSmp.options[lstSmp.selectedIndex].text.lastIndexOf(".txt") < 0)
@@ -290,7 +298,7 @@
                     return;
                 }
 				if (lstSmp.options[lstSmp.selectedIndex].value == "SCENARIO") {
-					window.location = "CustomizeControls/ScenarioDynamic.html?id=" + lstSmp.options[lstSmp.selectedIndex].text;
+					window.location = "CustomizeControls/ScenarioDynamic.html?id=" + lstSmp.options[lstSmp.selectedIndex].text + ShadowParam;
                     return;
                 }
 				if (lstSmp.options[lstSmp.selectedIndex].value == "EVENT") {
@@ -301,13 +309,13 @@
                 if (selectedCtr.substring(0,5) == "Input" && selectedCtr != "InputImage") {
 
                     var splitStr = selectedCtr.split('Input');
-                    window.location = "CustomizeControls/controls.html?id=" + splitStr[1];
+                    window.location = "CustomizeControls/controls.html?id=" + splitStr[1] + ShadowParam;
                 }
                 else if (selectedCtr == "InputImage") {
-                    window.location = "CustomizeControls/controls.html?id=imagebtn";
+                    window.location = "CustomizeControls/controls.html?id=imagebtn" + ShadowParam;
                 }				
                 else {
-                    window.location = "CustomizeControls/controls.html?id=" + selectedCtr;
+                    window.location = "CustomizeControls/controls.html?id=" + selectedCtr + ShadowParam;
                 }
             }
 
