@@ -183,7 +183,7 @@ function updDefaultLocation(proName) {
 // Work-around for IE
 function getBoundCtr() {
     if (IDControl != "svg_ControlTest") {
-        rec = GetControlByID(IDControl).getBoundingClientRect();
+        rec = GetControlByIDAndShadowContext(IDControl).getBoundingClientRect();
         updProperty("top", rec.top);
         iNum = $("#" + IDPropertyList).getDataIDs().length;
         for (iR = 1; iR <= iNum; iR++) {
@@ -205,26 +205,32 @@ function getBoundCtr() {
 
 function createControls() {
     
-    ID = getUrlParm('id').toLowerCase();    
+    ID = getUrlParm('id').toLowerCase();   
     IDControl = ID + "_" + IDControl;
-   
+
+    if (getUrlParm('shadow').toLowerCase() === 'true') {
+        ShadowParam = "?shadow=true";
+    }  else {
+        ShadowParam = "";
+    }
+ 
     if (ID == "windowwait") {
-        window.location = "WaitForWindow.html";
+        window.location = "WaitForWindow.html" + ShadowParam;
     }
     else if (ID == "objectwait") {
-        window.location = "ObjectWait.html";
+        window.location = "ObjectWait.html" + ShadowParam;
     }
 	else if (ID == "timingobject") {
-        window.location = "TimingObject.html";
+        window.location = "TimingObject.html" + ShadowParam;
     }
     else if (ID == "dynamicbutton") {
-        window.location = "DynamicButton.html";
+        window.location = "DynamicButton.html" + ShadowParam;
     }
     else if (ID == "scrollbar") {
-        window.location = "ScrollBarSample.html";
+        window.location = "ScrollBarSample.html" + ShadowParam;
     }
     else if (ID == "messagebox") {
-        window.location = "MessageBox.html";
+        window.location = "MessageBox.html" + ShadowParam;
     }
     else if (ID == "button") {
         createButton();

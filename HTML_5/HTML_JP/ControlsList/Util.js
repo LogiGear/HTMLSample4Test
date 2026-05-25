@@ -20,6 +20,13 @@ function attachShadowDOM(ele){
     shadowRoot.innerHTML = eleContent
 }
 
+function attachIFrame(ele){
+    eleContent = ele.innerHTML
+    ele.innerHTML = '<iframe id="iframe-element"></iframe>';
+    const iframeElement = document.querySelector('#iframe-element');
+    iframeElement.srcdoc = eleContent;
+}
+
 function getControlByIDAndShadowContext(id){
     if (getUrlParm('shadow').toLowerCase() === 'true') {
         return document.querySelector("#host-element").shadowRoot.getElementById(id);

@@ -92,7 +92,7 @@ html, body, #wrapper {
 </style>
 
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>   
-
+<script type="text/javascript" src="../ControlsList/Util.js"></script>
 <script type="text/javascript">
     var str = "";
     var num = 0;
@@ -139,6 +139,11 @@ html, body, #wrapper {
     function AddControl() {
         setvalueofText();
         oCtrl = selectedControl();
+
+        if (getUrlParm('shadow').toLowerCase() === 'true') {
+            attachShadowDOM(document.getElementById("btnDynamicButton"));
+        }
+
         if (oCtrl == "SingleClickButton")
         {
             CreateSingleClickButton();
@@ -171,32 +176,103 @@ html, body, #wrapper {
         num++;
     }
 	
+  function RenderControlWithShadowContext(str) {
+      if (getUrlParm('shadow').toLowerCase() === 'true') {
+          var pos = document.querySelector("#host-element").shadowRoot;
+          domStyle=`
+          <style>
+                #dragndrop {
+                        width: 350px;
+                        height: 70px;
+                        padding: 10px;
+                        border: 1px solid #aaaaaa;
+                    }
+                #box {
+                        width: 300px;
+                        height: 150px;
+                        background: #f2f2f2;
+                        border: 1px solid #000;
+                    }
+                #dropTarget {
+                  width: 350px;
+                  height: 70px;
+                  padding: 10px;
+                  border: 1px solid #aaaaaa;
+                }
+                .task {
+              display: flex;
+              justify-content: space-between;
+              padding: 10px;
+              background-color: LightGray;
+              box-shadow: 1px 1px 2px #cfcfcf;
+              width: 200px;
+              margin: 10px;
+            }
+
+            /* context menu */
+
+            .context-menu {
+              display: none;
+              position: absolute;
+              z-index: 10;
+              padding: 4px 0;
+              width: 100px;
+              background-color: #fff;
+              border: solid 1px #dfdfdf;
+              box-shadow: 1px 1px 2px #cfcfcf;
+            }
+
+            .context-menu--active {
+              display: block;
+            }
+
+            .context-menu__item {
+              display: block;
+              margin-bottom: 4px;
+              color: #0066aa;
+            }
+
+            .context-menu__link {
+              display: block;
+              padding: 4px 4px;
+              color: #0066aa;
+              text-decoration: none;
+            }
+
+            .context-menu__link:hover {
+              color: #fff;
+              background-color: #0066aa;
+            }
+          </style>`;
+          str = domStyle + str;
+      }else {
+          var pos = document.getElementById("btnDynamicButton");
+      }
+      pos.innerHTML = str;        
+  }
+
 	function CreateTextBox() {
         str += "<input type=\"text\"  id='textbox" + num + "' name='textbox" + num + "' maxlength=\"20\" />&nbsp;";
 
-        var pos = document.getElementById("btnDynamicButton");
-        pos.innerHTML = str;
+        RenderControlWithShadowContext(str)
     }
 	
 	function CreateTextArea() {
         str += "<textarea id=\"txtArea\" name=\"txtArea\" cols=\"60\" rows=\"10\" />&nbsp;";
 
-        var pos = document.getElementById("btnDynamicButton");
-        pos.innerHTML = str;
+        RenderControlWithShadowContext(str)
     }
 	
     function CreateSingleClickButton() {
             str += "<input type='button' id='btn" + num + "' value='Button"+ "_" + num + "' name='Button" +num + "' style='width:70px;height:23px;' onclick=\"showComment('Button_" + num + "');\">&nbsp;";
 
-        var pos = document.getElementById("btnDynamicButton");
-        pos.innerHTML = str;
+        RenderControlWithShadowContext(str)
     }
 
     function CreateDoubleClickButton() {
         str += "<input type='button' id='btnDoubleClick' value='Double_Click_Button' name='Double Click Button' onclick=\"ondblclickH(this);\">&nbsp;";
 
-        var pos = document.getElementById("btnDynamicButton");
-        pos.innerHTML = str;
+        RenderControlWithShadowContext(str)
     }
 
     function CreateLabelWithContextMenu() {
@@ -215,18 +291,16 @@ html, body, #wrapper {
 			"</li>" +
 			"</nav>";
 
-        var pos = document.getElementById("btnDynamicButton");
-        pos.innerHTML = str;
-		menu = document.querySelector("#context-menu");
-		menuItems = menu.querySelectorAll(".context-menu__item");
-		init();
+        RenderControlWithShadowContext(str)
+      menu = querySelectorAndShadowContext("#context-menu");
+      menuItems = menu.querySelectorAll(".context-menu__item");
+      init();
     }
 	
 	function CreateMouseMove() {
 		str += "<div id=\"box\" onmousemove=\"getCoordinate(event)\" onmouseout=\"clearCoor()\"></div>" +
 				"<p>Coordinates of mouse pointer with respect to the DIV box are: <strong id=\"results\"></strong></p>";
-        var pos = document.getElementById("btnDynamicButton");
-        pos.innerHTML = str;
+        RenderControlWithShadowContext(str)
     }
 	
 	function CreateDragDrop() {
@@ -235,8 +309,7 @@ html, body, #wrapper {
 				"</div>" +
 				"<br>" +
 				"<img id=\"dragImg\" src=\"../images/home_logo.gif\" draggable=\"true\" ondragstart=\"drag(event)\" width=\"336\" height=\"69\">";
-        var pos = document.getElementById("btnDynamicButton");
-        pos.innerHTML = str;
+        RenderControlWithShadowContext(str)
     }
      
     // Make Full Row select
@@ -488,7 +561,7 @@ html, body, #wrapper {
 <tr>
 <td width="25%" height="70%" rowspan="4"></td>
 <td width="34%"  align="left" bgcolor="#0000CC" style="vertical-align:middle"><span class="style1">&nbsp;&nbsp;&nbsp;Standard Control</span></td>
-<td width="17%" height="5%" align="right" bgcolor="#0000CC" style="vertical-align:middle"><!-- InstanceBeginEditable name="Home" --><span class="style1"><a href="../index.html">Home&nbsp;&nbsp;&nbsp;</a></span> <!-- InstanceEndEditable --></td>
+<td width="17%" height="5%" align="right" bgcolor="#0000CC" style="vertical-align:middle"><!-- InstanceBeginEditable name="Home" --><span class="style1"><script>const queryString = window.location.search;const urlParams = new URLSearchParams(queryString);const isShadow = urlParams.get('shadow'); if (isShadow === 'true') {var href = "../index.html?shadow=true";}else {var href = "../index.html";};document.write(`<a href="${href}">Home&nbsp;&nbsp;&nbsp;</a>`) </script></span> <!-- InstanceEndEditable --></td>
 <td width="24%" height="70%" rowspan="4"></td>
 </tr>
 

@@ -1,5 +1,14 @@
 
 // Create dynamic elements
+function GetControlByIDAndShadowContext(TargetID) {
+    IsShadow = getUrlParm('shadow').toLowerCase();
+    if (IsShadow === 'true') {
+        return document.querySelector('#host-element').shadowRoot.getElementById(TargetID);
+    }
+    else {
+        return document.getElementById(TargetID);
+    }
+}
 
 function DisplayComment(txt) {
     if (_willElementFireEvent) {
@@ -11,16 +20,6 @@ function DisplayComment(txt) {
         _sEvents = "";
     }
     
-}
-
-function GetControlByID(TargetID) {
-    IsShadow = getUrlParm('shadow').toLowerCase();
-    if (IsShadow === 'true') {
-        return document.querySelector('#host-element').shadowRoot.getElementById(TargetID);
-    }
-    else {
-        return document.getElementById(TargetID);
-    }
 }
 
 function DisplayHeader(txt) {
@@ -240,7 +239,7 @@ function UpdSelectValue() {
     //selected = new Array();
 
     selItems=""
-    ob = document.GetControlByID(IDControl);
+    ob = GetControlByIDAndShadowContext(IDControl);
 
     for (var i = 0; i < ob.options.length; i++) {
         if (ob.options[i].selected) {
@@ -255,7 +254,7 @@ function UpdSelectValue() {
 function AddItem_Select() {
     if (_varItemCount <= 0) return;
 
-    selectbox = document.GetControlByID(IDControl);
+    selectbox = GetControlByIDAndShadowContext(IDControl);
     
     var bUnique = !(document.getElementById(IDNonUnique).checked);
     if (bUnique != _bUnique) {
@@ -594,7 +593,7 @@ function createSource() {
                "</video>";
     document.write(inputStr);
 
-    var control = document.GetControlByID(IDControl);    
+    var control = GetControlByIDAndShadowContext(IDControl);    
 
 }
 
@@ -712,7 +711,7 @@ function createCanvas() {
     inputStr = "<canvas id=" + IDControl + " title=" + IDControl + " width=\"200\" height=\"100\" style=\"border:1px solid #d3d3d3;\">" +
                "Your browser does not support the HTML5 canvas tag.</canvas>";
     document.write(inputStr);
-        var c = document.GetControlByID(IDControl);
+        var c = GetControlByIDAndShadowContext(IDControl);
         var ctx=c.getContext("2d");
         ctx.font="30px Arial";
         ctx.strokeText("Hello World",10,50);
@@ -785,8 +784,8 @@ function createInputEmail() {
                "</form>";
     document.write(inputStr);
 
-    document.GetControlByID(IDControl).onchange = function () {
-        var ValDate = document.GetControlByID(IDControl);
+    GetControlByIDAndShadowContext(IDControl).onchange = function () {
+        var ValDate = GetControlByIDAndShadowContext(IDControl);
         updUISpecProperty("value", ValDate.value);
     };
 }
@@ -797,8 +796,8 @@ function createInputUrl() {
                "</form>";
     document.write(inputStr);
 
-    document.GetControlByID(IDControl).onchange = function () {
-        var ValDate = document.GetControlByID(IDControl);
+    GetControlByIDAndShadowContext(IDControl).onchange = function () {
+        var ValDate = GetControlByIDAndShadowContext(IDControl);
         updUISpecProperty("value", ValDate.value);
     };
 }
@@ -809,8 +808,8 @@ function createInputColor() {
                "<input type=\"submit\">" +
                "</form>";
     document.write(inputStr);
-    document.GetControlByID(IDControl).onchange = function () {
-        var ValDate = document.GetControlByID(IDControl);
+    GetControlByIDAndShadowContext(IDControl).onchange = function () {
+        var ValDate = GetControlByIDAndShadowContext(IDControl);
         updUISpecProperty("value", ValDate.value);
     };
 }
@@ -821,8 +820,8 @@ function createInputSearch() {
                "<input type=\"submit\">" +
                "</form>";
     document.write(inputStr);
-    document.GetControlByID(IDControl).onchange = function () {
-        var ValDate = document.GetControlByID(IDControl);
+    GetControlByIDAndShadowContext(IDControl).onchange = function () {
+        var ValDate = GetControlByIDAndShadowContext(IDControl);
         updUISpecProperty("value", ValDate.value);
     };
 }
@@ -832,8 +831,8 @@ function createInputTel() {
                "<input type=\"submit\">" +
                "</form>";
     document.write(inputStr);
-    document.GetControlByID(IDControl).onchange = function () {
-        var ValDate = document.GetControlByID(IDControl);
+    GetControlByIDAndShadowContext(IDControl).onchange = function () {
+        var ValDate = GetControlByIDAndShadowContext(IDControl);
         updUISpecProperty("value", ValDate.value);
     };
 }
@@ -856,7 +855,7 @@ function createHTML5Input() {
     buttonnode.step = "";
     
     buttonnode.onchange = function () {
-        var ValDate = document.GetControlByID(IDControl);
+        var ValDate = GetControlByIDAndShadowContext(IDControl);
         updUISpecProperty("value", ValDate.value);
     };
 
@@ -886,7 +885,7 @@ function createNumeric() {
     buttonnode.setAttribute('required', '');
     buttonnode.setAttribute('title', IDControl);
     buttonnode.onchange = function () {
-        var ValDate = document.GetControlByID(IDControl);
+        var ValDate = GetControlByIDAndShadowContext(IDControl);
         updUISpecProperty("value", ValDate.value);
     };
 
@@ -929,7 +928,7 @@ function createRange() {
     buttonnode.setAttribute('autocomplete', 'on');
     buttonnode.setAttribute('title', IDControl);
     buttonnode.onchange = function () {
-        var ValDate = document.GetControlByID(IDControl);
+        var ValDate = GetControlByIDAndShadowContext(IDControl);
         updUISpecProperty("value", ValDate.value);
     };
 

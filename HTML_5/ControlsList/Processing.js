@@ -183,7 +183,7 @@ function updDefaultLocation(proName) {
 // Work-around for IE
 function getBoundCtr() {
     if (IDControl != "svg_ControlTest") {
-        rec = GetControlByID(IDControl).getBoundingClientRect();
+        rec = GetControlByIDAndShadowContext(IDControl).getBoundingClientRect();
         updProperty("top", rec.top);
         iNum = $("#" + IDPropertyList).getDataIDs().length;
         for (iR = 1; iR <= iNum; iR++) {
@@ -208,23 +208,30 @@ function createControls() {
     ID = getUrlParm('id').toLowerCase();    
     IDControl = ID + "_" + IDControl;
    
+
+    if (getUrlParm('shadow').toLowerCase() === 'true') {
+        ShadowParam = "?shadow=true";
+    }  else {
+        ShadowParam = "";
+    }
+ 
     if (ID == "windowwait") {
-        window.location = "WaitForWindow.html";
+        window.location = "WaitForWindow.html" + ShadowParam;
     }
     else if (ID == "objectwait") {
-        window.location = "ObjectWait.html";
+        window.location = "ObjectWait.html" + ShadowParam;
     }
 	else if (ID == "timingobject") {
-        window.location = "TimingObject.html";
+        window.location = "TimingObject.html" + ShadowParam;
     }
     else if (ID == "dynamicbutton") {
-        window.location = "DynamicButton.html";
+        window.location = "DynamicButton.html" + ShadowParam;
     }
     else if (ID == "scrollbar") {
-        window.location = "ScrollBarSample.html";
+        window.location = "ScrollBarSample.html" + ShadowParam;
     }
     else if (ID == "messagebox") {
-        window.location = "MessageBox.html";
+        window.location = "MessageBox.html" + ShadowParam;
     }
     else if (ID == "button") {
         createButton();
@@ -279,16 +286,16 @@ function createControls() {
         createEvent();
     }
     else if (ID == "selectitemwait") {
-        window.location = "SelectItemWait.html";
+        window.location = "SelectItemWait.html" + ShadowParam;
     }
     else if (ID == "table") {
         createTable();
     }
     else if (ID == "tablecustomize") {
-        window.location = "TableCustomize.html";
+        window.location = "TableCustomize.html" + ShadowParam;
     }
     else if (ID == "tableitemwait") {
-        window.location = "TableItemWait.html";
+        window.location = "TableItemWait.html" + ShadowParam;
     }
     else if (ID == "map") {
         createMap();
@@ -402,16 +409,16 @@ function createControls() {
         createHTML5Input();
     }
     else if (ID == "customizevideo") {
-        window.location = "CustumizeVideo.html";
+        window.location = "CustumizeVideo.html" + ShadowParam;
     }
     else if (ID == "cookie") {
-        window.location = "SetCookiePage.html";
+        window.location = "SetCookiePage.html" + ShadowParam;
     }
     else if (ID == "svgexpand") {
-        window.location = "SVGControl.html";
+        window.location = "SVGControl.html" + ShadowParam;
     }
     else if (ID == "iframe") {
-        window.location = "Iframe.html";
+        window.location = "Iframe.html" + ShadowParam;
     }
     else {
         createParagraph(ID);
