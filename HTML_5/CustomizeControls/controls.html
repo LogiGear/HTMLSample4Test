@@ -127,7 +127,7 @@
     #txtComment
     {
         width: 743px;
-        //height: 100px;
+        /*height: 100px;*/
         margin-left: 0px;
     }
     #IDComment
@@ -151,7 +151,17 @@
             </tr>
             <tr bgcolor="#0000CC" >
                 <td id="HeaderCell" align="left" height="2%" style="vertical-align:middle" class="style4"><span class="style1">&nbsp;&nbsp;&nbsp;Standard Control</span></td>
-                <td id="CloseCell" align="right" height="2%"  style="vertical-align:middle"><span class="style1"><a href="../index.html">Home&nbsp;&nbsp;&nbsp;</a></span></td>
+                <td id="CloseCell" align="right" height="2%"  style="vertical-align:middle"><span class="style1">
+                    <script>
+                        if (getUrlParm('shadow').toLowerCase() === 'true') {
+                            var href = "../index.html?shadow=true";
+                        }
+                        else {
+                            var href = "../index.html";
+                        };
+                        document.write(`<a href="${href}">Home&nbsp;&nbsp;&nbsp;</a>`) 
+                    </script>
+                </span></td>
             </tr>
             <tr >
                 <td id="TitleCell" height="2%" align="left" style="vertical-align:middle" class="style4"><p id="IDCaption" style ="color: red; font-weight: bold; font-family: Tahoma; font-size: 18px">&nbsp;&nbsp;&nbsp; </p></td>

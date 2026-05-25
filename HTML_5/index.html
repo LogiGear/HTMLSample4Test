@@ -293,8 +293,8 @@
 
                 if (lstSmp.options[lstSmp.selectedIndex].value == "VIEWER") {
                     if (lstSmp.options[lstSmp.selectedIndex].text.lastIndexOf(".txt") < 0)
-                        window.location = "ScenarioViewer_src/Selection_TestCase.html?id=" + lstSmp.options[lstSmp.selectedIndex].text + ".txt";
-                    else window.location = "ScenarioViewer_src/Selection_TestCase.html?id=" + lstSmp.options[lstSmp.selectedIndex].text;
+                        window.location = "ScenarioViewer_src/Selection_TestCase.html?id=" + lstSmp.options[lstSmp.selectedIndex].text + ".txt" + ShadowParam
+                    else window.location = "ScenarioViewer_src/Selection_TestCase.html?id=" + lstSmp.options[lstSmp.selectedIndex].text + ShadowParam;
                     return;
                 }
 				if (lstSmp.options[lstSmp.selectedIndex].value == "SCENARIO") {
@@ -303,7 +303,7 @@
                 }
 				if (lstSmp.options[lstSmp.selectedIndex].value == "EVENT") {
 					var selectedName = lstSmp.options[lstSmp.selectedIndex].text;
-                    window.location = "ScenarioFireEvents_HTML/"+ selectedName + ".html";
+                    window.location = "ScenarioFireEvents_HTML/"+ selectedName + ".html" + ShadowParam.replace("&", "?");
                     return;
                 }
                 if (selectedCtr.substring(0,5) == "Input" && selectedCtr != "InputImage") {

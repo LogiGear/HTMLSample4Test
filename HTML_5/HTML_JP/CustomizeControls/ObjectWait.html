@@ -41,6 +41,7 @@ COLOR: #FFFFFF;
 
 <!-- InstanceBeginEditable name="head" -->
 <!-- InstanceEndEditable -->
+<script type="text/javascript" src="../ControlsList/Util.js"></script>
 <script type="text/javascript">
     var str = "";
     var num = 0;
@@ -93,6 +94,11 @@ COLOR: #FFFFFF;
     function AddControl() {
         setvalueofText();
         oCtrl = selectedControl();
+
+        if (getUrlParm('shadow').toLowerCase() === 'true') {
+            attachShadowDOM(document.getElementById("btnDynamicButton"));
+        }
+
         if (oCtrl == "Button")
         {
             CreateButton();
@@ -126,11 +132,19 @@ COLOR: #FFFFFF;
         num++;
     }
 
-    function CreateButton() {
-            str += "<input type='button' id='btn" + num + "' value='Button"+ "_" + num + "' name='Button" +num + "' style='width:70px;height:23px;' onclick=\"showComment('Button_" + num + "');\">&nbsp;";
+    function RenderControlWithShadowContext(str) {
+        if (getUrlParm('shadow').toLowerCase() === 'true') {
+            var pos = document.querySelector("#host-element").shadowRoot;
+        }else {
+            var pos = document.getElementById("btnDynamicButton");
+        }
+        pos.innerHTML = str;        
+    }
 
-        var pos = document.getElementById("btnDynamicButton");
-        pos.innerHTML = str;
+    function CreateButton() {
+        str += "<input type='button' id='btn" + num + "' value='Button"+ "_" + num + "' name='Button" +num + "' style='width:70px;height:23px;' onclick=\"showComment('Button_" + num + "');\">&nbsp;";
+
+        RenderControlWithShadowContext(str)
     }
 
     function CreateSelect() {
@@ -140,8 +154,7 @@ COLOR: #FFFFFF;
                         "<option value=\"項目_3\">項目_3</option>"+
                     "</select>&nbsp;";
 
-        var pos = document.getElementById("btnDynamicButton");
-        pos.innerHTML = str;
+        RenderControlWithShadowContext(str)
     }
 
     function CreateListBox() {
@@ -151,8 +164,7 @@ COLOR: #FFFFFF;
                         "<option value=\"Item_3\">Item_3</option>" +
                     "</select>&nbsp;";
 
-        var pos = document.getElementById("btnDynamicButton");
-        pos.innerHTML = str;
+        RenderControlWithShadowContext(str)
     }
     function CreateListBoxMulti() {
         str += "<select multiple id='listbox_multi" + num + "' name='listbox_multi" + num + "' size='3' style='width:150px;height:70px;'  onchange=\"select_selectionchange('listbox_multi" + num + "')\" >" +
@@ -161,8 +173,7 @@ COLOR: #FFFFFF;
                         "<option value=\"Item_3\">Item_3</option>" +
                     "</select>&nbsp;";
 
-        var pos = document.getElementById("btnDynamicButton");
-        pos.innerHTML = str;
+        RenderControlWithShadowContext(str)
     }
     function select_selectionchange(idCtr) {
         var selectbox = document.getElementById(idCtr);
@@ -180,8 +191,7 @@ COLOR: #FFFFFF;
     function CreateTextBox() {
         str += "<input type=\"text\"  id='textbox" + num + "' name='textbox" + num + "' maxlength=\"20\" />&nbsp;";
 
-        var pos = document.getElementById("btnDynamicButton");
-        pos.innerHTML = str;
+        RenderControlWithShadowContext(str)
     }
     
     function CreateTable() {
@@ -207,8 +217,7 @@ COLOR: #FFFFFF;
                 "<td width=\"20%\"><input type=\"checkbox\" id='table" + num + "_cb3' onclick =\"showcommentTable('table" + num + "_cb3','table" + num + ": String_3 | 文本_3 | ');\"/></td>" +
                 "</tr>" +
                  "</TABLE>&nbsp;";
-        var pos = document.getElementById("btnDynamicButton");
-        pos.innerHTML = str;
+        RenderControlWithShadowContext(str)
     }
     function showcommentTable(cbID, rowval)
     {
@@ -230,15 +239,13 @@ COLOR: #FFFFFF;
     function CreateRadio() {
         str += "<input type=\"Radio\" id='radio" + num + "' name='radio' value='Radio_" + num + "' onclick=\"showComment('Radio_" + num + "')\"/>Radio_" + num + " &nbsp;";
 
-        var pos = document.getElementById("btnDynamicButton");
-        pos.innerHTML = str;
+        RenderControlWithShadowContext(str)
     }
 
     function CreateCheckBox() {
         str += "<input type=\"CheckBox\" id='checkBox" + num + "' name='checkBox" + num + "' value='CheckBox_" + num + "' onclick=\"showComment('CheckBox_" + num + "')\"/>CheckBox_" + num + " &nbsp;";
 
-        var pos = document.getElementById("btnDynamicButton");
-        pos.innerHTML = str;
+        RenderControlWithShadowContext(str)
     }
 
 			function showComment(button)
@@ -246,12 +253,18 @@ COLOR: #FFFFFF;
 				var cmt = document.getElementById("txtComments");
 				cmt.innerHTML = "<label id='txtComments' style='font-family:tahoma;color:blue;font-size:12px'>" + button + "</label>";
 			}
+			
+	function changeTitle() 
+	{
+		var sTitle = document.title;
+		parent.postMessage(sTitle,"*");
+	}
 
 </script>
 </head>
 <!-- InstanceBeginEditable name="doctitle" -->
 <!-- InstanceEndEditable -->
-<body>
+<body onload="changeTitle()">
 
 <table id="wrapper" cellspacing="0">
 
@@ -262,7 +275,7 @@ COLOR: #FFFFFF;
 <tr>
 <td width="25%" height="70%" rowspan="4"></td>
 <td width="34%"  align="left" bgcolor="#0000CC" style="vertical-align:middle"><span class="style1">&nbsp;&nbsp;&nbsp;Standard Control</span></td>
-<td width="17%" height="5%" align="right" bgcolor="#0000CC" style="vertical-align:middle"><!-- InstanceBeginEditable name="Home" --><span class="style1"><a href="../index.html">Home&nbsp;&nbsp;&nbsp;</a></span> <!-- InstanceEndEditable --></td>
+<td width="17%" height="5%" align="right" bgcolor="#0000CC" style="vertical-align:middle"><!-- InstanceBeginEditable name="Home" --><span class="style1"><script>const queryString = window.location.search;const urlParams = new URLSearchParams(queryString);const isShadow = urlParams.get('shadow'); if (isShadow === 'true') {var href = "../index.html?shadow=true";}else {var href = "../index.html";};document.write(`<a href="${href}">Home&nbsp;&nbsp;&nbsp;</a>`) </script></span> <!-- InstanceEndEditable --></td>
 <td width="24%" height="70%" rowspan="4"></td>
 </tr>
 

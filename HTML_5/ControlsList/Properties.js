@@ -2,12 +2,12 @@
 //Public Functions //////////////////////////////////////////////////////////////////////////////////////////
 
 function getSvg_Left() {
-    var oLeft = GetControlByID(IDControl);
+    var oLeft = GetControlByIDAndShadowContext(IDControl);
     var valLeft = oLeft.getClientRects()[0].left;
     return valLeft;
 }
 function getSvg_Top() {
-    var oTop = GetControlByID(IDControl);
+    var oTop = GetControlByIDAndShadowContext(IDControl);
     var valTop = oTop.getClientRects()[0].top;
     return valTop;
 }
@@ -110,27 +110,27 @@ function getElement_ScreenTop(idElement) {
 
 function Element_id() {
     
-    return GetControlByID(IDControl).id;
+    return GetControlByIDAndShadowContext(IDControl).id;
 }
 
 function Element_name(name, isSet) {
     if (isSet == 1) {
-        GetControlByID(IDControl).name = name;
+        GetControlByIDAndShadowContext(IDControl).name = name;
     }
-    return GetControlByID(IDControl).name;
+    return GetControlByIDAndShadowContext(IDControl).name;
 }
 
 function Element_tagName() {
-    return GetControlByID(IDControl).tagName;
+    return GetControlByIDAndShadowContext(IDControl).tagName;
 }
 
 function Element_type() {
-    Ctrl = GetControlByID(IDControl);
+    Ctrl = GetControlByIDAndShadowContext(IDControl);
     if (Ctrl.hasAttribute("type")) {
         oType = Ctrl.getAttribute('Type');
     }
-    else if (GetControlByID(IDControl).type != null)
-        oType = GetControlByID(IDControl).type;
+    else if (GetControlByIDAndShadowContext(IDControl).type != null)
+        oType = GetControlByIDAndShadowContext(IDControl).type;
     else
         oType = "";
 
@@ -139,16 +139,16 @@ function Element_type() {
 
 function Element_value(value, isSet) {
     if (isSet == 1) {
-        GetControlByID(IDControl).value = value;
+        GetControlByIDAndShadowContext(IDControl).value = value;
     }
 
-    return GetControlByID(IDControl).value;
+    return GetControlByIDAndShadowContext(IDControl).value;
 }
 function Element_disabled(value, isSet) {
     if (isSet == 1) {
-        GetControlByID(IDControl).disabled = (value.toLowerCase() == "true");
+        GetControlByIDAndShadowContext(IDControl).disabled = (value.toLowerCase() == "true");
     }
-    return (GetControlByID(IDControl).disabled == true);
+    return (GetControlByIDAndShadowContext(IDControl).disabled == true);
 
 }
 
@@ -166,7 +166,7 @@ function Element_visibility(value, isSet) {
 function Element_Width(value, isSet) {
     if (isSet == 1) {
         $("#" + IDControl).width(value);
-        // var valWidth = GetControlByID(IDControl).style.Width;
+        // var valWidth = GetControlByIDAndShadowContext(IDControl).style.Width;
     }
     return getElement_Width(IDControl);
 }
@@ -195,114 +195,114 @@ function Element_Top(value, isSet) {
 function Element_Check(value, isSet) {
     if (isSet == 1) {
         if (value.toLowerCase() == "true") {
-            GetControlByID(IDControl).checked = true;
+            GetControlByIDAndShadowContext(IDControl).checked = true;
         } else {
-            GetControlByID(IDControl).checked = false;
+            GetControlByIDAndShadowContext(IDControl).checked = false;
         }
     }
-    return (GetControlByID(IDControl).checked);
+    return (GetControlByIDAndShadowContext(IDControl).checked);
 }
 
 function Element_Size(value, isSet) {
     if (isSet == 1) {
-        GetControlByID(IDControl).size = value;
+        GetControlByIDAndShadowContext(IDControl).size = value;
     }
-    return GetControlByID(IDControl).size;
+    return GetControlByIDAndShadowContext(IDControl).size;
 
 }
 
 function Element_maxLength(value, isSet) {
     if (isSet == 1) {
-        GetControlByID(IDControl).maxLength = value;
+        GetControlByIDAndShadowContext(IDControl).maxLength = value;
     }
-    return GetControlByID(IDControl).maxLength;
+    return GetControlByIDAndShadowContext(IDControl).maxLength;
 
 }
 
 function Element_pattern(value, isSet) {
     if (isSet == 1) {
-        GetControlByID(IDControl).pattern = value;
+        GetControlByIDAndShadowContext(IDControl).pattern = value;
     }
-    return GetControlByID(IDControl).pattern;
+    return GetControlByIDAndShadowContext(IDControl).pattern;
 
 }
 
 function Element_Src(value, isSet) {
     if (isSet == 1) {
-        GetControlByID(IDControl).src = value;
+        GetControlByIDAndShadowContext(IDControl).src = value;
     }
-    return GetCurrentFile(GetControlByID(IDControl).src);
+    return GetCurrentFile(GetControlByIDAndShadowContext(IDControl).src);
 
 }
 
 function Element_alt(value, isSet) {
 
     if (isSet == 1) {
-        GetControlByID(IDControl).alt = value;
+        GetControlByIDAndShadowContext(IDControl).alt = value;
     }
-    return GetControlByID(IDControl).alt;
+    return GetControlByIDAndShadowContext(IDControl).alt;
 
 }
 
 function Element_longHrf() {
 
-    return GetControlByID(IDControl).src;
+    return GetControlByIDAndShadowContext(IDControl).src;
 }
 
 function Element_shortHrf() {
 
-    return GetShortFileName(GetControlByID(IDControl).src);
+    return GetShortFileName(GetControlByIDAndShadowContext(IDControl).src);
 }
 
 function Element_title(value, isSet) {
 
     if (isSet == 1) {
-        GetControlByID(IDControl).title = value;
+        GetControlByIDAndShadowContext(IDControl).title = value;
     }
-    return GetControlByID(IDControl).title;
+    return GetControlByIDAndShadowContext(IDControl).title;
 }
 
 function Element_textContent(value, isSet) {
 
     if (isSet == 1) {
-        GetControlByID(IDControl).textContent = value;
+        GetControlByIDAndShadowContext(IDControl).textContent = value;
     }
-    return GetControlByID(IDControl).textContent;
+    return GetControlByIDAndShadowContext(IDControl).textContent;
 }
 
 function Element_innerHTML(value, isSet) {
 
     if (isSet == 1) {
-        GetControlByID(IDControl).innerHTML = value;
+        GetControlByIDAndShadowContext(IDControl).innerHTML = value;
     }
 
-    return GetControlByID(IDControl).innerHTML;
+    return GetControlByIDAndShadowContext(IDControl).innerHTML;
 
 }
 
 function Element_rows(value, isSet) {
 
     if (isSet == 1) {
-        GetControlByID(IDControl).rows = value;
+        GetControlByIDAndShadowContext(IDControl).rows = value;
     }
-    return GetControlByID(IDControl).rows;
+    return GetControlByIDAndShadowContext(IDControl).rows;
 }
 
 function Element_cols(value, isSet) {
 
     if (isSet == 1) {
-        GetControlByID(IDControl).cols = value;
+        GetControlByIDAndShadowContext(IDControl).cols = value;
     }
-    return GetControlByID(IDControl).cols;
+    return GetControlByIDAndShadowContext(IDControl).cols;
 }
 
 function Element_Multi(value, isSet) {
 
     if (value.toLowerCase() == "true")
-        GetControlByID(IDControl).multiple = true;
+        GetControlByIDAndShadowContext(IDControl).multiple = true;
     else
-        GetControlByID(IDControl).multiple = false;
-    return GetControlByID(IDControl).multiple;
+        GetControlByIDAndShadowContext(IDControl).multiple = false;
+    return GetControlByIDAndShadowContext(IDControl).multiple;
 }
 
 function Element_tableRows(value, isSet) {
@@ -311,7 +311,7 @@ function Element_tableRows(value, isSet) {
         _varItemCount = value;
         AddItem_Table();
     }
-    oRows = GetControlByID(IDControl).getElementsByTagName('tr');
+    oRows = GetControlByIDAndShadowContext(IDControl).getElementsByTagName('tr');
     return oRows.length;
 
 
@@ -336,7 +336,7 @@ function Element_ItemName(value, isSet) {
 
 function Element_Cells() {
 
-    var oRows = GetControlByID(IDControl).getElementsByTagName('tr');
+    var oRows = GetControlByIDAndShadowContext(IDControl).getElementsByTagName('tr');
     var iRows = oRows.length;
     var iCells = 0;
     for (ii = 0; ii < iRows; ii++) {
@@ -349,7 +349,7 @@ function Element_Cells() {
 
 function Element_Bodies() {
 
-    var oBodies = GetControlByID(IDControl).getElementsByTagName('tbody');
+    var oBodies = GetControlByIDAndShadowContext(IDControl).getElementsByTagName('tbody');
     var iBodies = 0;
     if (oBodies != null) {
         iBodies = oBodies.length;
@@ -358,7 +358,7 @@ function Element_Bodies() {
 }
 
 function Element_Caption(value, isSet) {
-    var oCap = GetControlByID(IDControl).getElementsByTagName('caption');
+    var oCap = GetControlByIDAndShadowContext(IDControl).getElementsByTagName('caption');
     if (oCap == null) return "";
     if (isSet == 1) {
         oCap[0].innerHTML = value;
@@ -375,14 +375,14 @@ function Element_Footer(value, isSet) {
     return oFoot.innerHTML;
 }
 function Element_Coords(value, isSet) {
-    var oCoords = GetControlByID(IDControl);
+    var oCoords = GetControlByIDAndShadowContext(IDControl);
     if (isSet == 1) {
         oCoords.coords = value;
     }
     return oCoords.coords;
 }
 function Element_Shape(value, isSet) {
-    var oShape = GetControlByID(IDControl);
+    var oShape = GetControlByIDAndShadowContext(IDControl);
     if (isSet == 1) {
         oShape.shape = value;
     }
@@ -390,7 +390,7 @@ function Element_Shape(value, isSet) {
 }
 
 function Element_videoSrc(value, isSet) {
-    oVideo = GetControlByID(IDControl);
+    oVideo = GetControlByIDAndShadowContext(IDControl);
     oSrc = oVideo.getElementsByTagName('source');
     ii = 0;
     if (navigator.appName != 'Microsoft Internet Explorer') ii = 1;
@@ -403,7 +403,7 @@ function Element_videoSrc(value, isSet) {
 }
 
 function Element_videoAutoplay(value, isSet) {
-    oVideo = GetControlByID(IDControl);
+    oVideo = GetControlByIDAndShadowContext(IDControl);
 
     if (isSet == 1) {
         if (value == 'true')
@@ -417,7 +417,7 @@ function Element_videoAutoplay(value, isSet) {
 }
 
 function Element_videoControls(value, isSet) {
-    oVideo = GetControlByID(IDControl);
+    oVideo = GetControlByIDAndShadowContext(IDControl);
     if (isSet == 1) {
         if (value == 'true')
             oVideo.setAttribute("controls", "controls")
@@ -430,7 +430,7 @@ function Element_videoControls(value, isSet) {
 }
 
 function Element_videoLoop(value, isSet) {
-    oEle = GetControlByID(IDControl);
+    oEle = GetControlByIDAndShadowContext(IDControl);
     if (isSet == 1) {
         if (value == 'true')
             oEle.setAttribute("loop", "loop")
@@ -443,7 +443,7 @@ function Element_videoLoop(value, isSet) {
 }
 
 function Element_Low(value, isSet) {
-    var oEle = GetControlByID(IDControl);
+    var oEle = GetControlByIDAndShadowContext(IDControl);
     if (isSet == 1) {
         oEle.setAttribute('low', value);
     }
@@ -451,7 +451,7 @@ function Element_Low(value, isSet) {
 }
 
 function Element_High(value, isSet) {
-    var oEle = GetControlByID(IDControl);
+    var oEle = GetControlByIDAndShadowContext(IDControl);
     if (isSet == 1) {
         oEle.setAttribute('high', value);
     }
@@ -459,7 +459,7 @@ function Element_High(value, isSet) {
 }
 
 function Element_Max(value, isSet) {
-    var oEle = GetControlByID(IDControl);
+    var oEle = GetControlByIDAndShadowContext(IDControl);
     if (isSet == 1) {
         oEle.setAttribute('max', value);
     }
@@ -467,7 +467,7 @@ function Element_Max(value, isSet) {
 }
 
 function Element_Min(value, isSet) {
-    var oEle = GetControlByID(IDControl);
+    var oEle = GetControlByIDAndShadowContext(IDControl);
     if (isSet == 1) {
         oEle.setAttribute('min', value);
     }
@@ -475,7 +475,7 @@ function Element_Min(value, isSet) {
 }
 
 function Element_optimum(value, isSet) {
-    var oEle = GetControlByID(IDControl);
+    var oEle = GetControlByIDAndShadowContext(IDControl);
     if (isSet == 1) {
         oEle.setAttribute('optimum', value);
     }
@@ -483,7 +483,7 @@ function Element_optimum(value, isSet) {
 }
 
 function Element_cmdtype(value, isSet) {
-    var oEle = GetControlByID(IDControl);
+    var oEle = GetControlByIDAndShadowContext(IDControl);
     if (isSet == 1) {
         oEle.setAttribute('optimum', value);
     }
@@ -491,7 +491,7 @@ function Element_cmdtype(value, isSet) {
 }
 
 function Element_open(value, isSet) {
-    oEle = GetControlByID(IDControl);
+    oEle = GetControlByIDAndShadowContext(IDControl);
     if (isSet == 1) {
         if (value == 'true')
             oEle.setAttribute("open", "open")
@@ -502,7 +502,7 @@ function Element_open(value, isSet) {
 
 }
 function Element_preload(value, isSet) {
-    oEle = GetControlByID(IDControl);
+    oEle = GetControlByIDAndShadowContext(IDControl);
     if (isSet == 1) {
         oEle.setAttribute('preload', value);
     }
@@ -510,18 +510,18 @@ function Element_preload(value, isSet) {
 
 }
 function Element_for(value, isSet) {
-    oEle = GetControlByID(IDControl);
+    oEle = GetControlByIDAndShadowContext(IDControl);
     return oEle.getAttribute('for');
 }
 function Element_datetime(value, isSet) {
-    oEle = GetControlByID(IDControl);
+    oEle = GetControlByIDAndShadowContext(IDControl);
     if (isSet == 1) {
         oEle.setAttribute('datetime', value);
     }
     return oEle.getAttribute('datetime');
 }
 function Element_PubDate(value, isSet) {
-    oEle = GetControlByID(IDControl);
+    oEle = GetControlByIDAndShadowContext(IDControl);
     if (isSet == 1) {
         if (value == 'true')
             oEle.setAttribute("pubdate", "pubdate")
@@ -533,7 +533,7 @@ function Element_PubDate(value, isSet) {
 }
 
 function Element_step(value, isSet) {
-    oEle = GetControlByID(IDControl);
+    oEle = GetControlByIDAndShadowContext(IDControl);
     if (isSet == 1) {
         oEle.setAttribute('step', value);
     }
@@ -541,7 +541,7 @@ function Element_step(value, isSet) {
 }
 
 function Element_autocomplete(value, isSet) {
-    oEle = GetControlByID(IDControl);
+    oEle = GetControlByIDAndShadowContext(IDControl);
     if (isSet == 1) {
         if (value == "off")
             oEle.setAttribute('autocomplete', 'off');
@@ -552,7 +552,7 @@ function Element_autocomplete(value, isSet) {
 }
 
 function Element_autofocus(value, isSet) {
-    oEle = GetControlByID(IDControl);
+    oEle = GetControlByIDAndShadowContext(IDControl);
     if (isSet == 1) {
         if (value.toLowerCase() == "true")
             oEle.autofocus = true;
@@ -564,7 +564,7 @@ function Element_autofocus(value, isSet) {
 }
 
 function Element_placeholder(value, isSet) {
-    oEle = GetControlByID(IDControl);
+    oEle = GetControlByIDAndShadowContext(IDControl);
     if (isSet == 1) {
         oEle.setAttribute('placeholder', value);
     }
@@ -572,7 +572,7 @@ function Element_placeholder(value, isSet) {
 }
 
 function Element_list(value, isSet) {
-    oEle = GetControlByID(IDControl);
+    oEle = GetControlByIDAndShadowContext(IDControl);
     if (isSet == 1) {
         oEle.setAttribute('list', value);
     }    
@@ -580,7 +580,7 @@ function Element_list(value, isSet) {
 }
 
 function Element_readOnly(value, isSet) {
-    oEle = GetControlByID(IDControl);
+    oEle = GetControlByIDAndShadowContext(IDControl);
     if (isSet == 1) {
         if (value.toLowerCase() == "true")
             oEle.readOnly = true;
@@ -593,11 +593,11 @@ function Element_readOnly(value, isSet) {
 function Element_required(value, isSet) {
     if (isSet == 1) {
         if (value.toLowerCase() == "true")
-            GetControlByID(IDControl).required = true;
+            GetControlByIDAndShadowContext(IDControl).required = true;
         else
-            GetControlByID(IDControl).required = false;
+            GetControlByIDAndShadowContext(IDControl).required = false;
     }
-    return GetControlByID(IDControl).required;
+    return GetControlByIDAndShadowContext(IDControl).required;
 }
 
 function Element_detectMouseOver(value, isSet) {
@@ -612,11 +612,11 @@ function Element_contentEditable(value, isSet) {
 
     if (isSet == 1) {
         if ((value == '') || (value.toLowerCase() == "true"))
-            GetControlByID(IDControl).contentEditable = true;
+            GetControlByIDAndShadowContext(IDControl).contentEditable = true;
         else
-            GetControlByID(IDControl).contentEditable = false;
+            GetControlByIDAndShadowContext(IDControl).contentEditable = false;
     }
-    return GetControlByID(IDControl).isContentEditable;
+    return GetControlByIDAndShadowContext(IDControl).isContentEditable;
 }
 
 function Element_isEnableTabOrder(value, isSet) {
@@ -630,7 +630,7 @@ function Element_isEnableTabOrder(value, isSet) {
 }
 
 function Element_inputmode(value, isSet) {
-    oEle = GetControlByID(IDControl);
+    oEle = GetControlByIDAndShadowContext(IDControl);
     if (isSet == 1) {
         oEle.inputmode = value;
     }    
