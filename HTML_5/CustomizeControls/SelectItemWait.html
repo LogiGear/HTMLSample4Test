@@ -62,7 +62,7 @@ label { display: block; }
         numofitem = 0;
         var numofItem = document.getElementById('txtnumberofItem');
         var AddButton = document.getElementById('btnAdd');
-        var selectbox = document.getElementById('SelectIemWaitTest');
+        var selectbox = getControlByIDAndShadowContext('SelectIemWaitTest');
         AddButton.disabled = true;
         var size = document.getElementById('txtSize');
         var delaytime = document.getElementById('txtDelay');
@@ -78,7 +78,7 @@ label { display: block; }
     }
     function additem() {
         var newOpt;
-        selectbox = document.getElementById('SelectIemWaitTest');
+        selectbox = getControlByIDAndShadowContext('SelectIemWaitTest');
         var nameofItem = document.getElementById('txtnameofItem');
         newOpt = new Option((nameofItem.value + "_" + numofitem), (nameofItem.value + "_" + numofitem));
         selectbox.options[selectbox.options.length] = newOpt;
@@ -92,12 +92,12 @@ label { display: block; }
         txtSecond.value = second * parseInt(numofitem) + " second";
     }
     function changeSizeSelectbox() {
-        ctrlSelect = document.getElementById('SelectIemWaitTest');
+        ctrlSelect = getControlByIDAndShadowContext('SelectIemWaitTest');
         ctrltxtSize = document.getElementById('txtSize');
         ctrlSelect.setAttribute('size', ctrltxtSize.value);
     }
     function displayComment() {
-        var selectbox = document.getElementById('SelectIemWaitTest');
+        var selectbox = getControlByIDAndShadowContext('SelectIemWaitTest');
         var txtComment = document.getElementById('txtComments');
         for (var i = 0; i < selectbox.options.length; i++) {
             if (selectbox.options[i].selected) {
@@ -191,5 +191,10 @@ label { display: block; }
   <td colspan="4" align="right" height="19%"><span class="style3"></span></td>
 </tr>
 </table>
+<script type="text/javascript">
+    if (getUrlParm('shadow').toLowerCase() === 'true') {
+        attachShadowDOM(document.querySelector("#ItemDisplay"));
+    }
+</script>
 </body>
 <!-- InstanceEnd --></html>

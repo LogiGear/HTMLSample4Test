@@ -41,9 +41,10 @@ COLOR: #FFFFFF;
 
 <!-- InstanceBeginEditable name="head" -->
 <!-- InstanceEndEditable -->
+<script type="text/javascript" src="../ControlsList/Util.js"></script>
 <script type="text/javascript">
     function showmessage() {
-        var str = document.getElementById("select").value;
+        var str = getControlByIDAndShadowContext("select").value;
         
         if (str == "showAlert") {
             window.alert("This is an alert message.");
@@ -66,13 +67,19 @@ COLOR: #FFFFFF;
     function showConfirm() {
         var res = window.confirm("Comfirm Message?");
     }
+	
+	function changeTitle() 
+	{
+		var sTitle = document.title;
+		parent.postMessage(sTitle,"*");
+	}
 
 </script>
 </head>
 <!-- InstanceBeginEditable name="doctitle" -->
 <title>Layout Controls</title>
 <!-- InstanceEndEditable -->
-<body>
+<body onload="changeTitle()">
 
 <table id="wrapper" cellspacing="0">
 
@@ -137,7 +144,10 @@ COLOR: #FFFFFF;
 </tr>
 </table>
 <script type="text/javascript">
-    AddButton();
+    if (getUrlParm('shadow').toLowerCase() === 'true') {
+        attachShadowDOM(document.querySelector('table[align="center"]'));
+    }
 </script>
+
 </body>
 <!-- InstanceEnd --></html>
