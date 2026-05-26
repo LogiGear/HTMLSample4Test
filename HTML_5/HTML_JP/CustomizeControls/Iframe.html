@@ -71,10 +71,11 @@ label { display: block; }
         width: 100px;
     }
 </style>  
+<script type="text/javascript" src="../ControlsList/Util.js"></script>
 <script type="text/javascript">
 
     function ChangeUrl() {
-        var iframe = document.getElementById("IframeControl");
+        var iframe = getControlByIDAndShadowContext("IframeControl");
         var txtUrl = document.getElementById("txtUrl");
         var txtW = document.getElementById("txtWidth");
         var txtH = document.getElementById("txtHeight");
@@ -84,10 +85,15 @@ label { display: block; }
             iframe.src = txtUrl.value;
         }
     }
+	function changeTitle() 
+	{
+		var sTitle = document.title;
+		parent.postMessage(sTitle,"*");
+	}
 
 </script>
 </head>
-<body>
+<body onload="changeTitle()">
 <table id="wrapper" cellspacing="0">
 <tr>
 <td colspan="4" align="right" height="15%"></td>
@@ -129,7 +135,9 @@ label { display: block; }
     <script type="text/javascript">
         inputStr = "<iframe  src=\"http://www.logigear.com/\" title=\"Iframe control\" id=\"IframeControl\" name=\"IframeControl\" width=\"600\" height=\"350\" />";
         document.write(inputStr);
-
+        if (getUrlParm('shadow').toLowerCase() === 'true') {
+            attachShadowDOM(document.querySelector('td:has(iframe)'));
+        }
 		</script>
   <!-- InstanceEndEditable --></td>
 </tr>

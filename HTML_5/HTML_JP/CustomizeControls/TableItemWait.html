@@ -63,7 +63,10 @@ label { display: block; }
 <script type="text/javascript">
 
     function Clear_table() {
-        $("#" + IDControl + " tbody").remove();
+        if (querySelectorAndShadowContext("#" + IDControl + " tbody")){
+            querySelectorAndShadowContext("#" + IDControl + " tbody").remove();
+        }
+        
     }
 
     function AddItem_Table() {
@@ -85,17 +88,16 @@ label { display: block; }
     function addRows(i)
     {
         if (i % iGroup == 0) {    //add body
-            $("#" + IDControl).append("<tbody></tbody>");
+            querySelectorAndShadowContext("#" + IDControl).appendChild(document.createElement("tbody"));
         }
-        //addRow(i);ひも
-        sRow = "<tr>" +
+        //addRow(i);
+        sRow = 
                 "<td width=\"20%\" onclick =\"DisplayComment('ひも_" + i + "')\">ひも_" + i + "</td>" +
                 "<td width=\"20%\" onclick =\"DisplayComment('Chuỗi_" + i + "');\">Chuỗi_" + i + "</td>" +
                 "<td width=\"20%\" onclick =\"DisplayComment('文本_" + i + "');\">文本_" + i + "</td>" +
                 "<td width=\"20%\"><input type=\"checkbox\"/></td>" +
-                "<td width=\"20%\" onclick =\"DisplayComment('long_" + i + "');\">long_" + i + "</td>" +
-                "</tr>";
-        $("#" + IDControl + "> tbody:last").append(sRow);
+                "<td width=\"20%\" onclick =\"DisplayComment('long_" + i + "');\">long_" + i + "</td>";
+        querySelectorAndShadowContext("#" + IDControl + " > tbody").appendChild(document.createElement("tr")).innerHTML = sRow;
     }
 
     function setvalueofText(seconds) {
@@ -104,12 +106,16 @@ label { display: block; }
         var second = (txtMiliSecond.value) / 1000;
         txtSecond.value = second * parseInt(seconds) + " second";
     }
-
+	function changeTitle() 
+	{
+		var sTitle = document.title;
+		parent.postMessage(sTitle,"*");
+	}
 
 
 </script>
 </head>
-<body>
+<body onload="changeTitle()">
 <table id="wrapper" cellspacing="0">
 <tr>
 <td colspan="4" align="right" height="15%"></td>
@@ -196,5 +202,10 @@ label { display: block; }
   <td colspan="4" align="right" height="19%"><span class="style3"></span></td>
 </tr>
 </table>
+<script type="text/javascript">
+    if (getUrlParm('shadow').toLowerCase() === 'true') {
+        attachShadowDOM(document.querySelector("td:has(#ControlTest)"));
+    }
+</script>
 </body>
 <!-- InstanceEnd --></html>
