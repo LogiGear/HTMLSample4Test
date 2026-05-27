@@ -39,7 +39,7 @@ function getElement_Top(idElement) {
 
 function getElement_Width(idElement) {
     if (typeof (idElement) == "string") {
-        element = document.getElementById(idElement);
+        element = GetControlByIDAndShadowContext(idElement);
     }
     else {
         element = idElement;
@@ -61,7 +61,7 @@ function getElement_Width(idElement) {
 
 function getElement_Height(idElement) {
     if (typeof (idElement) == "string") {
-        element = document.getElementById(idElement);
+        element = GetControlByIDAndShadowContext(idElement);
     }
     else {
         element = idElement;
@@ -156,16 +156,17 @@ function Element_visibility(value, isSet) {
 
     if (isSet == 1) {
         if (value.toLowerCase() == "true")
-            $("#" + IDControl).show();
+            GetControlByIDAndShadowContext(IDControl).style.display = "";
         else
-            $("#" + IDControl).hide();
+            GetControlByIDAndShadowContext(IDControl).style.display = "none";
     }
-    return ($("#" + IDControl).is(':visible'));
+
+    return GetControlByIDAndShadowContext(IDControl).style.display != "none";
 }
 
 function Element_Width(value, isSet) {
     if (isSet == 1) {
-        $("#" + IDControl).width(value);
+        GetControlByIDAndShadowContext(IDControl).style.width = `${value}px`;
         // var valWidth = GetControlByIDAndShadowContext(IDControl).style.Width;
     }
     return getElement_Width(IDControl);
@@ -173,21 +174,21 @@ function Element_Width(value, isSet) {
 
 function Element_Height(value, isSet) {
     if (isSet == 1) {
-        $("#" + IDControl).height(value);
+        GetControlByIDAndShadowContext(IDControl).style.height = `${value}px`;
     }
     return getElement_Height(IDControl);
 }
 
 function Element_Left(value, isSet) {
     if (isSet == 1) {
-        $("#" + IDControl).offset({ left: value });
+        GetControlByIDAndShadowContext(IDControl).style.left = `${value}px`;
     }
     return getElement_Left(IDControl);
 }
 
 function Element_Top(value, isSet) {
     if (isSet == 1) {
-        $("#" + IDControl).offset({ top: value });
+        GetControlByIDAndShadowContext(IDControl).style.top = `${value}px`;
     }
     return getElement_Top(IDControl);
 }
