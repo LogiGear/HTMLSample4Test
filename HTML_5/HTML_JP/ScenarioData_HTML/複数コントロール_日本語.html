@@ -12,6 +12,7 @@
             a { display: block; COLOR:blue;}
             label { display: block;}  
 </style>
+<script type="text/javascript" src="../ControlsList/Util.js"></script>
 </head>
 
 <body>
@@ -2021,6 +2022,11 @@ not supported</video>
 not supported</video>
  -->
 </div>
-</frame>			
+</frame>	
+<script type="text/javascript">
+    if (getUrlParm('shadow').toLowerCase() === 'true') {
+        attachShadowDOM(document.querySelector("body"));
+    }
+</script>		
 </body>
 </html>

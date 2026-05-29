@@ -272,13 +272,10 @@ function Element_textContent(value, isSet) {
 }
 
 function Element_innerHTML(value, isSet) {
-
     if (isSet == 1) {
         GetControlByIDAndShadowContext(IDControl).innerHTML = value;
     }
-
     return GetControlByIDAndShadowContext(IDControl).innerHTML;
-
 }
 
 function Element_rows(value, isSet) {
