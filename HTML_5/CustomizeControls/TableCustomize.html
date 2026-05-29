@@ -3,6 +3,7 @@
 <head>
 <title>Standard Control</title>
 <script src="../Scripts/js/jquery-1.5.2.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="../ControlsList/Util.js"></script>
 <style type="text/css">
 body {
 	background-image: url(../images/background.jpg);
@@ -54,8 +55,8 @@ COLOR: #FFFFFF;
     
     function AddRow() {
 
-        var table = document.getElementById("TableTest3");
-        var itemName = document.getElementById("txtColumnName");
+        var table = getControlByIDAndShadowContext("TableTest3");
+        var itemName = getControlByIDAndShadowContext("txtColumnName");
         var curRow = table.rows.length - 1;        
         var newrow = table.insertRow(-1);
         var col = table.getElementsByTagName("tr")[0].cells.length;
@@ -78,8 +79,8 @@ COLOR: #FFFFFF;
     }
 
     function AddColumn() {
-        var table = document.getElementById('TableTest3'); //table body
-        var itemName = document.getElementById("txtColumnName");
+        var table = getControlByIDAndShadowContext('TableTest3'); //table body
+        var itemName = getControlByIDAndShadowContext("txtColumnName");
         for (var i = 0; i < table.rows.length; i++) {
             var newCell = table.rows[i].insertCell(-1); //create new cell
 
@@ -102,7 +103,7 @@ COLOR: #FFFFFF;
     }
 
     function TextInComment(text) {
-        document.getElementById("txtComments").value = text;
+        getControlByIDAndShadowContext("txtComments").value = text;
     }
 	function changeTitle() 
 	{
@@ -271,5 +272,10 @@ COLOR: #FFFFFF;
   <td colspan="4" align="right" height="19%"><span class="style3"></span></td>
 </tr>
 </table>
+<script type="text/javascript">
+    if (getUrlParm('shadow').toLowerCase() === 'true') {
+        attachShadowDOM(document.querySelector("td:has(#TableTest-1)"));
+    }
+</script>
 </body>
 <!-- InstanceEnd --></html>

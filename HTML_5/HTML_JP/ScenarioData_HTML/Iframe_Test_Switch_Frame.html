@@ -14,6 +14,7 @@
     cursor:pointer;
 }
 </style>
+<script type="text/javascript" src="../ControlsList/Util.js"></script>
 </head>
 <body>
 
@@ -23,5 +24,10 @@
 <td colspan="3" height="100%"><iframe name="Iframe_test_lv1" id="Iframe_test_lv1" width="100%" height="1200" src="./Iframe_Page/Iframe_フレームテストLV1.html"></iframe></td>
 </tr>
 </table>
+<script type="text/javascript">
+    if (getUrlParm('shadow').toLowerCase() === 'true') {
+        attachShadowDOM(document.querySelector("table"));
+    }
+</script>
 </body>
 </html>
