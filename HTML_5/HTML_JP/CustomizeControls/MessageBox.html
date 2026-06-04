@@ -45,27 +45,18 @@ COLOR: #FFFFFF;
 <script type="text/javascript">
     function showmessage() {
         var str = getControlByIDAndShadowContext("select").value;
-        
-        if (str == "showAlert") {
-            window.alert("This is an alert message.");
-        }
-        else if (str == "showPrompt") {
-            window.prompt("This is a Prompt Message:", "");
-        }
-        else {
-            window.confirm("This is a Comfirm Message.");
-        }
-    }
-    function showAlert() {
-        window.alert("This is an alert message.");
-    }
-
-    function showPrompt() {
-        window.prompt("Please enter something:", "");
-    }
-
-    function showConfirm() {
-        var res = window.confirm("Comfirm Message?");
+        var delay = getControlByIDAndShadowContext("ipDelay").value;
+        setTimeout(() => {
+            if (str == "showAlert") {
+                window.alert("This is an alert message.");
+            }
+            else if (str == "showPrompt") {
+                window.prompt("This is a Prompt Message:", "");
+            }
+            else {
+                window.confirm("This is a Comfirm Message.");
+            }
+        }, parseInt(delay));
     }
 	
 	function changeTitle() 
@@ -121,7 +112,11 @@ COLOR: #FFFFFF;
                             
                     </td>
                        
-                    <td colspan="4" width="100%" align="right"><input type="button" id="btnApply" value="Apply" style="width:100px;" onclick="showmessage();"></td>					
+                    <td colspan="4" width="100%" align="right">
+                        <label for="ipDelay" style="font-size:smaller;font-weight:bold;">Delay time (ms):</label>
+                        <input type="text" id="ipDelay" style="width:120px;margin-left:10px;" value="0">
+                        <input type="button" id="btnApply" value="Apply" style="width:128px; margin-top:5px;" onclick="showmessage();">
+                    </td>					
 				</tr>
 				
 				
