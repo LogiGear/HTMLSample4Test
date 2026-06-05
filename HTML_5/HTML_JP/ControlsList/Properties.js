@@ -169,28 +169,28 @@ function Element_Width(value, isSet) {
         GetControlByIDAndShadowContext(IDControl).style.width = `${value}px`;
         // var valWidth = GetControlByIDAndShadowContext(IDControl).style.Width;
     }
-    return getElement_Width(IDControl);
+    return GetControlByIDAndShadowContext(IDControl).style.width;
 }
 
 function Element_Height(value, isSet) {
     if (isSet == 1) {
         GetControlByIDAndShadowContext(IDControl).style.height = `${value}px`;
     }
-    return getElement_Height(IDControl);
+    return GetControlByIDAndShadowContext(IDControl).style.height;
 }
 
 function Element_Left(value, isSet) {
     if (isSet == 1) {
-        GetControlByIDAndShadowContext(IDControl).style.left = `${value}px`;
+        $(GetControlByIDAndShadowContext(IDControl)).offset({ left: value });
     }
-    return getElement_Left(IDControl);
+    return GetControlByIDAndShadowContext(IDControl).style.left;
 }
 
 function Element_Top(value, isSet) {
     if (isSet == 1) {
-        GetControlByIDAndShadowContext(IDControl).style.top = `${value}px`;
+        $(GetControlByIDAndShadowContext(IDControl)).offset({ top: value });
     }
-    return getElement_Top(IDControl);
+    return GetControlByIDAndShadowContext(IDControl).style.top;
 }
 
 function Element_Check(value, isSet) {
@@ -272,13 +272,10 @@ function Element_textContent(value, isSet) {
 }
 
 function Element_innerHTML(value, isSet) {
-
     if (isSet == 1) {
         GetControlByIDAndShadowContext(IDControl).innerHTML = value;
     }
-
     return GetControlByIDAndShadowContext(IDControl).innerHTML;
-
 }
 
 function Element_rows(value, isSet) {

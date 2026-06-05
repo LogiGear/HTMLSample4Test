@@ -181,14 +181,14 @@ function Element_Height(value, isSet) {
 
 function Element_Left(value, isSet) {
     if (isSet == 1) {
-        GetControlByIDAndShadowContext(IDControl).style.left = `${value}px`;
+        $(GetControlByIDAndShadowContext(IDControl)).offset({ left: value });
     }
     return GetControlByIDAndShadowContext(IDControl).style.left;
 }
 
 function Element_Top(value, isSet) {
     if (isSet == 1) {
-        GetControlByIDAndShadowContext(IDControl).style.top = `${value}px`;
+        $(GetControlByIDAndShadowContext(IDControl)).offset({ top: value });
     }
     return GetControlByIDAndShadowContext(IDControl).style.top;
 }
