@@ -43,6 +43,14 @@ function querySelectorAndShadowContext(cssSelector){
     }
 }
 
+function querySelectorAllAndShadowContext(cssSelector){
+    if (getUrlParm('shadow').toLowerCase() === 'true') {
+        return document.querySelector("#host-element").shadowRoot.querySelectorAll(cssSelector);
+    }else{
+        return document.querySelectorAll(cssSelector);
+    }
+}
+
 function ValidValue(checkStr, minval, maxval) {
     var checkOK = "0123456789";
     var bValid = false;

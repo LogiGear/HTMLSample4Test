@@ -94,10 +94,10 @@ COLOR: #FFFFFF;
         $("#content").load(sPage, function (response, status, xhr) {            
             if (status == "error") {
                 var msg = "Sorry but there was an error: ";
-                $("#txtComment").html(msg + xhr.status + " " + xhr.statusText);
+                $(querySelectorAndShadowContext("#txtComment")).html(msg + xhr.status + " " + xhr.statusText);
             }
             else
-                $("#txtComment").html("Page loaded successful.");
+                $(querySelectorAndShadowContext("#txtComment")).html("Page loaded successful.");
         });
 
         if (getUrlParm('shadow').toLowerCase() === 'true') {
