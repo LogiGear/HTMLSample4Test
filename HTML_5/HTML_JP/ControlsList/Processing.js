@@ -205,8 +205,9 @@ function getBoundCtr() {
 
 function createControls() {
     
-    ID = getUrlParm('id').toLowerCase();   
+    ID = getUrlParm('id').toLowerCase();    
     IDControl = ID + "_" + IDControl;
+   
 
     if (getUrlParm('shadow').toLowerCase() === 'true') {
         ShadowParam = "?shadow=true";
@@ -285,16 +286,16 @@ function createControls() {
         createEvent();
     }
     else if (ID == "selectitemwait") {
-        window.location = "SelectItemWait.html";
+        window.location = "SelectItemWait.html" + ShadowParam;
     }
     else if (ID == "table") {
         createTable();
     }
     else if (ID == "tablecustomize") {
-        window.location = "TableCustomize.html";
+        window.location = "TableCustomize.html" + ShadowParam;
     }
     else if (ID == "tableitemwait") {
-        window.location = "TableItemWait.html";
+        window.location = "TableItemWait.html" + ShadowParam;
     }
     else if (ID == "map") {
         createMap();
@@ -408,16 +409,16 @@ function createControls() {
         createHTML5Input();
     }
     else if (ID == "customizevideo") {
-        window.location = "CustumizeVideo.html";
+        window.location = "CustumizeVideo.html" + ShadowParam;
     }
     else if (ID == "cookie") {
-        window.location = "SetCookiePage.html";
+        window.location = "SetCookiePage.html" + ShadowParam;
     }
     else if (ID == "svgexpand") {
-        window.location = "SVGControl.html";
+        window.location = "SVGControl.html" + ShadowParam;
     }
     else if (ID == "iframe") {
-        window.location = "Iframe.html";
+        window.location = "Iframe.html" + ShadowParam;
     }
     else {
         createParagraph(ID);
