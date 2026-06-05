@@ -10,6 +10,26 @@ function GetControlByIDAndShadowContext(TargetID) {
     }
 }
 
+function QuerySelectorByIDAndShadowContext(selector) {
+    IsShadow = getUrlParm('shadow').toLowerCase();
+    if (IsShadow === 'true') {
+        return document.querySelector('#host-element').shadowRoot.querySelector(selector);
+    }
+    else {
+        return document.querySelector(selector);
+    }
+}
+
+function QuerySelectorAllByIDAndShadowContext(selector) {
+    IsShadow = getUrlParm('shadow').toLowerCase();
+    if (IsShadow === 'true') {
+        return document.querySelector('#host-element').shadowRoot.querySelectorAll(selector);
+    }
+    else {
+        return document.querySelectorAll(selector);
+    }
+}
+
 function DisplayComment(txt) {
     if (_willElementFireEvent) {
         if (_sEvents == "") _sEvents = txt;
@@ -305,7 +325,7 @@ function createTable() {
 }
 
 function Clear_table() {
-    $("#" + IDControl + " tbody").remove();
+    $(QuerySelectorAllByIDAndShadowContext("#" + IDControl + " tbody")).remove();
 }
 
 function AddItem_Table() {
@@ -315,7 +335,7 @@ function AddItem_Table() {
     iGroup = 3;
     for (i = 0; i < _varItemCount; i++) {
         if (i % iGroup == 0) {    //add body
-            $("#" + IDControl).append("<tbody></tbody>");
+            $(QuerySelectorByIDAndShadowContext("#" + IDControl)).append("<tbody></tbody>");
         }
         //addRow(i);
         sRow = "<tr>"+
@@ -325,7 +345,7 @@ function AddItem_Table() {
                 "<td width=\"20%\"><input type=\"checkbox\"/></td>" +
                 "<td width=\"20%\" onclick =\"DisplayComment('long_" + i + "');\">long_" + i + "</td>" +
                 "</tr>";
-        $("#" + IDControl + "> tbody:last").append(sRow);
+        $(QuerySelectorAllByIDAndShadowContext("#" + IDControl + "> tbody")).last().append(sRow);
 
     }
     updDefaultLocation();
